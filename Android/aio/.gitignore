@@ -1,0 +1,12 @@
+/build
+gen
+.DS_Store
+/obj
+/ffmpeg_rtsp
+.vscode
+local.properties
+gradle.properties
+.gradle
+.idea
+*.iml
+/exo-library
