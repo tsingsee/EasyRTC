@@ -6,9 +6,11 @@ EasyRTC将采用WEBRTC技术，近期正在做内部测试，即将发布！
 
 Android版：http://fir.im/EasyRTC
 
-![EasyRTC](http://www.easydarwin.org/github/images/easyrtc/EasyRTC_Android.png)
+![EasyRTC-Android](https://raw.githubusercontent.com/EasyDSS/EasyRTC/master/QR%20Code/EasyRTC-Android.png)
 
-iOS版：AppStore搜索EasyRTC
+iOS版：AppStore搜索**EasyRTC**
+
+![EasyRTC-iOS](https://raw.githubusercontent.com/EasyDSS/EasyRTC/master/QR%20Code/EasyRTC-iOS.png)
 
 ## 获取更多信息 ##
 
