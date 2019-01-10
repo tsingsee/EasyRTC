@@ -1,0 +1,6 @@
+framework module venus {
+  umbrella header "venus.h"
+
+  export *
+  module * { export * }
+}
