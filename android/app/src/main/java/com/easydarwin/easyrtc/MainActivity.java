@@ -1,10 +1,11 @@
-package com.easyrtc.venustest;
+package com.easydarwin.easyrtc;
 
 import android.Manifest;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import com.easyrtc.easyrtc.R;
 import com.easyrtc.venus.Room;
 import com.easyrtc.venus.RoomStatus;
 import com.easyrtc.venus.StatusSink;

@@ -1,4 +1,4 @@
-package com.easyrtc.venustest;
+package com.easydarwin.easyrtc;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.easyrtc.venus.Room;
+import com.easyrtc.easyrtc.R;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;

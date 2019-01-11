@@ -1,4 +1,4 @@
-package com.easyrtc.venustest;
+package com.easydarwin.easyrtc;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -10,6 +10,8 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.easyrtc.venus.Room;
+import com.easyrtc.easyrtc.R;
+
 import org.webrtc.RendererCommon;
 import org.webrtc.SurfaceViewRenderer;
 

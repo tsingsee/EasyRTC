@@ -1,8 +1,8 @@
-package com.easyrtc.venustest;
+package com.easydarwin.easyrtc;
 
 import android.app.Application;
 
-public class VenusApp extends Application {
+public class EasyRTCApp extends Application {
     public static Application context;
 
     @Override

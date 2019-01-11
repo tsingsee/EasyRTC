@@ -1,4 +1,4 @@
-package com.easyrtc.venustest;
+package com.easydarwin.easyrtc;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.easyrtc.easyrtc.R;
 import com.easyrtc.venus.Options;
 import com.easyrtc.venus.Room;
 

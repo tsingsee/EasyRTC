@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.easyrtc.venustest.MainActivity"
+    tools:context="com.easyrtc.venustest.com.easydarwin.easyrtc.MainActivity"
     android:orientation="vertical"
     android:paddingLeft="16dp"
     android:paddingRight="16dp"

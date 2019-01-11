@@ -55,7 +55,7 @@ dependencies {
 
 //    api project(':venus')
 //    api project(':base')
-    implementation(name: 'venus-release', ext: 'aar')
+    implementation(name: 'easyrtc-release', ext: 'aar')
     implementation(name: 'base-release', ext: 'aar')
 
     testImplementation 'junit:junit:4.12'

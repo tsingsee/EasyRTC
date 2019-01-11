@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.easyrtc.venustest">
+    package="com.easyrtc.easyrtc">
 
 
     <uses-feature android:name="android.hardware.camera" />
@@ -24,8 +24,8 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-        android:name="com.easyrtc.venustest.VenusApp">
-        <activity android:name="com.easyrtc.venustest.MainActivity">
+        android:name="com.easydarwin.easyrtc.EasyRTCApp">
+        <activity android:name="com.easydarwin.easyrtc.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

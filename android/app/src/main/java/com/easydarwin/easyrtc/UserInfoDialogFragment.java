@@ -1,4 +1,4 @@
-package com.easyrtc.venustest;
+package com.easydarwin.easyrtc;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -15,6 +15,7 @@ import android.widget.TextView;
 import com.easyrtc.venus.Room;
 import com.easyrtc.venus.UserInfo;
 import com.easyrtc.venus.UserInfoSink;
+import com.easyrtc.easyrtc.R;
 
 import java.util.ArrayList;
 

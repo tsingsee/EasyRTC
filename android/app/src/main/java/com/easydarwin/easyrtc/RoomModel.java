@@ -1,4 +1,4 @@
-package com.easyrtc.venustest;
+package com.easydarwin.easyrtc;
 
 import com.easyrtc.venus.Room;
 
@@ -9,7 +9,7 @@ public class RoomModel {
 
     public Room getRoom() {
         if (null == room)
-            room = Room.createInstance(VenusApp.context);
+            room = Room.createInstance(EasyRTCApp.context);
         return room;
     }
 
