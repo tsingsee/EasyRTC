@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: venus-release:@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/venus-release.aar/1622fb6b4b2e902b896c82fee851a79f/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/venus-release.aar/1622fb6b4b2e902b896c82fee851a79f/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
