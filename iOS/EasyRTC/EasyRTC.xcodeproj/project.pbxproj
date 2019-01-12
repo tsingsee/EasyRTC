@@ -1,0 +1,510 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6673B9F021E9993400EB2430 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6673B9EF21E9993400EB2430 /* AppDelegate.m */; };
+		6673B9F621E9993400EB2430 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6673B9F421E9993400EB2430 /* Main.storyboard */; };
+		6673B9F821E9993500EB2430 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6673B9F721E9993500EB2430 /* Assets.xcassets */; };
+		6673B9FB21E9993500EB2430 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6673B9F921E9993500EB2430 /* LaunchScreen.storyboard */; };
+		6673B9FE21E9993500EB2430 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6673B9FD21E9993500EB2430 /* main.m */; };
+		6673BA1921E99B3B00EB2430 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 6673BA0721E99B3B00EB2430 /* UIView+Toast.m */; };
+		6673BA1A21E99B3B00EB2430 /* ListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6673BA0A21E99B3B00EB2430 /* ListTableViewCell.m */; };
+		6673BA1B21E99B3B00EB2430 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6673BA0B21E99B3B00EB2430 /* ListViewController.m */; };
+		6673BA1C21E99B3B00EB2430 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6673BA0C21E99B3B00EB2430 /* LoginViewController.m */; };
+		6673BA1D21E99B3B00EB2430 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6673BA0E21E99B3B00EB2430 /* MainViewController.m */; };
+		6673BA1E21E99B3B00EB2430 /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6673BA1021E99B3B00EB2430 /* SVRadialGradientLayer.m */; };
+		6673BA1F21E99B3B00EB2430 /* SVProgressAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6673BA1321E99B3B00EB2430 /* SVProgressAnimatedView.m */; };
+		6673BA2021E99B3B00EB2430 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 6673BA1521E99B3B00EB2430 /* SVProgressHUD.m */; };
+		6673BA2121E99B3B00EB2430 /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6673BA1621E99B3B00EB2430 /* SVIndefiniteAnimatedView.m */; };
+		6673BA2221E99B3B00EB2430 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6673BA1721E99B3B00EB2430 /* SVProgressHUD.bundle */; };
+		6673BA2521E99BB000EB2430 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6673BA2421E99BB000EB2430 /* AudioToolbox.framework */; };
+		6673BA2721E99BBB00EB2430 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6673BA2621E99BBA00EB2430 /* VideoToolbox.framework */; };
+		6673BA2921E99BC200EB2430 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6673BA2821E99BC200EB2430 /* CoreGraphics.framework */; };
+		6673BA2B21E99BC900EB2430 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6673BA2A21E99BC900EB2430 /* CoreMotion.framework */; };
+		6673BA2D21E99BD200EB2430 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6673BA2C21E99BD200EB2430 /* CoreTelephony.framework */; };
+		6673BA2F21E99BD900EB2430 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6673BA2E21E99BD900EB2430 /* MessageUI.framework */; };
+		6673BA3121E99BE100EB2430 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6673BA3021E99BE100EB2430 /* SystemConfiguration.framework */; };
+		6673BA3321E99BEC00EB2430 /* EasyRTC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6673BA3221E99BEC00EB2430 /* EasyRTC.framework */; };
+		6673BA3521E99BF700EB2430 /* EasyRTC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6673BA3421E99BF700EB2430 /* EasyRTC.framework */; };
+		6673BA3621E99BF700EB2430 /* EasyRTC.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6673BA3421E99BF700EB2430 /* EasyRTC.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6673BA3921E99C0000EB2430 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6673BA3821E99C0000EB2430 /* GLKit.framework */; };
+		6673BA3B21E99C0D00EB2430 /* libstdc++.6.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6673BA3A21E99C0D00EB2430 /* libstdc++.6.tbd */; };
+		6673BA3D21E99C1400EB2430 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6673BA3C21E99C1400EB2430 /* libicucore.tbd */; };
+		6673BA3F21E99C1C00EB2430 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6673BA3E21E99C1C00EB2430 /* libsqlite3.tbd */; };
+		6673BA4121E99C2300EB2430 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6673BA4021E99C2300EB2430 /* libresolv.tbd */; };
+		6673BA4321E99C2E00EB2430 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6673BA4221E99C2E00EB2430 /* libc++.tbd */; };
+		6673BA4521E99C3500EB2430 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6673BA4421E99C3500EB2430 /* libz.tbd */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6673BA3721E99BF800EB2430 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6673BA3621E99BF700EB2430 /* EasyRTC.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		6673B9EB21E9993400EB2430 /* EasyRTC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyRTC.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6673B9EE21E9993400EB2430 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6673B9EF21E9993400EB2430 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6673B9F521E9993400EB2430 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6673B9F721E9993500EB2430 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6673B9FA21E9993500EB2430 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6673B9FC21E9993500EB2430 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6673B9FD21E9993500EB2430 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6673BA0421E99B3B00EB2430 /* ListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListTableViewCell.h; sourceTree = "<group>"; };
+		6673BA0621E99B3B00EB2430 /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast.h"; sourceTree = "<group>"; };
+		6673BA0721E99B3B00EB2430 /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
+		6673BA0821E99B3B00EB2430 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		6673BA0921E99B3B00EB2430 /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
+		6673BA0A21E99B3B00EB2430 /* ListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListTableViewCell.m; sourceTree = "<group>"; };
+		6673BA0B21E99B3B00EB2430 /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
+		6673BA0C21E99B3B00EB2430 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		6673BA0D21E99B3B00EB2430 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		6673BA0E21E99B3B00EB2430 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		6673BA1021E99B3B00EB2430 /* SVRadialGradientLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVRadialGradientLayer.m; sourceTree = "<group>"; };
+		6673BA1121E99B3B00EB2430 /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
+		6673BA1221E99B3B00EB2430 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		6673BA1321E99B3B00EB2430 /* SVProgressAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressAnimatedView.m; sourceTree = "<group>"; };
+		6673BA1421E99B3B00EB2430 /* SVRadialGradientLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVRadialGradientLayer.h; sourceTree = "<group>"; };
+		6673BA1521E99B3B00EB2430 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		6673BA1621E99B3B00EB2430 /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
+		6673BA1721E99B3B00EB2430 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		6673BA1821E99B3B00EB2430 /* SVProgressAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressAnimatedView.h; sourceTree = "<group>"; };
+		6673BA2421E99BB000EB2430 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		6673BA2621E99BBA00EB2430 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
+		6673BA2821E99BC200EB2430 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		6673BA2A21E99BC900EB2430 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		6673BA2C21E99BD200EB2430 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		6673BA2E21E99BD900EB2430 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		6673BA3021E99BE100EB2430 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		6673BA3221E99BEC00EB2430 /* EasyRTC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EasyRTC.framework; path = EasyRTC/EasyRTC.framework; sourceTree = "<group>"; };
+		6673BA3421E99BF700EB2430 /* EasyRTC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EasyRTC.framework; path = EasyRTC/EasyRTC.framework; sourceTree = "<group>"; };
+		6673BA3821E99C0000EB2430 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		6673BA3A21E99C0D00EB2430 /* libstdc++.6.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.tbd"; path = "usr/lib/libstdc++.6.tbd"; sourceTree = SDKROOT; };
+		6673BA3C21E99C1400EB2430 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		6673BA3E21E99C1C00EB2430 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		6673BA4021E99C2300EB2430 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
+		6673BA4221E99C2E00EB2430 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		6673BA4421E99C3500EB2430 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6673B9E821E9993400EB2430 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6673BA4521E99C3500EB2430 /* libz.tbd in Frameworks */,
+				6673BA4321E99C2E00EB2430 /* libc++.tbd in Frameworks */,
+				6673BA4121E99C2300EB2430 /* libresolv.tbd in Frameworks */,
+				6673BA3F21E99C1C00EB2430 /* libsqlite3.tbd in Frameworks */,
+				6673BA3D21E99C1400EB2430 /* libicucore.tbd in Frameworks */,
+				6673BA3B21E99C0D00EB2430 /* libstdc++.6.tbd in Frameworks */,
+				6673BA3921E99C0000EB2430 /* GLKit.framework in Frameworks */,
+				6673BA3521E99BF700EB2430 /* EasyRTC.framework in Frameworks */,
+				6673BA3321E99BEC00EB2430 /* EasyRTC.framework in Frameworks */,
+				6673BA3121E99BE100EB2430 /* SystemConfiguration.framework in Frameworks */,
+				6673BA2F21E99BD900EB2430 /* MessageUI.framework in Frameworks */,
+				6673BA2D21E99BD200EB2430 /* CoreTelephony.framework in Frameworks */,
+				6673BA2B21E99BC900EB2430 /* CoreMotion.framework in Frameworks */,
+				6673BA2921E99BC200EB2430 /* CoreGraphics.framework in Frameworks */,
+				6673BA2721E99BBB00EB2430 /* VideoToolbox.framework in Frameworks */,
+				6673BA2521E99BB000EB2430 /* AudioToolbox.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6673B9E221E9993400EB2430 = {
+			isa = PBXGroup;
+			children = (
+				6673BA3421E99BF700EB2430 /* EasyRTC.framework */,
+				6673B9ED21E9993400EB2430 /* EasyRTC */,
+				6673B9EC21E9993400EB2430 /* Products */,
+				6673BA2321E99BB000EB2430 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		6673B9EC21E9993400EB2430 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6673B9EB21E9993400EB2430 /* EasyRTC.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6673B9ED21E9993400EB2430 /* EasyRTC */ = {
+			isa = PBXGroup;
+			children = (
+				6673B9EE21E9993400EB2430 /* AppDelegate.h */,
+				6673B9EF21E9993400EB2430 /* AppDelegate.m */,
+				6673B9F421E9993400EB2430 /* Main.storyboard */,
+				6673B9F921E9993500EB2430 /* LaunchScreen.storyboard */,
+				6673B9F721E9993500EB2430 /* Assets.xcassets */,
+				6673B9FC21E9993500EB2430 /* Info.plist */,
+				6673B9FD21E9993500EB2430 /* main.m */,
+				6673BA0821E99B3B00EB2430 /* LoginViewController.h */,
+				6673BA0C21E99B3B00EB2430 /* LoginViewController.m */,
+				6673BA0D21E99B3B00EB2430 /* MainViewController.h */,
+				6673BA0E21E99B3B00EB2430 /* MainViewController.m */,
+				6673BA0421E99B3B00EB2430 /* ListTableViewCell.h */,
+				6673BA0A21E99B3B00EB2430 /* ListTableViewCell.m */,
+				6673BA0921E99B3B00EB2430 /* ListViewController.h */,
+				6673BA0B21E99B3B00EB2430 /* ListViewController.m */,
+				6673BA0F21E99B3B00EB2430 /* SVProgressHUD */,
+				6673BA0521E99B3B00EB2430 /* Toast */,
+			);
+			path = EasyRTC;
+			sourceTree = "<group>";
+		};
+		6673BA0521E99B3B00EB2430 /* Toast */ = {
+			isa = PBXGroup;
+			children = (
+				6673BA0621E99B3B00EB2430 /* UIView+Toast.h */,
+				6673BA0721E99B3B00EB2430 /* UIView+Toast.m */,
+			);
+			path = Toast;
+			sourceTree = "<group>";
+		};
+		6673BA0F21E99B3B00EB2430 /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				6673BA1021E99B3B00EB2430 /* SVRadialGradientLayer.m */,
+				6673BA1121E99B3B00EB2430 /* SVIndefiniteAnimatedView.h */,
+				6673BA1221E99B3B00EB2430 /* SVProgressHUD.h */,
+				6673BA1321E99B3B00EB2430 /* SVProgressAnimatedView.m */,
+				6673BA1421E99B3B00EB2430 /* SVRadialGradientLayer.h */,
+				6673BA1521E99B3B00EB2430 /* SVProgressHUD.m */,
+				6673BA1621E99B3B00EB2430 /* SVIndefiniteAnimatedView.m */,
+				6673BA1721E99B3B00EB2430 /* SVProgressHUD.bundle */,
+				6673BA1821E99B3B00EB2430 /* SVProgressAnimatedView.h */,
+			);
+			path = SVProgressHUD;
+			sourceTree = "<group>";
+		};
+		6673BA2321E99BB000EB2430 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6673BA4421E99C3500EB2430 /* libz.tbd */,
+				6673BA4221E99C2E00EB2430 /* libc++.tbd */,
+				6673BA4021E99C2300EB2430 /* libresolv.tbd */,
+				6673BA3E21E99C1C00EB2430 /* libsqlite3.tbd */,
+				6673BA3C21E99C1400EB2430 /* libicucore.tbd */,
+				6673BA3A21E99C0D00EB2430 /* libstdc++.6.tbd */,
+				6673BA3821E99C0000EB2430 /* GLKit.framework */,
+				6673BA3221E99BEC00EB2430 /* EasyRTC.framework */,
+				6673BA3021E99BE100EB2430 /* SystemConfiguration.framework */,
+				6673BA2E21E99BD900EB2430 /* MessageUI.framework */,
+				6673BA2C21E99BD200EB2430 /* CoreTelephony.framework */,
+				6673BA2A21E99BC900EB2430 /* CoreMotion.framework */,
+				6673BA2821E99BC200EB2430 /* CoreGraphics.framework */,
+				6673BA2621E99BBA00EB2430 /* VideoToolbox.framework */,
+				6673BA2421E99BB000EB2430 /* AudioToolbox.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6673B9EA21E9993400EB2430 /* EasyRTC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6673BA0121E9993500EB2430 /* Build configuration list for PBXNativeTarget "EasyRTC" */;
+			buildPhases = (
+				6673B9E721E9993400EB2430 /* Sources */,
+				6673B9E821E9993400EB2430 /* Frameworks */,
+				6673B9E921E9993400EB2430 /* Resources */,
+				6673BA3721E99BF800EB2430 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EasyRTC;
+			productName = EasyRTC;
+			productReference = 6673B9EB21E9993400EB2430 /* EasyRTC.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6673B9E321E9993400EB2430 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = easydarwin;
+				TargetAttributes = {
+					6673B9EA21E9993400EB2430 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = 6673B9E621E9993400EB2430 /* Build configuration list for PBXProject "EasyRTC" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6673B9E221E9993400EB2430;
+			productRefGroup = 6673B9EC21E9993400EB2430 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6673B9EA21E9993400EB2430 /* EasyRTC */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6673B9E921E9993400EB2430 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6673B9FB21E9993500EB2430 /* LaunchScreen.storyboard in Resources */,
+				6673B9F821E9993500EB2430 /* Assets.xcassets in Resources */,
+				6673B9F621E9993400EB2430 /* Main.storyboard in Resources */,
+				6673BA2221E99B3B00EB2430 /* SVProgressHUD.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6673B9E721E9993400EB2430 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6673BA1921E99B3B00EB2430 /* UIView+Toast.m in Sources */,
+				6673BA1F21E99B3B00EB2430 /* SVProgressAnimatedView.m in Sources */,
+				6673BA1E21E99B3B00EB2430 /* SVRadialGradientLayer.m in Sources */,
+				6673BA1B21E99B3B00EB2430 /* ListViewController.m in Sources */,
+				6673BA1D21E99B3B00EB2430 /* MainViewController.m in Sources */,
+				6673B9FE21E9993500EB2430 /* main.m in Sources */,
+				6673BA1C21E99B3B00EB2430 /* LoginViewController.m in Sources */,
+				6673B9F021E9993400EB2430 /* AppDelegate.m in Sources */,
+				6673BA2021E99B3B00EB2430 /* SVProgressHUD.m in Sources */,
+				6673BA1A21E99B3B00EB2430 /* ListTableViewCell.m in Sources */,
+				6673BA2121E99B3B00EB2430 /* SVIndefiniteAnimatedView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		6673B9F421E9993400EB2430 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6673B9F521E9993400EB2430 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6673B9F921E9993500EB2430 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6673B9FA21E9993500EB2430 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6673B9FF21E9993500EB2430 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		6673BA0021E9993500EB2430 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6673BA0221E9993500EB2430 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 33USAS7KQX;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/EasyRTC",
+				);
+				INFOPLIST_FILE = EasyRTC/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.easydarwin.easyrtc;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		6673BA0321E9993500EB2430 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 33USAS7KQX;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/EasyRTC",
+				);
+				INFOPLIST_FILE = EasyRTC/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.easydarwin.easyrtc;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6673B9E621E9993400EB2430 /* Build configuration list for PBXProject "EasyRTC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6673B9FF21E9993500EB2430 /* Debug */,
+				6673BA0021E9993500EB2430 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6673BA0121E9993500EB2430 /* Build configuration list for PBXNativeTarget "EasyRTC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6673BA0221E9993500EB2430 /* Debug */,
+				6673BA0321E9993500EB2430 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6673B9E321E9993400EB2430 /* Project object */;
+}
