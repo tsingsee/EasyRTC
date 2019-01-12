@@ -101,5 +101,3 @@ typedef NS_ENUM(NSUInteger, RoomStatus) {
 
 @end
 ```
-
-### **由于webrtc.a太大，请到 https://pan.baidu.com/s/1_UJU7u2QqC7I4EmAQJeN6g 提取码: fd21 下载。 放在 venus/venus/Vendors/WebRTC 下**
