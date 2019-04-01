@@ -1,0 +1,6 @@
+framework module EasyRTC {
+  umbrella header "EasyRTC.h"
+
+  export *
+  module * { export * }
+}
