@@ -30,6 +30,7 @@
 		6673BA2D21E99BD200EB2430 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6673BA2C21E99BD200EB2430 /* CoreTelephony.framework */; };
 		6673BA2F21E99BD900EB2430 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6673BA2E21E99BD900EB2430 /* MessageUI.framework */; };
 		6673BA3121E99BE100EB2430 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6673BA3021E99BE100EB2430 /* SystemConfiguration.framework */; };
+		6673BA3621E99BF700EB2430 /* EasyRTC.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6673BA3421E99BF700EB2430 /* EasyRTC.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6673BA3921E99C0000EB2430 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6673BA3821E99C0000EB2430 /* GLKit.framework */; };
 		6673BA3B21E99C0D00EB2430 /* libstdc++.6.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6673BA3A21E99C0D00EB2430 /* libstdc++.6.tbd */; };
 		6673BA3D21E99C1400EB2430 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6673BA3C21E99C1400EB2430 /* libicucore.tbd */; };
@@ -38,6 +39,20 @@
 		6673BA4321E99C2E00EB2430 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6673BA4221E99C2E00EB2430 /* libc++.tbd */; };
 		6673BA4521E99C3500EB2430 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6673BA4421E99C3500EB2430 /* libz.tbd */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6673BA3721E99BF800EB2430 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6673BA3621E99BF700EB2430 /* EasyRTC.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		6673B9EB21E9993400EB2430 /* EasyRTC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyRTC.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -210,6 +225,7 @@
 				6673B9E721E9993400EB2430 /* Sources */,
 				6673B9E821E9993400EB2430 /* Frameworks */,
 				6673B9E921E9993400EB2430 /* Resources */,
+				6673BA3721E99BF800EB2430 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
