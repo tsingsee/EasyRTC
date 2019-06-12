@@ -27,10 +27,8 @@ public class LoginFragment extends Fragment {
     @BindView(R.id.roomNumberEditText)
     EditText roomNumber;
 
-
     @BindView(R.id.userIdEditText)
     EditText userId;
-
 
     @BindView(R.id.userPasswordEditText)
     EditText userPassword;

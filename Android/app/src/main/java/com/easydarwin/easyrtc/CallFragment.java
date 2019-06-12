@@ -32,8 +32,7 @@ public class CallFragment extends Fragment {
     ImageView speaker;
 
     @Override
-    public View onCreateView(LayoutInflater inflater,
-                             ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_call, container, false);
         ButterKnife.bind(this, view);
 
@@ -49,6 +48,7 @@ public class CallFragment extends Fragment {
             height = display.getHeight();
             width = display.getHeight() * 4 / 3;
         }
+
 //        RelativeLayout.LayoutParams parms = new RelativeLayout.LayoutParams(width,height);
 //        parms.addRule(RelativeLayout.CENTER_IN_PARENT, RelativeLayout.TRUE);
 //        remoteRender.setLayoutParams(parms);
@@ -73,11 +73,12 @@ public class CallFragment extends Fragment {
         remoteRender.setEnableHardwareScaler(false);
         remoteRender.setScalingType(RendererCommon.ScalingType.SCALE_ASPECT_FILL);
 
-        if (room.isSpeakerOn()){
+        if (room.isSpeakerOn()) {
             speaker.setImageResource(R.mipmap.volume);
-        }else{
+        } else {
             speaker.setImageResource(R.mipmap.mute);
         }
+
         room.startVideo(localRender, remoteRender);
     }
 
@@ -108,10 +109,11 @@ public class CallFragment extends Fragment {
     @OnClick(R.id.speaker)
     public void onSpeaker(){
         room.setSpeakerOn(!room.isSpeakerOn());
-        if (room.isSpeakerOn()){
+
+        if (room.isSpeakerOn()) {
             Toast.makeText(getContext(), "扬声器打开",Toast.LENGTH_SHORT).show();
             speaker.setImageResource(R.mipmap.volume);
-        }else{
+        } else {
             Toast.makeText(getContext(), "扬声器关闭",Toast.LENGTH_SHORT).show();
             speaker.setImageResource(R.mipmap.mute);
         }

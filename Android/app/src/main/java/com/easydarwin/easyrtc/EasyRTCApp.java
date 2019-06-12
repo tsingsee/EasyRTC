@@ -2,6 +2,8 @@ package com.easydarwin.easyrtc;
 
 import android.app.Application;
 
+import com.tencent.bugly.crashreport.CrashReport;
+
 public class EasyRTCApp extends Application {
     public static Application context;
 
@@ -9,5 +11,7 @@ public class EasyRTCApp extends Application {
     public void onCreate() {
         super.onCreate();
         context = this;
+
+        CrashReport.initCrashReport(getApplicationContext(), "479136a765", false);
     }
 }
