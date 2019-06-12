@@ -15,6 +15,7 @@
 @property (nonatomic, copy) NSString *displayName;
 @property (nonatomic, copy) NSString *userEmail;
 @property (nonatomic, copy) NSString *roomNumber;
+@property (nonatomic, copy) NSString *serverAddress;
 
 - (NSString *)getServerAddress;
 

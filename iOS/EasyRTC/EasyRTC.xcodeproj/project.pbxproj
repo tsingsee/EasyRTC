@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		663C27122251F29B000D45D2 /* EasyRTC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6673BA3221E99BEC00EB2430 /* EasyRTC.framework */; };
 		6673B9F021E9993400EB2430 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6673B9EF21E9993400EB2430 /* AppDelegate.m */; };
 		6673B9F621E9993400EB2430 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6673B9F421E9993400EB2430 /* Main.storyboard */; };
 		6673B9F821E9993500EB2430 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6673B9F721E9993500EB2430 /* Assets.xcassets */; };
@@ -29,8 +30,6 @@
 		6673BA2D21E99BD200EB2430 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6673BA2C21E99BD200EB2430 /* CoreTelephony.framework */; };
 		6673BA2F21E99BD900EB2430 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6673BA2E21E99BD900EB2430 /* MessageUI.framework */; };
 		6673BA3121E99BE100EB2430 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6673BA3021E99BE100EB2430 /* SystemConfiguration.framework */; };
-		6673BA3321E99BEC00EB2430 /* EasyRTC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6673BA3221E99BEC00EB2430 /* EasyRTC.framework */; };
-		6673BA3521E99BF700EB2430 /* EasyRTC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6673BA3421E99BF700EB2430 /* EasyRTC.framework */; };
 		6673BA3621E99BF700EB2430 /* EasyRTC.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6673BA3421E99BF700EB2430 /* EasyRTC.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6673BA3921E99C0000EB2430 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6673BA3821E99C0000EB2430 /* GLKit.framework */; };
 		6673BA3B21E99C0D00EB2430 /* libstdc++.6.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6673BA3A21E99C0D00EB2430 /* libstdc++.6.tbd */; };
@@ -106,6 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				663C27122251F29B000D45D2 /* EasyRTC.framework in Frameworks */,
 				6673BA4521E99C3500EB2430 /* libz.tbd in Frameworks */,
 				6673BA4321E99C2E00EB2430 /* libc++.tbd in Frameworks */,
 				6673BA4121E99C2300EB2430 /* libresolv.tbd in Frameworks */,
@@ -113,8 +113,6 @@
 				6673BA3D21E99C1400EB2430 /* libicucore.tbd in Frameworks */,
 				6673BA3B21E99C0D00EB2430 /* libstdc++.6.tbd in Frameworks */,
 				6673BA3921E99C0000EB2430 /* GLKit.framework in Frameworks */,
-				6673BA3521E99BF700EB2430 /* EasyRTC.framework in Frameworks */,
-				6673BA3321E99BEC00EB2430 /* EasyRTC.framework in Frameworks */,
 				6673BA3121E99BE100EB2430 /* SystemConfiguration.framework in Frameworks */,
 				6673BA2F21E99BD900EB2430 /* MessageUI.framework in Frameworks */,
 				6673BA2D21E99BD200EB2430 /* CoreTelephony.framework in Frameworks */,
@@ -244,7 +242,7 @@
 		6673B9E321E9993400EB2430 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1010;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = easydarwin;
 				TargetAttributes = {
 					6673B9EA21E9993400EB2430 = {

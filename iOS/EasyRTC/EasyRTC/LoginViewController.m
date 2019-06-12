@@ -11,6 +11,7 @@
 
 @interface LoginViewController ()
 
+@property (weak, nonatomic) IBOutlet UITextField *serverTF;
 @property (weak, nonatomic) IBOutlet UITextField *nameTF;
 @property (weak, nonatomic) IBOutlet UITextField *pwdTF;
 @property (weak, nonatomic) IBOutlet UITextField *roomTF;
@@ -39,12 +40,14 @@
 }
 
 - (IBAction)loginBtnClicked:(id)sender {
-    Options *options = [Options new];
+    Options *options = [[Options alloc] init];
     options.username = self.nameTF.text.length > 0 ? self.nameTF.text : @"1009";
     options.password = self.pwdTF.text.length > 0 ? self.pwdTF.text : @"iOS@easydss.com";
     options.roomNumber = self.roomTF.text.length > 0 ? self.roomTF.text : @"3581";
     options.displayName = options.username;
     options.userEmail = [NSString stringWithFormat:@"%@@easydarwin.org", options.username];
+    
+    options.serverAddress = self.serverTF.text.length > 0 ? self.serverTF.text : @"easyrtc.easydss.com";
     
     UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     MainViewController *mainVC  = [mainStoryboard instantiateViewControllerWithIdentifier:@"MainViewController"];

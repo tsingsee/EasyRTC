@@ -34,6 +34,8 @@ public class LoginFragment extends Fragment {
 
     @BindView(R.id.userPasswordEditText)
     EditText userPassword;
+    @BindView(R.id.serverEditText)
+    EditText serverEditText;
 
     Room room;
     private Options options;
@@ -52,6 +54,7 @@ public class LoginFragment extends Fragment {
         userId.setText(options.username);
         userPassword.setText(options.password);
         roomNumber.setText(options.roomNumber);
+        serverEditText.setText(options.serverAddress);
 
         return view;
     }
@@ -64,6 +67,7 @@ public class LoginFragment extends Fragment {
         options.roomNumber = roomNumber.getEditableText().toString();
         options.username = userId.getEditableText().toString();
         options.password = userPassword.getEditableText().toString();
+        options.serverAddress = serverEditText.getEditableText().toString();
 
         options.displayName = options.username;
         options.userEmail = options.username + "@easydarwin.org";

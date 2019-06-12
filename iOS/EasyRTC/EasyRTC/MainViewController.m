@@ -12,8 +12,9 @@
 #import "Toast/UIView+Toast.h"
 #import "ListTableViewCell.h"
 
-#define SCREENWIDTH       ([[UIScreen mainScreen] bounds].size.width)
-#define SCREENHEIGHT      ([[UIScreen mainScreen] bounds].size.height)
+// ---------------- 屏幕宽高 ----------------
+#define HRGScreenWidth [[UIScreen mainScreen] bounds].size.width
+#define HRGScreenHeight [[UIScreen mainScreen] bounds].size.height
 
 @interface MainViewController () <RoomStatusDelegate, UITableViewDelegate, UITableViewDataSource>
 
@@ -23,9 +24,10 @@
 @property (weak, nonatomic) IBOutlet UIImageView *liveView;
 @property (weak, nonatomic) IBOutlet UIButton *returnBtn;
 @property (weak, nonatomic) IBOutlet UIButton *speakBtn;
-//@property (weak, nonatomic) IBOutlet UIButton *userListBtn;
 
+//@property (weak, nonatomic) IBOutlet UIButton *userListBtn;
 //@property (nonatomic, strong) ListViewController *listVC;
+
 @property (nonatomic, strong) Room *room;
 
 @property (atomic, strong) NSMutableArray *userList;
@@ -51,10 +53,25 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(userMute:) name:@"kMuteBtnClicked" object:nil];
     
-    [self callRoom];
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onDeviceOrientationDidChange)
+//                                                 name:UIDeviceOrientationDidChangeNotification
+//                                               object:nil];
     
     self.userTable.delegate = self;
     self.userTable.dataSource = self;
+}
+
+- (void) viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [self callRoom];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    
+    [self.room leave];
+    [self hideWaitingView];
 }
 
 - (void)viewWillLayoutSubviews {
@@ -64,6 +81,40 @@
         renderView.frame = CGRectMake(0, 0, frame.size.width, frame.size.height);
     });
 }
+
+//- (BOOL)onDeviceOrientationDidChange {
+//    //获取当前设备Device
+//    UIDevice *device = [UIDevice currentDevice] ;
+//    //识别当前设备的旋转方向
+//    switch (device.orientation) {
+//        case UIDeviceOrientationFaceUp: {
+//            CGRect frame = self.liveView.frame;
+//            UIView *renderView = [self.room getRenderView];
+//            renderView.frame = CGRectMake(0, 0, frame.size.width, frame.size.height);
+//        }
+//            break;
+//        case UIDeviceOrientationLandscapeLeft: {
+//            UIView *renderView = [self.room getRenderView];
+//            renderView.frame = CGRectMake(0, 0, HRGScreenHeight, HRGScreenWidth);
+//        }
+//            break;
+//        case UIDeviceOrientationLandscapeRight: {
+//            UIView *renderView = [self.room getRenderView];
+//            renderView.frame = CGRectMake(0, 0, HRGScreenHeight, HRGScreenWidth);
+//        }
+//            break;
+//        case UIDeviceOrientationPortrait: {
+//            CGRect frame = self.liveView.frame;
+//            UIView *renderView = [self.room getRenderView];
+//            renderView.frame = CGRectMake(0, 0, frame.size.width, frame.size.height);
+//        }
+//            break;
+//        default:
+//            NSLog(@"無法识别");
+//            break;
+//    }
+//    return YES;
+//}
 
 - (void)callRoom {
     if (!self.room) {
@@ -79,7 +130,7 @@
 
 - (void)showWaitingView {
     if (![SVProgressHUD isVisible]) {
-        [SVProgressHUD showWithStatus:@"   连接中...   "];
+        [SVProgressHUD showWithStatus:@"连接中..."];
     }
 
     self.cancelBtn.hidden = NO;
