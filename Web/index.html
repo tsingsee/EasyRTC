@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/jquery.mobile.min.css"/>
+<link rel="stylesheet" href="css/verto.css"/>
+<meta charset="utf-8" />
+<title>CrossMeet</title>
+
+</head>
+
+
+<body>
+
+<!-- page main -->
+<div data-role="page" id="page-main" align="center">
+    <div id="offline" data-role="fieldcontain">
+        <div data-role="fieldcontain">
+            <label for="name">用户名</label>
+            <input type="text" id="login"/>
+        </div>
+
+        <div data-role="fieldcontain">
+            <label for="name">密码</label>
+            <input type="password" id="passwd"/>
+        </div>
+
+        <button data-inline="true" id="loginbtn">登录</button>
+    </div>
+
+    <div id="online" align="center">
+        <div class="ui-field-contain">
+            <div data-role="fieldcontain">
+                <label for="name">房间号</label>
+                <input type="text" id="ext"/><br>
+            </div>
+            
+            <button data-inline="true" id="callbtn">呼叫</button>
+            <button data-inline="true"id="logoutbtn">退出</button>
+            <div style="color:blue" id="main_info">©2018 chenxiemin</div>
+            <div style="color:blue" id="main_info">邮箱 chenxiemin@hotmail.com</div>
+            <div style="color:blue" id="main_info">QQ 444391333</div>
+        </div>
+    </div>
+</div>
+
+<!-- page in call -->
+<div data-role="page" id="page-incall" align="center">
+    <div id="media">
+        <video id='webcam' class='videoFull' playsinline autoplay></video>
+    </div>
+    <button data-inline="true" id="hupbtn">挂断</button>
+</div>
+
+<div data-role="page" id="page-progress" align="center">
+    <p>加载中...</p>
+</div>
+
+<script type="text/javascript" src="js/adapter-latest.js"></script>
+<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.cookie.js"></script>
+<script type="text/javascript" src="js/jquery.mobile.min.js"></script>
+<script type="text/javascript" src="js/jquery.json-2.4.min.js"></script>
+<script type="text/javascript" src="js/easyrtc.js"></script>
+
+</body>
+</html>
