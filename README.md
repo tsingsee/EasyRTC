@@ -4,7 +4,7 @@ EasyRTC将采用WEBRTC技术，近期正在做内部测试，即将发布！
 
 ## 演示下载 ##
 
-Web版：<a href="https://easyrtc.easydss.com/" target="_blank">https://easyrtc.easydss.com/</a>
+Web版：<a href="https://easyrtc.easydss.com/cm" target="_blank">https://easyrtc.easydss.com/cm</a>
 
 Android版：http://fir.im/EasyRTC
 
