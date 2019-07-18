@@ -2,7 +2,7 @@
 //  MainViewController.m
 //  VenusApp
 //
-//  Created by liyy on 2019/1/12.
+//  Created by leo on 2019/1/12.
 //  Copyright © 2019年 easydarwin. All rights reserved.
 //
 
@@ -13,8 +13,8 @@
 #import "ListTableViewCell.h"
 
 // ---------------- 屏幕宽高 ----------------
-#define HRGScreenWidth [[UIScreen mainScreen] bounds].size.width
-#define HRGScreenHeight [[UIScreen mainScreen] bounds].size.height
+#define EasyScreenWidth [[UIScreen mainScreen] bounds].size.width
+#define EasyScreenHeight [[UIScreen mainScreen] bounds].size.height
 
 @interface MainViewController () <RoomStatusDelegate, UITableViewDelegate, UITableViewDataSource>
 
@@ -95,12 +95,12 @@
 //            break;
 //        case UIDeviceOrientationLandscapeLeft: {
 //            UIView *renderView = [self.room getRenderView];
-//            renderView.frame = CGRectMake(0, 0, HRGScreenHeight, HRGScreenWidth);
+//            renderView.frame = CGRectMake(0, 0, EasyScreenHeight, EasyScreenWidth);
 //        }
 //            break;
 //        case UIDeviceOrientationLandscapeRight: {
 //            UIView *renderView = [self.room getRenderView];
-//            renderView.frame = CGRectMake(0, 0, HRGScreenHeight, HRGScreenWidth);
+//            renderView.frame = CGRectMake(0, 0, EasyScreenHeight, EasyScreenWidth);
 //        }
 //            break;
 //        case UIDeviceOrientationPortrait: {

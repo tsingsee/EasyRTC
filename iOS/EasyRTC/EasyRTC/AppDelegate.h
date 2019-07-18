@@ -2,7 +2,7 @@
 //  AppDelegate.h
 //  EasyRTC
 //
-//  Created by liyy on 2019/1/12.
+//  Created by leo on 2019/1/12.
 //  Copyright © 2019年 easydarwin. All rights reserved.
 //
 
