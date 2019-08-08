@@ -119,6 +119,11 @@ public class CallFragment extends Fragment {
         }
     }
 
+    @OnClick(R.id.switch_camera)
+    public void switchCamera(){
+        room.switchCamera();
+    }
+
 //    @OnClick(R.id.userInfoButton)
 //    public void onUserInfoClick() {
 //
