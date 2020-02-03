@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="onClick"
+            type="android.view.View.OnClickListener"/>
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/login_bottom"
+            android:contentDescription="@string/app_name" />
+
+        <TextView
+            android:id="@+id/login_title_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="100dp"
+            android:text="EasyRTC登录"
+            android:textSize="30sp"
+            android:textAlignment="center"
+            android:textColor="@color/colorTheme" />
+
+        <EditText
+            android:id="@+id/account_et"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/login_title_tv"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="50dp"
+            android:hint="@string/account_tint"
+            android:textColorHint="@color/color_ccc"
+            android:textColor="@color/color_333"
+            android:paddingStart="50dp"
+            android:background="@drawable/shape_line" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/admin"
+            android:layout_alignTop="@+id/account_et"
+            android:layout_alignStart="@+id/account_et"
+            android:layout_alignBottom="@+id/account_et"
+            android:contentDescription="TODO" />
+
+        <EditText
+            android:id="@+id/pwd_et"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/account_et"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="10dp"
+            android:hint="@string/pwd_tint"
+            android:textColorHint="@color/color_ccc"
+            android:textColor="@color/color_333"
+            android:paddingStart="50dp"
+            android:background="@drawable/shape_line"
+            android:inputType="textPassword" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/password"
+            android:layout_alignTop="@+id/pwd_et"
+            android:layout_alignStart="@+id/pwd_et"
+            android:layout_alignBottom="@+id/pwd_et"
+            android:contentDescription="TODO" />
+
+        <Button
+            android:id="@+id/account_btn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/pwd_et"
+            android:layout_marginTop="60dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:onClick="@{onClick}"
+            android:background="@drawable/btn_custom_selector"
+            android:text="登录"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"/>
+
+    </RelativeLayout>
+</layout>

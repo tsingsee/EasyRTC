@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">EasyRTC</string>
+    <string name="username">用户名</string>
+    <string name="email">邮箱</string>
+    <string name="roomNumber">房间号</string>
+    <string name="call">进入</string>
+    <string name="hangup">退出</string>
+    <string name="speaker">扬声器</string>
+    <string name="userinfo">用户</string>
+    <string name="connecting">连接中</string>
+    <string name="disconnecting">退出中</string>
+    <string name="user_id">账号</string>
+    <string name="user_password">密码</string>
+    <string name="default_server">easyrtc.easydss.com</string>
+    <string name="server">服务器</string>
+    <string name="toast_network_error">网络连接异常，请检查网络</string>
+    <string name="exit_hint">再按一次退出</string>
+    <string name="welcome">欢迎使用EasyRTC</string>
+    <string name="account_tint">请输入用户名或账号</string>
+    <string name="pwd_tint">请输入密码</string>
+    <string name="todo">TODO</string>
+    <string name="description">desc</string>
+
+    <string name="index_bottom_bar1">会议</string>
+    <string name="index_bottom_bar12">视频会议</string>
+    <string name="index_bottom_bar2">直播</string>
+    <string name="index_bottom_bar22">会议直播</string>
+    <string name="index_bottom_bar3">回看</string>
+    <string name="index_bottom_bar32">会议回看</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="info_name">设置</string>
+    <string name="create_room">新建会议</string>
+    <string name="live_room">会议直播-详情</string>
+    <string name="web_name">网页</string>
+</resources>

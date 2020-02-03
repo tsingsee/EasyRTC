@@ -1,0 +1,42 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorTheme</item><!--Appbar背景色-->
+        <item name="colorPrimaryDark">@color/colorTheme</item><!--状态栏颜色-->
+        <item name="colorAccent">@color/colorTheme</item><!--控制各个控件被选中时的颜色-->
+        <item name="toolbarStyle">@style/toolbar</item>
+    </style>
+<!--    <item name="android:windowBackground">@color/white_color</item>-->
+<!--    <item name="actionMenuTextColor">@color/white_color</item>-->
+
+    <style name="toolbar" parent="Base.Widget.AppCompat.Toolbar">
+        <item name="android:background">@color/colorTheme</item>
+    </style>
+
+    <style name="MyDialog" parent="android:style/Theme.Dialog">
+        <item name="android:background">@color/white_overlay</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+    <style name="SpinnerStyle">
+        <item name="colorAccent">@color/color_gray2</item>
+        <item name="colorControlNormal">@color/color_gray2</item> <!--改变了spinner的颜色  -->
+    </style>
+
+    <!--继承Theme.AppCompat.NoActionBar，不显示标题栏-->
+    <style name="TransparentTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!--不设置activity进入和退出动画样式-->
+        <item name="android:windowAnimationStyle">@null</item>
+        <!--设置窗口的背景为透明，设置透明背景必须要设置此项-->
+        <item name="android:windowBackground">@color/translucent_background</item>
+        <!--设置窗口的背景是否为半透明，设置透明背景必须要设置此项-->
+        <item name="android:windowIsTranslucent">true</item>
+        <!--设置状态栏的背景为半透明-->
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+</resources>

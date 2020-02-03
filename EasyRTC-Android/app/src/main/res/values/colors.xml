@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorTheme">#00a4f2</color>
+
+    <color name="green">#8000FF00</color>
+    <color name="red">#80FF0000</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="white_overlay">#66ffffff</color>
+    <color name="white_color">#ffffff</color>
+    <color name="colorBlack">#000000</color>
+    <color name="color_999">#999999</color>
+    <color name="color_gray3">#666666</color>
+    <color name="color_gray2">#8d9197</color>
+    <color name="color_gray1">#b2b2b2</color>
+    <color name="color_gray4">#bfbfbf</color>
+    <color name="color_gray5">#acafb3</color>
+    <color name="color_f4780b">#f4780b</color>
+    <color name="color_f03d14">#f03d14</color>
+    <color name="colorWhite2">#ccffffff</color>
+    <color name="colorWhite">#ffffff</color>
+
+    <color name="color_55c40b">#55c40b</color>
+    <color name="color_8d9197">#8d9197</color>
+    <color name="color_333">#333333</color>
+    <color name="color_ccc">#cccccc</color>
+    <color name="color_eee">#eeeeee</color>
+    <color name="color_f5">#f5f5f5</color>
+    <color name="colorGray2">#ecf0f6</color>
+
+    <color name="color_blue">#58b9fb</color>
+    <color name="color_73">#737373</color>
+    <color name="color_5b2e">#5bb2ee</color>
+    <color name="color_fb9643">#fb9643</color>
+    <color name="color_fd6845">#fd6845</color>
+
+    <color name="translucent_background">#44000000</color>
+    <color name="index_fl_bg_color">#00FFFFFF</color>
+</resources>

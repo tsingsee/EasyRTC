@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/normal_rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ECF0F6">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/control_top"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/colorWhite2">
+
+            <ImageButton
+                android:id="@+id/back_live_btn"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:contentDescription="@string/todo"
+                android:scaleType="center"
+                android:src="@mipmap/time_live"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginLeft="15dp" />
+
+            <ImageButton
+                android:id="@+id/full_btn"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:contentDescription="@string/todo"
+                android:scaleType="center"
+                android:src="@mipmap/full"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginRight="15dp"/>
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/date_cl"
+            android:layout_width="260dp"
+            android:layout_height="44dp"
+            android:layout_below="@+id/control_top"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/date_constraint_corner">
+
+            <TextView
+                android:id="@+id/date_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:gravity="center_vertical"
+                android:drawableLeft="@mipmap/time_calendar"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:padding="10dp"
+                android:textColor="#666666"
+                android:textSize="14sp"/>
+
+            <ImageButton
+                android:id="@+id/date_before"
+                android:layout_width="50dp"
+                android:layout_height="44dp"
+                android:src="@mipmap/time_before"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:background="@null"/>
+
+            <ImageButton
+                android:id="@+id/date_after"
+                android:layout_width="50dp"
+                android:layout_height="44dp"
+                android:src="@mipmap/time_after"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:background="@null"/>
+
+        </android.support.constraint.ConstraintLayout>
+        
+        <com.tsingsee.easyrtc.view.RullerView.HorizontalScaleScrollView
+            android:id="@+id/time_hs"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/date_cl"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorWhite"/>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/control_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:background="#ECF0F6">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#cccccc"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/download_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:drawableTop="@mipmap/time_down"
+                android:text="下载"
+                android:gravity="center"
+                android:textColor="@color/color_999"
+                android:textSize="12sp"
+                android:paddingTop="8dp"
+                app:layout_constraintEnd_toStartOf="@+id/record_list_tv"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/record_list_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:drawableTop="@mipmap/time_list"
+                android:text="录像列表"
+                android:textColor="@color/color_999"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:paddingTop="8dp"
+                app:layout_constraintEnd_toStartOf="@+id/pause_tv"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/download_tv" />
+
+            <TextView
+                android:id="@+id/pause_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:drawableTop="@mipmap/time_pause"
+                android:text="暂停"
+                android:textColor="@color/color_999"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:paddingTop="8dp"
+                app:layout_constraintEnd_toStartOf="@+id/delete_tv"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/record_list_tv" />
+
+            <TextView
+                android:id="@+id/delete_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:drawableTop="@mipmap/time_delete"
+                android:text="删除"
+                android:textColor="@color/color_999"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:paddingTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/pause_tv" />
+        </android.support.constraint.ConstraintLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/fullscreen_rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.tsingsee.easyrtc.view.RullerView.HorizontalScaleScrollView
+            android:id="@+id/time_hs2"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="44dp"
+            android:background="@color/colorWhite"/>
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="44dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="#33ffffff">
+
+            <ImageButton
+                android:id="@+id/fullscreen_live_btn"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@null"
+                android:contentDescription="@string/todo"
+                android:scaleType="center"
+                android:src="@mipmap/horizontal_live"
+                app:layout_constraintBottom_toTopOf="@+id/fullscreen_list_btn"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/fullscreen_list_btn"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@null"
+                android:contentDescription="@string/todo"
+                android:scaleType="center"
+                android:src="@mipmap/horizontal_list"
+                app:layout_constraintBottom_toTopOf="@+id/fullscreen_pause_btn"
+                app:layout_constraintTop_toBottomOf="@+id/fullscreen_live_btn" />
+
+            <ImageButton
+                android:id="@+id/fullscreen_pause_btn"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@null"
+                android:contentDescription="@string/todo"
+                android:scaleType="center"
+                android:src="@mipmap/horizontal_pause"
+                app:layout_constraintBottom_toTopOf="@+id/fullscreen_normal_btn"
+                app:layout_constraintTop_toBottomOf="@+id/fullscreen_list_btn" />
+
+            <ImageButton
+                android:id="@+id/fullscreen_normal_btn"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@null"
+                android:contentDescription="@string/todo"
+                android:scaleType="center"
+                android:src="@mipmap/horizontal_less"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fullscreen_pause_btn" />
+        </android.support.constraint.ConstraintLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

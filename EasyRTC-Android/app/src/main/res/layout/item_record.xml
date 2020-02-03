@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="50dp">
+
+    <TextView
+        android:id="@+id/tape_time_tv"
+        android:layout_width="140dp"
+        android:layout_height="match_parent"
+        android:text="time"
+        android:textColor="#4c4c4c"
+        android:textSize="14sp"
+        android:gravity="center"
+        app:layout_constraintHorizontal_weight="3"
+        app:layout_constraintEnd_toStartOf="@+id/tape_duration_tv"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tape_duration_tv"
+        android:layout_width="90dp"
+        android:layout_height="match_parent"
+        android:text="duration"
+        android:textColor="#4c4c4c"
+        android:textSize="14sp"
+        android:gravity="center"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintEnd_toStartOf="@+id/tape_play_tv"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tape_time_tv" />
+
+    <TextView
+        android:id="@+id/tape_play_tv"
+        android:layout_width="60dp"
+        android:layout_height="match_parent"
+        android:text=" 播放"
+        android:drawableLeft="@mipmap/list_record_pause"
+        android:textColor="#4c4c4c"
+        android:textSize="14sp"
+        android:gravity="center"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tape_duration_tv" />
+    
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#b2b2b2"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+</android.support.constraint.ConstraintLayout>

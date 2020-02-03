@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="onClick"
+            type="android.view.View.OnClickListener"/>
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white_color"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/main_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/index_bottom_bar12"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/iv_setting"
+                android:layout_width="45dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="left"
+                android:scaleType="center"
+                android:onClick="@{onClick}"
+                android:src="@drawable/icon_setting"/>
+
+            <ImageView
+                android:id="@+id/iv_add"
+                android:layout_width="45dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:scaleType="center"
+                android:onClick="@{onClick}"
+                android:src="@drawable/create_room"/>
+
+        </android.support.v7.widget.Toolbar>
+
+        <LinearLayout
+            android:id="@+id/room_top_ll"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:orientation="horizontal"
+            android:background="@color/color_f5"
+            android:gravity="center"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_below="@id/main_toolbar">
+
+            <Spinner
+                android:id="@+id/room_status_sp"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:textColorHint="@color/color_gray2"
+                android:textColor="@color/color_gray2"
+                android:textSize="14sp"
+                android:dropDownWidth="match_parent" />
+
+            <EditText
+                android:id="@+id/account_et"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:hint="请您输入搜索房间号"
+                android:layout_marginRight="20dp"
+                android:paddingLeft="6dp"
+                android:textColorHint="@color/color_gray1"
+                android:textColor="@color/color_gray1"
+                android:textSize="15sp"
+                android:background="@drawable/shape_et_bg"/>
+        </LinearLayout>
+
+        <com.yanzhenjie.recyclerview.swipe.SwipeMenuRecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/room_top_ll">
+        </com.yanzhenjie.recyclerview.swipe.SwipeMenuRecyclerView>
+
+        <RelativeLayout
+            android:id="@+id/activity_empty_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/room_top_ll"
+            android:background="@color/white_color">
+            <ImageView
+                android:id="@+id/empty_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_jzsb"
+                android:layout_centerInParent="true"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="暂无数据"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/empty_iv"
+                android:layout_marginTop="10dp"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+</layout>

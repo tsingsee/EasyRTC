@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="onClick"
+            type="android.view.View.OnClickListener"/>
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:background="#ecf0f6">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/main_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@color/colorTheme">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="视频广场"
+                android:textColor="@android:color/white"
+                android:layout_marginRight="60dp"
+                android:gravity="center"
+                android:textSize="20sp"/>
+
+        </android.support.v7.widget.Toolbar>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/title_cl"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_below="@+id/main_toolbar">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="录像列表"
+                android:gravity="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:textColor="#404040"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/date_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="  2018-10-10"
+                android:gravity="center_vertical"
+                android:drawableLeft="@mipmap/list_calendar_off"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginRight="10dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:padding="10dp"
+                android:background="@drawable/date_tv_corner"
+                android:textColor="#666666"
+                android:textSize="14sp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#b2b2b2"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/header_cl"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/title_cl">
+
+            <TextView
+                android:id="@+id/tape_time_tv"
+                android:layout_width="140dp"
+                android:layout_height="match_parent"
+                android:text="开始时间"
+                android:textColor="#4c4c4c"
+                android:textSize="14sp"
+                android:gravity="center"
+                app:layout_constraintHorizontal_weight="3"
+                app:layout_constraintEnd_toStartOf="@+id/tape_duration_tv"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/tape_duration_tv"
+                android:layout_width="90dp"
+                android:layout_height="match_parent"
+                android:text="录像时长"
+                android:textColor="#4c4c4c"
+                android:textSize="14sp"
+                android:gravity="center"
+                app:layout_constraintHorizontal_weight="2"
+                app:layout_constraintEnd_toStartOf="@+id/tape_play_tv"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/tape_time_tv" />
+
+            <TextView
+                android:id="@+id/tape_play_tv"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:text="操作"
+                android:textColor="#4c4c4c"
+                android:textSize="14sp"
+                android:gravity="center"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/tape_duration_tv" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#b2b2b2"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+        </android.support.constraint.ConstraintLayout>
+
+        <com.yanzhenjie.recyclerview.swipe.SwipeMenuRecyclerView
+            android:id="@+id/record_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/header_cl">
+        </com.yanzhenjie.recyclerview.swipe.SwipeMenuRecyclerView>
+
+        <RelativeLayout
+            android:id="@+id/activity_empty_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/header_cl"
+            android:background="@color/white_color">
+            <ImageView
+                android:id="@+id/empty_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_jzsb"
+                android:layout_centerInParent="true"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="暂无数据"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/empty_iv"
+                android:layout_marginTop="10dp"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</layout>
