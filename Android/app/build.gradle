@@ -27,6 +27,10 @@ android {
                 }
             }
         }
+
+        debug {
+            minifyEnabled false
+        }
     }
 
     compileOptions {
@@ -53,10 +57,11 @@ dependencies {
 
     api 'com.google.code.findbugs:jsr305:3.0.2'
 
-//    api project(':venus')
+//    api project(':easyrtc')
 //    api project(':base')
-    implementation(name: 'easyrtc-release', ext: 'aar')
+
     implementation(name: 'base-release', ext: 'aar')
+    implementation(name: 'easyrtc-release', ext: 'aar')
 
     implementation 'com.tencent.bugly:crashreport:latest.release'
 

@@ -11,6 +11,6 @@
     <string name="disconnecting">退出中</string>
     <string name="user_id">账号</string>
     <string name="user_password">密码</string>
-    <string name="default_server">easyrtc.easydss.com</string>
+    <string name="default_server">demo.easyrtc.com</string>
     <string name="server">服务器</string>
 </resources>

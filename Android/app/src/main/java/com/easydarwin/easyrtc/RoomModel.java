@@ -1,6 +1,6 @@
 package com.easydarwin.easyrtc;
 
-import com.easyrtc.venus.Room;
+import com.tsingsee.rtc.Room;
 
 public class RoomModel {
     private static RoomModel instance;
