@@ -63,7 +63,8 @@ public class VideotapeAdapter extends RecyclerView.Adapter<VideotapeAdapter.View
         }
 
         public void setData(String data) {
-            this.room_no_tv.setText("会议室号：" + data);
+//            this.room_no_tv.setText("会议室号：" + data);
+            this.room_no_tv.setText(data);
         }
     }
 }

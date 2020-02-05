@@ -24,19 +24,19 @@
         android:gravity="center">
 
         <ImageView
+            android:id="@+id/speaker"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:src="@drawable/close_mute"/>
+
+        <ImageView
             android:id="@+id/hangup"
             android:layout_width="0dp"
             android:layout_height="80dp"
             android:layout_weight="1"
             android:src="@drawable/stop_call"
             android:text="@string/hangup" />
-
-        <ImageView
-            android:id="@+id/speaker"
-            android:layout_width="0dp"
-            android:layout_height="40dp"
-            android:layout_weight="1"
-            android:src="@drawable/close_mute"/>
 
         <ImageView
             android:id="@+id/switch_camera"
@@ -47,6 +47,7 @@
             android:src="@drawable/flip_lens" />
 
         <ImageView
+            android:visibility="gone"
             android:id="@+id/switch_orientation"
             android:layout_width="0dp"
             android:layout_height="40dp"

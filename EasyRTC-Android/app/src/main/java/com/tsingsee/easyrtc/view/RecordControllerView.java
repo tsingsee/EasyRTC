@@ -23,9 +23,6 @@ import java.lang.ref.WeakReference;
 
 import tv.danmaku.ijk.media.widget.media.IMediaController;
 
-/**
- *
- */
 public class RecordControllerView extends FrameLayout implements IMediaController, View.OnClickListener {
     private static final int sDefaultTimeout = 10000;
 
@@ -314,10 +311,10 @@ public class RecordControllerView extends FrameLayout implements IMediaControlle
     public void setAnchorView(View view) {
 
         // TODO mBinding.renderContainer 没有录像时，加到了这里
-        if (mAnchor != null) {
-            ViewGroup vg = (ViewGroup) mAnchor;
-            vg.removeView(this);
-        }
+//        if (mAnchor != null) {
+//            ViewGroup vg = (ViewGroup) mAnchor;
+//            vg.removeView(this);
+//        }
 
         mAnchor = view;
 
@@ -432,8 +429,8 @@ public class RecordControllerView extends FrameLayout implements IMediaControlle
         return position;
     }
 
-    private static final int FADE_OUT = 1;
-    private static final int SHOW_PROGRESS = 2;
+    private static final int FADE_OUT = 111;
+    private static final int SHOW_PROGRESS = 222;
 
     public boolean mDragging;
     private Handler mHandler = new RecordControllerView.MessageHandler(this);

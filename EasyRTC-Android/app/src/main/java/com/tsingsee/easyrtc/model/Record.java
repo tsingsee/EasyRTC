@@ -30,8 +30,10 @@ public class Record extends BaseObservable implements Serializable {
                 return hls;
             }
 
-            SharedHelper helper = new SharedHelper(RTCApplication.getContext());
-            return helper.getURL() + hls;
+//            SharedHelper helper = new SharedHelper(RTCApplication.getContext());
+//            return helper.getURL() + hls;
+            return "https://demo.easyrtc.cn" + hls;
+//            return "rtmp://202.69.69.180:443/webcast/bshdlive-pc";
         }
 
         return hls;

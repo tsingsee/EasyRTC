@@ -5,6 +5,9 @@ import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
+import android.text.Editable;
+import android.text.TextUtils;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,11 +20,9 @@ import com.tsingsee.easyrtc.http.BaseEntity2;
 import com.tsingsee.easyrtc.http.BaseObserver2;
 import com.tsingsee.easyrtc.http.RetrofitFactory;
 import com.tsingsee.easyrtc.model.Devices;
-import com.yanzhenjie.recyclerview.swipe.SwipeMenu;
-import com.yanzhenjie.recyclerview.swipe.SwipeMenuBridge;
-import com.yanzhenjie.recyclerview.swipe.SwipeMenuCreator;
-import com.yanzhenjie.recyclerview.swipe.SwipeMenuItem;
-import com.yanzhenjie.recyclerview.swipe.SwipeMenuItemClickListener;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import io.reactivex.Observable;
 
@@ -42,6 +43,41 @@ public class RecordFragment extends BaseFragment implements View.OnClickListener
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_record, container, false);
         binding.setOnClick(this);
+
+        binding.searchEt.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                if (devices == null || devices.getDevices() == null) {
+                    return;
+                }
+
+                List<String> res = new ArrayList<>();
+                String s = binding.searchEt.getText().toString();
+                if (TextUtils.isEmpty(s)) {
+                    res = devices.getDevices();
+                } else {
+                    for (String item : devices.getDevices()) {
+                        if (item.contains(s)) {
+                            res.add(item);
+                        }
+                    }
+                }
+
+                VideotapeAdapter adapter = new VideotapeAdapter(getContext());
+                binding.recyclerView.setAdapter(adapter);
+                adapter.notifyDataSetChanged(res);
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+            }
+        });
 
         showHub("查询中");
         queryDevices();
@@ -78,50 +114,6 @@ public class RecordFragment extends BaseFragment implements View.OnClickListener
         }
     }
 
-    private void initView() {
-        LinearLayoutManager manager = new LinearLayoutManager(getContext());
-        binding.recyclerView.setLayoutManager(manager);
-
-//        // 添加侧滑菜单
-//        binding.recyclerView.setSwipeMenuCreator(new SwipeMenuCreator() {
-//            @Override
-//            public void onCreateMenu(SwipeMenu swipeLeftMenu, SwipeMenu swipeRightMenu, int viewType) {
-//                SwipeMenuItem item1 = new SwipeMenuItem(getContext());
-//                item1.setText("播放");
-//                item1.setTextSize(15);
-//                item1.setTextColor(getResources().getColor(R.color.white_color));
-//                item1.setBackgroundColor(getResources().getColor(R.color.colorTheme));
-//                item1.setWidth(200);
-//                item1.setHeight(ViewGroup.LayoutParams.MATCH_PARENT);
-//
-//                SwipeMenuItem item2 = new SwipeMenuItem(getContext());
-//                item2.setText("删除");
-//                item2.setTextSize(15);
-//                item2.setTextColor(getResources().getColor(R.color.white_color));
-//                item2.setBackgroundColor(getResources().getColor(R.color.color_f03d14));
-//                item2.setWidth(200);
-//                item2.setHeight(ViewGroup.LayoutParams.MATCH_PARENT);
-//
-//                swipeRightMenu.addMenuItem(item1);
-//                swipeRightMenu.addMenuItem(item2);
-//            }
-//        });
-//        binding.recyclerView.setSwipeMenuItemClickListener(new SwipeMenuItemClickListener() {
-//            @Override
-//            public void onItemClick(SwipeMenuBridge menuBridge) {
-//                // 任何操作必须先关闭菜单，否则可能出现Item菜单打开状态错乱。
-//                menuBridge.closeMenu();
-//
-//                String item = devices.getDevices().get(menuBridge.getAdapterPosition());
-//                if (menuBridge.getPosition() == 0) {
-//                    // TODO 播放
-//                } else {
-//                    // TODO 删除
-//                }
-//            }
-//        });
-    }
-
     public void queryDevices() {
         Observable<BaseEntity2<Devices>> observable = RetrofitFactory.getRetrofitService().queryDevices();
         observable.compose(compose(this.<BaseEntity2<Devices>> bindToLifecycle()))
@@ -138,7 +130,9 @@ public class RecordFragment extends BaseFragment implements View.OnClickListener
 
                         devices = model;
 
-                        initView();
+                        LinearLayoutManager manager = new LinearLayoutManager(getContext());
+                        binding.recyclerView.setLayoutManager(manager);
+
                         VideotapeAdapter adapter = new VideotapeAdapter(getContext());
                         binding.recyclerView.setAdapter(adapter);
                         adapter.notifyDataSetChanged(model.getDevices());

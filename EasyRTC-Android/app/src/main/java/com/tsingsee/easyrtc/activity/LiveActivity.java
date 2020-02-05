@@ -47,7 +47,6 @@ public class LiveActivity extends BaseActivity {
 
         Intent intent = getIntent();
         url = intent.getStringExtra("url");
-//        url = "rtmp://202.69.69.180:443/webcast/bshdlive-pc";
 
         // init player
         IjkMediaPlayer.loadLibrariesOnce(null);

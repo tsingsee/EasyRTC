@@ -92,12 +92,14 @@
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/build-info" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/builds" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/bundle_manifest" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/check_manifest_result" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/compatible_screen_manifest" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/data-binding" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/data_binding_base_class_log_artifact" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/data_binding_base_class_logs_dependency_artifacts" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/data_binding_dependency_artifacts" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/data_binding_layout_info_type_merge" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/duplicate_classes_check" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/feature_data_binding_base_feature_info" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/incremental" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/incremental-runtime-classes" />
@@ -120,10 +122,13 @@
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/reload-dex" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/res" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/resources" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/shader_assets" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/signing_config" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/split-apk" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/symbols" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/transforms" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/validate_signing_config" />
       <excludeFolder url="file://$MODULE_DIR$/build/outputs" />
       <excludeFolder url="file://$MODULE_DIR$/build/tmp" />
     </content>
@@ -161,7 +166,6 @@
     <orderEntry type="library" name="Gradle: com.google.guava:guava:19.0@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.squareup.retrofit2:retrofit:2.3.0@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support:support-core-ui:27.1.1@aar" level="project" />
-    <orderEntry type="library" name="Gradle: com.tencent.bugly:crashreport:3.1.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.android.databinding:adapters:3.4.1@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support.constraint:constraint-layout-solver:1.1.2@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.squareup.leakcanary:leakcanary-android:1.6.1@aar" level="project" />
@@ -173,6 +177,7 @@
     <orderEntry type="library" name="Gradle: com.android.support:appcompat-v7:27.1.1@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.jwenfeng.pulltorefresh:library:1.2.7@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.github.bumptech.glide:glide:3.7.0@jar" level="project" />
+    <orderEntry type="library" name="Gradle: com.tencent.bugly:crashreport_upgrade:1.4.2@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: net.sf.kxml:kxml2:2.3.0@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support:support-vector-drawable:27.1.1@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support:support-core-utils:27.1.1@aar" level="project" />
@@ -186,6 +191,7 @@
     <orderEntry type="library" name="Gradle: io.reactivex.rxjava2:rxandroid:2.0.1@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.jakewharton:butterknife-compiler:8.8.1@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.yanzhenjie:recyclerview-swipe:1.1.4@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.tencent.bugly:nativecrashreport:3.7.1@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.android.databinding:library:3.4.1@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: junit:junit:4.12@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.trello.rxlifecycle2:rxlifecycle-android:2.1.0@aar" level="project" />
@@ -202,9 +208,6 @@
     <orderEntry type="library" name="Gradle: android.arch.core:common:1.1.0@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.squareup.haha:haha:2.0.4@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.trello.rxlifecycle2:rxlifecycle-components:2.1.0@aar" level="project" />
-    <orderEntry type="module" module-name="ijkplayer-java" />
-    <orderEntry type="module" module-name="ijkplayer-java" />
-    <orderEntry type="module" module-name="ijkplayer-java" />
     <orderEntry type="module" module-name="ijkplayer-java" />
   </component>
 </module>

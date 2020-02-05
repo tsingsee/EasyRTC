@@ -197,36 +197,36 @@ public class RecordListActivity extends BaseActivity implements Toolbar.OnMenuIt
     }
 
     private void downloadVideo(final Record record) {
-        new AlertDialog.Builder(this)
-                .setTitle("提示")
-                .setMessage("确定下载该时段的录像吗？")
-                .setPositiveButton("确定", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        SharedHelper helper = new SharedHelper(RTCApplication.getContext());
-                        String url = helper.getURL() + "/api/v1/record/download/" + id + "/" + record.getStartAt();
-
-                        DownLoadUtil downLoadUtil = new DownLoadUtil();
-                        downLoadUtil.initDownload(RecordListActivity.this);
-                        downLoadUtil.download(url, record.getStartAt());
-                    }
-                })
-                .setNegativeButton("取消", null)
-                .show();
+//        new AlertDialog.Builder(this)
+//                .setTitle("提示")
+//                .setMessage("确定下载该时段的录像吗？")
+//                .setPositiveButton("确定", new DialogInterface.OnClickListener() {
+//                    @Override
+//                    public void onClick(DialogInterface dialogInterface, int i) {
+//                        SharedHelper helper = new SharedHelper(RTCApplication.getContext());
+//                        String url = helper.getURL() + "/api/v1/record/download/" + id + "/" + record.getStartAt();
+//
+//                        DownLoadUtil downLoadUtil = new DownLoadUtil();
+//                        downLoadUtil.initDownload(RecordListActivity.this);
+//                        downLoadUtil.download(url, record.getStartAt());
+//                    }
+//                })
+//                .setNegativeButton("取消", null)
+//                .show();
     }
 
     private void deleteVideo(final Record record) {
-        new AlertDialog.Builder(this)
-                .setTitle("提示")
-                .setMessage("确定删除该时段的录像吗？")
-                .setPositiveButton("确定", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        removeRecord(record);
-                    }
-                })
-                .setNegativeButton("取消", null)
-                .show();
+//        new AlertDialog.Builder(this)
+//                .setTitle("提示")
+//                .setMessage("确定删除该时段的录像吗？")
+//                .setPositiveButton("确定", new DialogInterface.OnClickListener() {
+//                    @Override
+//                    public void onClick(DialogInterface dialogInterface, int i) {
+//                        removeRecord(record);
+//                    }
+//                })
+//                .setNegativeButton("取消", null)
+//                .show();
     }
 
     private void removeRecord(final Record record) {

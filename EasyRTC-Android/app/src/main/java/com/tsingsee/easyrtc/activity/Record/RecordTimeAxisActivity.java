@@ -1,7 +1,5 @@
 package com.tsingsee.easyrtc.activity.Record;
 
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
@@ -25,7 +23,6 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.tsingsee.easyrtc.BuildConfig;
 import com.tsingsee.easyrtc.R;
-import com.tsingsee.easyrtc.RTCApplication;
 import com.tsingsee.easyrtc.activity.BaseActivity;
 import com.tsingsee.easyrtc.databinding.ActivityRecordTimeAxisBinding;
 import com.tsingsee.easyrtc.http.BaseEntity2;
@@ -34,8 +31,6 @@ import com.tsingsee.easyrtc.http.RetrofitFactory;
 import com.tsingsee.easyrtc.model.Record;
 import com.tsingsee.easyrtc.model.RecordModel;
 import com.tsingsee.easyrtc.tool.DateUtil;
-import com.tsingsee.easyrtc.tool.DownLoadUtil;
-import com.tsingsee.easyrtc.tool.SharedHelper;
 import com.tsingsee.easyrtc.view.RecordControllerView;
 import com.tsingsee.easyrtc.view.RullerView.TimeRange;
 
@@ -265,6 +260,7 @@ public class RecordTimeAxisActivity extends BaseActivity implements Toolbar.OnMe
                         break;
                     case IMediaPlayer.MEDIA_INFO_VIDEO_RENDERING_START:
                         mBinding.progress.setVisibility(View.GONE);
+                        mediaController.show(0);
                         showDateTv();
                         break;
                     case IMediaPlayer.MEDIA_INFO_BUFFERING_START:
@@ -396,26 +392,26 @@ public class RecordTimeAxisActivity extends BaseActivity implements Toolbar.OnMe
 
     // 下载当然录像段
     public void downloadRecord() {
-        new AlertDialog.Builder(this)
-                .setTitle("提示")
-                .setMessage("确定下载该时段的录像吗？")
-                .setPositiveButton("确定", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        try {
-                            SharedHelper helper = new SharedHelper(RTCApplication.getContext());
-                            String url = helper.getURL() + "/api/v1/record/download/" + id + "/" + selectRecord.getStartAt();
-
-                            DownLoadUtil downLoadUtil = new DownLoadUtil();
-                            downLoadUtil.initDownload(RecordTimeAxisActivity.this);
-                            downLoadUtil.download(url, selectRecord.getStartAt());
-                        } catch (Exception e) {
-                            e.printStackTrace();
-                        }
-                    }
-                })
-                .setNegativeButton("取消", null)
-                .show();
+//        new AlertDialog.Builder(this)
+//                .setTitle("提示")
+//                .setMessage("确定下载该时段的录像吗？")
+//                .setPositiveButton("确定", new DialogInterface.OnClickListener() {
+//                    @Override
+//                    public void onClick(DialogInterface dialogInterface, int i) {
+//                        try {
+//                            SharedHelper helper = new SharedHelper(RTCApplication.getContext());
+//                            String url = helper.getURL() + "/api/v1/record/download/" + id + "/" + selectRecord.getStartAt();
+//
+//                            DownLoadUtil downLoadUtil = new DownLoadUtil();
+//                            downLoadUtil.initDownload(RecordTimeAxisActivity.this);
+//                            downLoadUtil.download(url, selectRecord.getStartAt());
+//                        } catch (Exception e) {
+//                            e.printStackTrace();
+//                        }
+//                    }
+//                })
+//                .setNegativeButton("取消", null)
+//                .show();
     }
 
     // 去视图列表
@@ -430,17 +426,17 @@ public class RecordTimeAxisActivity extends BaseActivity implements Toolbar.OnMe
 
     // 删除当然录像段
     public void deleteRecord() {
-        new AlertDialog.Builder(this)
-                .setTitle("提示")
-                .setMessage("确定删除该时段的录像吗？")
-                .setPositiveButton("确定", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        removeRecord(selectRecord);
-                    }
-                })
-                .setNegativeButton("取消", null)
-                .show();
+//        new AlertDialog.Builder(this)
+//                .setTitle("提示")
+//                .setMessage("确定删除该时段的录像吗？")
+//                .setPositiveButton("确定", new DialogInterface.OnClickListener() {
+//                    @Override
+//                    public void onClick(DialogInterface dialogInterface, int i) {
+//                        removeRecord(selectRecord);
+//                    }
+//                })
+//                .setNegativeButton("取消", null)
+//                .show();
     }
 
     // 调整播放进度

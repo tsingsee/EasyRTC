@@ -30,6 +30,9 @@ import com.yanzhenjie.recyclerview.swipe.SwipeMenuCreator;
 import com.yanzhenjie.recyclerview.swipe.SwipeMenuItem;
 import com.yanzhenjie.recyclerview.swipe.SwipeMenuItemClickListener;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import io.reactivex.Observable;
 
 public class LiveFragment extends BaseFragment implements View.OnClickListener {
@@ -160,9 +163,17 @@ public class LiveFragment extends BaseFragment implements View.OnClickListener {
                             return;
                         }
 
+                        List<LiveSessionModel.Session> result = new ArrayList<>();
+                        for (LiveSessionModel.Session s : model.getSessions().getSessions()) {
+                            // 返回的数据有2种格式：hls/record，如果有record格式说明有录像
+                            if ("hls".equals(s.getApplication())) {
+                                result.add(s);
+                            }
+                        }
+
                         LiveAdapter adapter = new LiveAdapter(getContext());
                         binding.recyclerView.setAdapter(adapter);
-                        adapter.notifyDataSetChanged(model.getSessions().getSessions());
+                        adapter.notifyDataSetChanged(result);
                     }
 
                     @Override

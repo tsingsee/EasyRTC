@@ -92,8 +92,9 @@ public class RecordControllerView2 extends FrameLayout implements IMediaControll
         play_pause_iv = (ImageView) mRoot.findViewById(R.id.play_pause_iv);
 
         if (!mShowProgress) {
-            RelativeLayout bottom_rl = (RelativeLayout) mRoot.findViewById(R.id.bottom_rl);
-            bottom_rl.setVisibility(View.GONE);
+            mCurrentTime.setVisibility(View.GONE);
+            mEndTime.setVisibility(View.GONE);
+            mProgress.setVisibility(View.GONE);
         }
 
         play_pause_iv.setVisibility(View.GONE);

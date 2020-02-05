@@ -40,6 +40,7 @@
         </android.support.v7.widget.Toolbar>
 
         <LinearLayout
+            android:visibility="gone"
             android:id="@+id/room_top_ll"
             android:layout_width="match_parent"
             android:layout_height="64dp"
@@ -49,7 +50,7 @@
             android:layout_below="@id/main_toolbar">
 
             <EditText
-                android:id="@+id/account_et"
+                android:id="@+id/search_et"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_weight="1"

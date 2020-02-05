@@ -1,7 +1,9 @@
 package com.tsingsee.easyrtc.activity;
 
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.widget.TextView;
 
 import com.tsingsee.easyrtc.R;
 
@@ -19,6 +21,16 @@ public class StartActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
+
+        String versionName;
+        try {
+            versionName = getPackageManager().getPackageInfo(getPackageName(), 0).versionName;
+        } catch (PackageManager.NameNotFoundException e) {
+            versionName = "1.0";
+        }
+
+        TextView txtVersion = (TextView) findViewById(R.id.txt_version);
+        txtVersion.setText(String.format("客户端版本：%s", versionName));
 
         Observable.interval(1, TimeUnit.SECONDS)
                 .compose(this.<Long>bindToLifecycle())

@@ -69,8 +69,14 @@ public class CalendarActivity extends BaseActivity implements Toolbar.OnMenuItem
         binding.datePicker.setOnDatePickedListener(new DatePicker.OnDatePickedListener() {
             @Override
             public void onDatePicked(String date) {
+                String[]arr = date.split("-");
+                String year = arr[0];
+                int month = Integer.parseInt(arr[1]);
+                int day = Integer.parseInt(arr[2]);
+                String d = year + "-" + String.format("%02d", month) + "-" + String.format("%02d", day);
+
                 for (String str : recordDates) {
-                    if (str.equals(date)) {
+                    if (str.equals(d)) {
                         selectDate = DateUtil.getDate(date);
                         clickDate();
 

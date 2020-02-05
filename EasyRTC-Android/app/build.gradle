@@ -8,8 +8,8 @@ android {
         applicationId "com.tsingsee.easyrtc"
         minSdkVersion 21
         targetSdkVersion 27
-        versionCode 102
-        versionName "1.0.2"
+        versionCode 10200205
+        versionName "1.0.200205"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
         if (project.hasProperty('PLAYER_KEY')) {
@@ -98,8 +98,6 @@ dependencies {
     implementation 'com.zyao89:zloading:1.1.1'
     implementation 'com.jwenfeng.pulltorefresh:library:1.2.7'
 
-    implementation 'com.tencent.bugly:crashreport:latest.release'
-
     debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.6.1'
     releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.6.1'
     // Optional, if you use support library fragments:
@@ -125,12 +123,13 @@ dependencies {
     implementation(name: 'easyrtc-release', ext: 'aar')
     implementation(name: 'base-release', ext: 'aar')
 
-    implementation 'com.tencent.bugly:crashreport:latest.release'
-
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation 'com.android.support:recyclerview-v7:27.1.1'
 
     implementation 'com.google.zxing:core:3.3.0'
+
+    implementation 'com.tencent.bugly:crashreport_upgrade:latest.release'//其中latest.release指代最新版本号，也可以指定明确的版本号，例如1.2.0
+    implementation 'com.tencent.bugly:nativecrashreport:latest.release' //其中latest.release指代最新版本号，也可以指定明确的版本号，例如2.2.0
 }

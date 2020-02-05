@@ -6,7 +6,7 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="error" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="AvailableLibraryUpdateStorage">
@@ -14,250 +14,49 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f5dda3ad-a8bc-4c14-9628-7ec0ab88d143" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/adapter/RoomAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/model/RequestKeyModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Expand/Category/UILabel+ChangeLineSpaceAndWordSpace.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Expand/Category/UILabel+ChangeLineSpaceAndWordSpace.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Expand/Category/UILabel+lineSpace.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Expand/Category/UILabel+lineSpace.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Model/Devices.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Model/Devices.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Model/LiveSessionModel.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Model/LiveSessionModel.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Model/RequestKeyModel.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Model/RequestKeyModel.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Model/RoomBean.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Model/RoomBean.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/Assets.xcassets/AppIcon.appiconset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/Assets.xcassets/AppIcon.appiconset/logo-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/Assets.xcassets/AppIcon.appiconset/logo-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/Assets.xcassets/AppIcon.appiconset/logo-3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/Assets.xcassets/AppIcon.appiconset/logo-4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/Assets.xcassets/AppIcon.appiconset/logo-5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/Assets.xcassets/AppIcon.appiconset/logo-6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/Assets.xcassets/AppIcon.appiconset/logo-7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/Assets.xcassets/AppIcon.appiconset/logo-8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/Assets.xcassets/AppIcon.appiconset/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/Assets.xcassets/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/login/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/login/admin.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/login/admin.imageset/admin@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/login/admin.imageset/admin@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/login/hide_pwd.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/login/hide_pwd.imageset/hide_pwd@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/login/hide_pwd.imageset/hide_pwd@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/login/login_bottom.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/login/login_bottom.imageset/login_bottom@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/login/login_bottom.imageset/login_bottom@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/login/password.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/login/password.imageset/password@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/login/password.imageset/password@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/login/show_pwd.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/login/show_pwd.imageset/show_pwd@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/login/show_pwd.imageset/show_pwd@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/record/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/record/default_img.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/record/default_img.imageset/default_img@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/record/default_img.imageset/default_img@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/record/record_calendar.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/record/record_calendar.imageset/record_calendar@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/record/record_calendar.imageset/record_calendar@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/record/record_calendar_click.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/record/record_calendar_click.imageset/record_calendar_click@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/record/record_calendar_click.imageset/record_calendar_click@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/record/record_close_mute.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/record/record_close_mute.imageset/record_close_mute@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/record/record_close_mute.imageset/record_close_mute@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/record/record_date_after.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/record/record_date_after.imageset/record_date_after@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/record/record_date_after.imageset/record_date_after@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/record/record_date_after_click.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/record/record_date_after_click.imageset/record_date_after_click@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/record/record_date_after_click.imageset/record_date_after_click@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/record/record_date_before.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/record/record_date_before.imageset/record_date_before@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/record/record_date_before.imageset/record_date_before@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/record/record_date_before_click.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/record/record_date_before_click.imageset/record_date_before_click@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/record/record_date_before_click.imageset/record_date_before_click@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/record/record_delete.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/record/record_delete.imageset/record_delete@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/record/record_delete.imageset/record_delete@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/record/record_delete_click.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/record/record_delete_click.imageset/record_delete_click@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/record/record_delete_click.imageset/record_delete_click@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/record/record_download.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/record/record_download.imageset/record_download@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/record/record_download.imageset/record_download@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/record/record_download_click.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/record/record_download_click.imageset/record_download_click@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/record/record_download_click.imageset/record_download_click@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/record/record_fullscreen.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/record/record_fullscreen.imageset/record_fullscreen@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/record/record_fullscreen.imageset/record_fullscreen@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/record/record_list.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/record/record_list.imageset/record_list@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/record/record_list.imageset/record_list@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/record/record_list_click.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/record/record_list_click.imageset/record_list_click@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/record/record_list_click.imageset/record_list_click@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/record/record_normalscreen.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/record/record_normalscreen.imageset/record_normalscreen@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/record/record_normalscreen.imageset/record_normalscreen@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/record/record_oepn_mute.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/record/record_oepn_mute.imageset/record_oepn_mute@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/record/record_oepn_mute.imageset/record_oepn_mute@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/record/record_pause.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/record/record_pause.imageset/record_pause@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/record/record_pause.imageset/record_pause@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/record/record_pause_click.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/record/record_pause_click.imageset/record_pause_click@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/record/record_pause_click.imageset/record_pause_click@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/record/record_play.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/record/record_play.imageset/record_play@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/record/record_play.imageset/record_play@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/record/record_play_click.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/record/record_play_click.imageset/record_play_click@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/record/record_play_click.imageset/record_play_click@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room/create_room.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room/create_room.imageset/create_room@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room/create_room.imageset/create_room@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room/drop_down.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room/drop_down.imageset/drop_down@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room/drop_down.imageset/drop_down@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room/play.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room/play.imageset/play@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room/play.imageset/play@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room/play_click.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room/play_click.imageset/play_click@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room/play_click.imageset/play_click@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room/record.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room/record.imageset/record@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room/record.imageset/record@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room/record_click.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room/record_click.imageset/record_click@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room/record_click.imageset/record_click@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room/room.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room/room.imageset/room@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room/room.imageset/room@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room/room_click.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room/room_click.imageset/room_click@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room/room_click.imageset/room_click@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room/setting.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room/setting.imageset/设置@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room/setting.imageset/设置@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room_live/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room_live/copy.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room_live/copy.imageset/copy@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room_live/copy.imageset/copy@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room_live/copy_click.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room_live/copy_click.imageset/copy_click@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room_live/copy_click.imageset/copy_click@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room_live/select.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room_live/select.imageset/select@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room_live/select.imageset/select@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room_live/selected.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room_live/selected.imageset/selected@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room_live/selected.imageset/selected@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room_live/video_close.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room_live/video_close.imageset/video_close@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room_live/video_close.imageset/video_close@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room_live/video_pause.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room_live/video_pause.imageset/video_pause@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room_live/video_pause.imageset/video_pause@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room_live/video_play.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room_live/video_play.imageset/video_play@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room_live/video_play.imageset/video_play@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room_live/video_play2.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room_live/video_play2.imageset/video_play2@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room_live/video_play2.imageset/video_play2@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room_new/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room_new/room_count.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room_new/room_count.imageset/room_count@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room_new/room_count.imageset/room_count@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room_new/room_date.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room_new/room_date.imageset/room_date@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room_new/room_date.imageset/room_date@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room_new/room_num.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room_new/room_num.imageset/room_num@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room_new/room_num.imageset/room_num@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room_new/room_right.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room_new/room_right.imageset/room_right@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room_new/room_right.imageset/room_right@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room_new/room_title.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room_new/room_title.imageset/room_title@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room_new/room_title.imageset/room_title@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room_video/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room_video/add_user.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room_video/add_user.imageset/add_user@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room_video/add_user.imageset/add_user@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room_video/back.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room_video/back.imageset/back@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room_video/back.imageset/back@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room_video/close_mute.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room_video/close_mute.imageset/close_mute@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room_video/close_mute.imageset/close_mute@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room_video/flip_lens.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room_video/flip_lens.imageset/flip_lens@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room_video/flip_lens.imageset/flip_lens@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room_video/open_mute.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room_video/open_mute.imageset/open_mute@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room_video/open_mute.imageset/open_mute@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room_video/start_call.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room_video/start_call.imageset/start_call@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room_video/start_call.imageset/start_call@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room_video/stop_call.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room_video/stop_call.imageset/stop_call@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/room_video/stop_call.imageset/stop_call@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/setting/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/setting/setting_key.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/setting/setting_key.imageset/setting_key@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/setting/setting_key.imageset/setting_key@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/setting/setting_product.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/setting/setting_product.imageset/setting_product@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/Resource/new.xcassets/setting/setting_product.imageset/setting_product@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/View/RecordCell.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/View/RecordCell.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/View/RoomCell.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/View/RoomCell.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/ViewController/Account/LoginViewController.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/ViewController/Account/LoginViewController.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/ViewController/Live/LiveViewController.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/ViewController/Live/LiveViewController.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/ViewController/Record/CalendarViewController.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/ViewController/Record/CalendarViewController.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/ViewController/Record/DownloadViewController.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/ViewController/Record/DownloadViewController.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/ViewController/Record/RecordListViewController.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/ViewController/Record/RecordListViewController.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/ViewController/Record/RecordPlayerViewController.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/ViewController/Record/RecordPlayerViewController.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/ViewController/Record/RecordTimeAxisViewController.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/ViewController/Record/RecordTimeAxisViewController.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/ViewController/Record/RecordViewController.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/ViewController/Record/RecordViewController.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/ViewController/Room/CallViewController.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/ViewController/Room/ListViewController.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/ViewController/Room/RoomViewController.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/ViewController/Room/RoomViewController.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/ViewController/Setting/SettingViewController.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/ViewController/Setting/SettingViewController.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/ViewController/Setting/WebViewController.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/ViewController/Setting/WebViewController.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/ViewModel/BaseViewModel.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/ViewModel/BaseViewModel.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/ViewModel/DownloadViewModel.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/ViewModel/DownloadViewModel.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/ViewModel/LiveViewModel.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/ViewModel/LiveViewModel.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/ViewModel/RecordViewModel.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/ViewModel/RecordViewModel.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/ViewModel/RoomRecordViewModel.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/ViewModel/RoomRecordViewModel.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC/ViewModel/ViewModelProtocol.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../iOS/EasyRTC/EasyRTC.xcodeproj/project.xcworkspace/xcuserdata/liyy.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/../iOS/EasyRTC/EasyRTC.xcodeproj/project.xcworkspace/xcuserdata/liyy.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/fileContent/annotation-processors.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/fileContent/annotation-processors.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/fileContent/fileContent.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/fileContent/fileContent.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/jarAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/RTCApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/RTCApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/activity/LiveActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/activity/LiveActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/activity/Record/CalendarActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/activity/Record/CalendarActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/activity/Record/RecordListActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/activity/Record/RecordListActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/activity/Record/RecordTimeAxisActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/activity/Record/RecordTimeAxisActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/activity/StartActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/activity/StartActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/adapter/VideotapeAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/adapter/VideotapeAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/fragment/LiveFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/fragment/LiveFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/fragment/RecordFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/fragment/RecordFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/model/Record.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/model/Record.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/view/RecordControllerView.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/view/RecordControllerView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/view/RecordControllerView2.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/view/RecordControllerView2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/jniLibs/armeabi-v7a/libproffmpeg.so" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/armeabi-v7a/libproffmpeg.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/jniLibs/armeabi-v7a/libproplayer.so" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/armeabi-v7a/libproplayer.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/jniLibs/armeabi-v7a/libprosdl.so" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/armeabi-v7a/libprosdl.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/jniLibs/x86/libproffmpeg.so" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/x86/libproffmpeg.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/jniLibs/x86/libproplayer.so" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/x86/libproplayer.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/jniLibs/x86/libprosdl.so" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/jniLibs/x86/libprosdl.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_call.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_call.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_start.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_start.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_live.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_live.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_record.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_record.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_room.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_room.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ijkplayer-java/ijkplayer-java.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ijkplayer-java/ijkplayer-java.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC.xcworkspace/xcuserdata/liyy.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/../EasyRTC-iOS/EasyRTC.xcworkspace/xcuserdata/liyy.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -286,29 +85,7 @@
     </system>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/activity/LiveActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="71">
-              <caret line="50" selection-start-line="50" selection-end-line="50" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ijkplayer-java/src/main/java/tv/danmaku/ijk/media/widget/media/IjkVideoView.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="434">
-              <caret line="316" lean-forward="true" selection-start-line="316" selection-end-line="316" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -319,36 +96,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>hangup</find>
-      <find>switch_camera</find>
-      <find>if (room.isSpeakerOn()) {</find>
-      <find>mute</find>
-      <find>info11</find>
-      <find>login_bg</find>
-      <find>info2</find>
-      <find>button</find>
-      <find>unregisterReceiver</find>
-      <find>IntentReceiver</find>
-      <find>options</find>
-      <find>timer</find>
-      <find>getlivesessions</find>
-      <find>1000</find>
-      <find>lintOptions</find>
-      <find>Key不合法</find>
-      <find>Player_KEY</find>
-      <find>setKey</find>
-      <find>openAudio</find>
-      <find>LiveActivity.class</find>
+      <find>daily</find>
+      <find>recordDates</find>
+      <find>account_et</find>
+      <find>getDevices</find>
       <find>64686473647036526D34304145545A656F636E757065746A6232307564484E70626D647A5A5755755A57467A65584A3059796C58444661672F3658695257467A65555268636E6470626C526C5957314A6331526F5A554A6C6333516A4D6A41784F546C6C59584E35</find>
-      <find>iformat</find>
-      <find>IjkMediaPlayer.OPT_CATEGORY_FORMAT</find>
-      <find>inBitrate</find>
-      <find>USE_UDP_MODE</find>
-      <find>media_controller_progress</find>
-      <find>setAnchorView</find>
+      <find>mediacodec-auto-rotate</find>
+      <find>setVideoURI</find>
+      <find>selectRecord</find>
+      <find>query_record_daily</find>
+      <find>LiveActivity.class</find>
+      <find>mediaController.show</find>
+      <find>scaleScroll</find>
+      <find>setAdapter</find>
+      <find>mMediaController.hide</find>
+      <find>equals</find>
+      <find>mMediaController.hide();</find>
+      <find>FADE_OUT</find>
+      <find>private static final int sDefaultTimeout</find>
       <find>mediaController</find>
-      <find>new RecordControllerView2</find>
-      <find>mPlayer</find>
+      <find>播放完成</find>
+      <find>mMediaController</find>
+      <find>没有录像</find>
+      <find>time_hs2</find>
+      <find>mBinding.progress.setVisibility</find>
+      <find>getlivesessions</find>
+      <find>hide</find>
+      <find>sDefaultTimeout</find>
+      <find>onBackPressed</find>
+      <find>OnScrollListener</find>
+      <find>bugly</find>
     </findStrings>
   </component>
   <component name="GenerateSignedApkSettings">
@@ -363,19 +140,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_record_time_axis.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/model/MonthFlags.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/model/MonthFlag.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/model/RecordModel.java" />
         <option value="$PROJECT_DIR$/gradle.properties" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/view/RecordControllerView.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/view/VideoControllerView.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/activity/SettingActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/http/RetrofitService2.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/activity/Record/CalendarActivity.java" />
         <option value="$PROJECT_DIR$/EasyRTC-Android.iml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/adapter/RoomAdapter.java" />
@@ -384,43 +154,50 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/fragment/LoginFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/activity/LoginActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/model/Devices.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_record.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/item_videotape.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/adapter/VideotapeAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/fragment/RecordFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_live.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/model/Record.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/media_record_controller.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/model/RoomBean.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/fragment/RoomFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/activity/Record/RecordTimeAxisActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/activity/Record/RecordListActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/activity/LiveDetailActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_live_detail.xml" />
         <option value="$PROJECT_DIR$/ijkplayer-java/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/activity/CallActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/view/ProVideoView.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/activity/MainActivity.java" />
-        <option value="$PROJECT_DIR$/app/build.gradle" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/fragment/LiveFragment.java" />
         <option value="$PROJECT_DIR$/ijkplayer-java/src/main/java/tv/danmaku/ijk/media/player/IjkMediaPlayer.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/model/LiveSessionModel.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/adapter/LiveAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/item_live.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_call.xml" />
         <option value="$PROJECT_DIR$/ijkplayer-java/src/main/java/tv/danmaku/ijk/media/widget/media/IjkVideoView.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/activity/Record/PlayRecordActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/media_record_controller2.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/view/RecordControllerView2.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/activity/Record/RecordListActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/adapter/VideotapeAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_record.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/fragment/RecordFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/activity/Record/CalendarActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/model/Record.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_call.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_room.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_live.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/activity/LiveActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/fragment/LiveFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/view/RecordControllerView2.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/activity/Record/RecordTimeAxisActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/view/RecordControllerView.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_start.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/activity/StartActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/RTCApplication.java" />
+        <option value="$PROJECT_DIR$/app/build.gradle" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="22" />
+    <option name="y" value="23" />
     <option name="width" value="1280" />
-    <option name="height" value="753" />
+    <option name="height" value="752" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -430,7 +207,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -443,52 +220,12 @@
               <item name="EasyRTC-Android" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
-            <path>
-              <item name="EasyRTC-Android" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EasyRTC-Android" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="EasyRTC-Android" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EasyRTC-Android" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="EasyRTC-Android" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EasyRTC-Android" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="EasyRTC-Android" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EasyRTC-Android" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="easyrtc" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="EasyRTC-Android" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EasyRTC-Android" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="easyrtc" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="AndroidView" />
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -509,9 +246,12 @@
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/libs" />
-      <recent name="$PROJECT_DIR$/ijkplayer-java/src/main" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/src/main/jniLibs/armeabi-v7a" />
+      <recent name="$PROJECT_DIR$/app/src/main/jniLibs/x86" />
+      <recent name="$PROJECT_DIR$/app/src/main" />
+      <recent name="$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/view" />
+      <recent name="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.tsingsee.easyrtc" />
@@ -527,12 +267,9 @@
       <recent name="com.tsingsee.easyrtc.http" />
       <recent name="com.tsingsee.easyrtc.activity" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/src/main" />
-      <recent name="$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/view" />
-      <recent name="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi" />
-      <recent name="$PROJECT_DIR$/app/src/main/res" />
-      <recent name="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/libs" />
+      <recent name="$PROJECT_DIR$/ijkplayer-java/src/main" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -624,10 +361,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="752" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.26979" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.24474959" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Build Variants" order="4" side_tool="true" />
@@ -636,13 +372,13 @@
       <window_info id="Resources Explorer" order="7" />
       <window_info id="Capture Tool" order="8" />
       <window_info anchor="bottom" id="Run" order="0" weight="0.32894737" />
-      <window_info anchor="bottom" id="Logcat" order="1" sideWeight="0.49928468" weight="0.51666665" />
+      <window_info anchor="bottom" id="Logcat" order="1" sideWeight="0.49928468" weight="0.5984849" />
       <window_info anchor="bottom" id="TODO" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3469697" />
       <window_info anchor="bottom" id="Terminal" order="4" weight="0.3287879" />
       <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.5007153" side_tool="true" weight="0.51969695" />
       <window_info anchor="bottom" id="Version Control" order="6" />
-      <window_info anchor="bottom" id="Build" order="7" weight="0.27878788" />
+      <window_info anchor="bottom" id="Build" order="7" weight="0.27727273" />
       <window_info anchor="bottom" id="Android Profiler" order="8" />
       <window_info anchor="bottom" id="Find" order="9" weight="0.3272727" />
       <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
@@ -655,7 +391,7 @@
     </layout>
     <layout-to-restore>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.22374798" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.26979" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Build Variants" order="4" side_tool="true" />
@@ -664,7 +400,7 @@
       <window_info id="Resources Explorer" order="7" />
       <window_info id="Capture Tool" order="8" />
       <window_info anchor="bottom" id="Run" order="0" weight="0.32894737" />
-      <window_info anchor="bottom" id="Logcat" order="1" sideWeight="0.49928468" weight="0.5173979" />
+      <window_info anchor="bottom" id="Logcat" order="1" sideWeight="0.49928468" weight="0.6" />
       <window_info anchor="bottom" id="TODO" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3469697" />
       <window_info anchor="bottom" id="Terminal" order="4" weight="0.3287879" />
@@ -683,186 +419,6 @@
     </layout-to-restore>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/fragment/LoginFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="706">
-          <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/16bd4215003760deb8a4f2ed8819f62c/jars/classes.jar!/com/tsingsee/rtc/Room.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1987">
-          <caret line="370" column="21" selection-start-line="370" selection-start-column="21" selection-end-line="370" selection-end-column="21" />
-          <folding>
-            <element signature="e#19050#19051#0" expanded="true" />
-            <element signature="e#19079#19080#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/model/Record.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="97">
-          <caret line="51" column="18" selection-start-line="51" selection-start-column="18" selection-end-line="51" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/http/RetrofitService2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="41" column="41" selection-start-line="41" selection-start-column="41" selection-end-line="41" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/activity/Record/RecordListActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="244" lean-forward="true" selection-start-line="244" selection-end-line="244" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/fragment/BaseFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="33" column="21" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/16bd4215003760deb8a4f2ed8819f62c/jars/classes.jar!/com/tsingsee/rtc/Options.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_live_detail.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="135" column="44" selection-start-line="135" selection-start-column="44" selection-end-line="135" selection-end-column="44" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/activity/LiveDetailActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/model/RoomBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="29" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/adapter/RoomAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="27" column="81" selection-start-line="27" selection-start-column="81" selection-end-line="27" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="16" column="37" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="80" column="24" selection-start-line="80" selection-start-column="24" selection-end-line="80" selection-end-column="24" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/activity/LoginActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="33" column="27" lean-forward="true" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_room.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="57" column="44" lean-forward="true" selection-start-line="57" selection-start-column="44" selection-end-line="57" selection-end-column="44" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/tool/SharedHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="41" column="33" selection-start-line="41" selection-start-column="33" selection-end-line="41" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/http/RetrofitFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="30" column="25" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/model/ServiceInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="29" column="37" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/model/RequestKeyModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="8" column="31" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="31" />
-          <folding>
-            <element signature="e#288#289#0" expanded="true" />
-            <element signature="e#321#322#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_setting.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="243" column="29" lean-forward="true" selection-start-line="243" selection-start-column="29" selection-end-line="243" selection-end-column="29" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ijkplayer-java/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
-          <caret line="56" selection-start-line="56" selection-end-line="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ijkplayer-java/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="16" lean-forward="true" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/view/VideoFullScreenMediaPlayerControl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/activity/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
@@ -895,33 +451,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/adapter/VideotapeAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/fragment/RecordFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="125" column="95" lean-forward="true" selection-start-line="125" selection-start-column="95" selection-end-line="125" selection-end-column="95" />
-          <folding>
-            <element signature="e#1298#1299#0" expanded="true" />
-            <element signature="e#1348#1349#0" expanded="true" />
-            <element signature="e#1732#1733#0" expanded="true" />
-            <element signature="e#1764#1765#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/http/BaseEntity2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="25" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/http/BaseEntity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="653">
@@ -929,47 +458,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/http/RetrofitService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="26" column="28" lean-forward="true" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/model/Devices.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/model/LiveSessionModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="61">
-          <caret line="196" column="29" lean-forward="true" selection-start-line="196" selection-start-column="29" selection-end-line="196" selection-end-column="29" />
-          <folding>
-            <element signature="e#482#483#0" expanded="true" />
-            <element signature="e#517#518#0" expanded="true" />
-            <element signature="class#Sessions#0;class#LiveSessionModel#0" />
-            <element signature="e#937#938#0" expanded="true" />
-            <element signature="e#976#977#0" expanded="true" />
-            <element signature="e#4218#4219#0" expanded="true" />
-            <element signature="e#4256#4257#0" expanded="true" />
-            <element signature="e#4617#4618#0" expanded="true" />
-            <element signature="e#4657#4658#0" expanded="true" />
-            <element signature="e#6035#6036#0" expanded="true" />
-            <element signature="e#6075#6076#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_live.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
           <caret line="21" column="17" lean-forward="true" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
         </state>
       </provider>
-      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/adapter/LiveAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -978,57 +473,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/fragment/LiveFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="150" column="75" selection-start-line="150" selection-start-column="75" selection-end-line="150" selection-end-column="75" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#6883#6884#0" expanded="true" />
-            <element signature="e#6924#6925#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/activity/CallActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="37" column="24" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
-          <folding>
-            <element signature="e#4393#4394#0" expanded="true" />
-            <element signature="e#4428#4429#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_call.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="21" column="26" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/setting_key.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/setting.png">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/fragment/RoomFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="72" column="65" lean-forward="true" selection-start-line="72" selection-start-column="65" selection-end-line="72" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_room.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="37" column="40" selection-start-line="37" selection-start-column="40" selection-end-line="37" selection-end-column="40" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/icon_setting.png">
       <provider selected="true" editor-type-id="images" />
@@ -1038,13 +487,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
           <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/activity/Record/RecordTimeAxisActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="244" column="44" selection-start-line="244" selection-start-column="44" selection-end-line="244" selection-end-column="44" />
         </state>
       </provider>
     </entry>
@@ -1060,35 +502,367 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/media_record_controller2.xml">
-      <provider editor-type-id="android-designer2" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/tool/SharedHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        <state relative-caret-position="236">
+          <caret line="45" column="19" selection-start-line="45" selection-start-column="19" selection-end-line="45" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/view/RecordControllerView2.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/http/BaseEntity2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="436">
-          <caret line="97" lean-forward="true" selection-start-line="97" selection-end-line="97" />
+        <state relative-caret-position="247">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/http/BaseObserver2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="70" column="28" selection-start-line="70" selection-start-column="28" selection-end-line="70" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/cn.aigestudio.datepicker/DatePicker/2.2.0/af595f557ce944407662fec17d4782bd11bb4189/DatePicker-2.2.0-sources.jar!/cn/aigestudio/datepicker/bizs/calendars/DPCManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="75" column="16" selection-start-line="75" selection-start-column="16" selection-end-line="75" selection-end-column="16" />
+          <folding>
+            <element signature="e#2049#2050#0" expanded="true" />
+            <element signature="e#2095#2096#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/activity/Record/RecordListActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="197" lean-forward="true" selection-start-line="197" selection-end-line="197" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/cn.aigestudio.datepicker/DatePicker/2.2.0/af595f557ce944407662fec17d4782bd11bb4189/DatePicker-2.2.0-sources.jar!/cn/aigestudio/datepicker/views/DatePicker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="215" column="31" selection-start-line="215" selection-start-column="31" selection-end-line="215" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/cn.aigestudio.datepicker/DatePicker/2.2.0/af595f557ce944407662fec17d4782bd11bb4189/DatePicker-2.2.0-sources.jar!/cn/aigestudio/datepicker/views/MonthView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="590" column="43" selection-start-line="590" selection-start-column="43" selection-end-line="590" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/adapter/VideotapeAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="64" column="42" selection-start-line="64" selection-start-column="42" selection-end-line="64" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_record.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="50" column="21" lean-forward="true" selection-start-line="50" selection-start-column="21" selection-end-line="50" selection-end-column="21" />
+          <folding>
+            <element signature="e#925#953#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/model/Devices.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/activity/Record/CalendarActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="72" column="37" selection-start-line="72" selection-start-column="37" selection-end-line="72" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_call.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="485">
+          <caret line="49" column="36" selection-start-line="49" selection-start-column="36" selection-end-line="49" selection-end-column="36" />
+          <folding>
+            <element signature="e#1426#1442#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/activity/CallActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="503">
+          <caret line="55" column="36" selection-start-line="55" selection-start-column="36" selection-end-line="55" selection-end-column="36" />
+          <folding>
+            <element signature="e#4393#4394#0" expanded="true" />
+            <element signature="e#4428#4429#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_room.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="40" column="40" selection-start-line="40" selection-start-column="40" selection-end-line="40" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/fragment/RoomFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="72" column="66" lean-forward="true" selection-start-line="72" selection-start-column="66" selection-end-line="72" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/fragment/RecordFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="637">
+          <caret line="68" column="13" selection-start-line="68" selection-start-column="13" selection-end-line="68" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2787#2788#0" expanded="true" />
+            <element signature="e#2819#2820#0" expanded="true" />
+            <element signature="e#2878#2879#0" expanded="true" />
+            <element signature="e#2917#2918#0" expanded="true" />
+            <element signature="e#2961#2962#0" expanded="true" />
+            <element signature="e#2993#2994#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_live.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="42" column="29" lean-forward="true" selection-start-line="42" selection-start-column="29" selection-end-line="42" selection-end-column="29" />
+          <folding>
+            <element signature="e#494#1454#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/http/RetrofitService2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="15" column="15" lean-forward="true" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/model/Record.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="26" column="18" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/http/RetrofitService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="32" column="57" selection-start-line="32" selection-start-column="57" selection-end-line="32" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/Library/Android/sdk/platforms/android-27/android.jar!/java/lang/String.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="128" column="19" selection-start-line="128" selection-start-column="19" selection-end-line="128" selection-end-column="19" />
+          <folding>
+            <element signature="e#3426#3427#0" expanded="true" />
+            <element signature="e#3477#3478#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/fragment/BaseFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="61">
+          <caret line="32" column="25" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/model/LiveSessionModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="120" column="25" selection-start-line="120" selection-start-column="25" selection-end-line="120" selection-end-column="25" />
+          <folding>
+            <element signature="e#482#483#0" expanded="true" />
+            <element signature="e#517#518#0" expanded="true" />
+            <element signature="e#937#938#0" expanded="true" />
+            <element signature="e#976#977#0" expanded="true" />
+            <element signature="e#2841#2842#0" expanded="true" />
+            <element signature="e#2883#2884#0" expanded="true" />
+            <element signature="e#4063#4064#0" expanded="true" />
+            <element signature="e#4097#4098#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/media_record_controller2.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="45" column="37" selection-start-line="45" selection-start-column="29" selection-end-line="45" selection-end-column="37" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/activity/LiveActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="71">
-          <caret line="50" selection-start-line="50" selection-end-line="50" />
+        <state relative-caret-position="181">
+          <caret line="53" column="32" lean-forward="true" selection-start-line="53" selection-start-column="32" selection-end-line="53" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/fragment/LiveFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="164" selection-start-line="164" selection-end-line="164" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#6722#6723#0" expanded="true" />
+            <element signature="e#6787#6788#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/view/RecordControllerView2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="556">
+          <caret line="352" column="27" selection-start-line="352" selection-start-column="27" selection-end-line="352" selection-end-column="27" />
+          <folding>
+            <element signature="e#5590#5591#0" expanded="true" />
+            <element signature="e#5621#5622#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_record_time_axis.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+          <folding>
+            <element signature="e#1555#2503#0" />
+            <element signature="e#2517#3694#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/media_record_controller.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="167" column="42" selection-start-line="167" selection-start-column="42" selection-end-line="167" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/view/VideoFullScreenMediaPlayerControl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="35" column="9" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ijkplayer-java/src/main/java/tv/danmaku/ijk/media/widget/media/IMediaController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="22" column="9" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ijkplayer-java/src/main/java/tv/danmaku/ijk/media/widget/media/IjkVideoView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="316" lean-forward="true" selection-start-line="316" selection-end-line="316" />
+        <state relative-caret-position="-6774">
+          <caret line="715" lean-forward="true" selection-start-line="715" selection-end-line="715" />
+          <folding>
+            <element signature="e#14804#15250#0" expanded="true" />
+            <element signature="e#15249#15250#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/view/RecordControllerView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2474">
+          <caret line="311" selection-start-line="311" selection-end-line="311" />
+          <folding>
+            <element signature="e#10732#10733#0" expanded="true" />
+            <element signature="e#10763#10764#0" expanded="true" />
+            <element signature="e#11448#11449#0" expanded="true" />
+            <element signature="e#11485#11486#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/activity/Record/RecordTimeAxisActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="223" selection-start-line="223" selection-end-line="223" />
+          <folding>
+            <element signature="e#5251#5252#0" expanded="true" />
+            <element signature="e#5288#5289#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_start.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="16" lean-forward="true" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="43" column="42" selection-start-line="43" selection-start-column="42" selection-end-line="43" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0ecf012e6f1d5d174c29c3d304e86365/jars/classes.jar!/com/tencent/bugly/crashreport/CrashReport.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="35" column="13" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/activity/StartActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="13" selection-start-column="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tsingsee/easyrtc/RTCApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#461#462#0" expanded="true" />
+            <element signature="e#491#492#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="30" column="12" lean-forward="true" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="12" />
         </state>
       </provider>
     </entry>
