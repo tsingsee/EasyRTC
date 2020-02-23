@@ -8,6 +8,7 @@
 
 #import "RecordViewController.h"
 #import "SettingViewController.h"
+#import "RecordTimeAxisViewController.h"
 #import "RoomRecordViewModel.h"
 #import "RoomRecordCell.h"
 #import "PromptView.h"
@@ -23,6 +24,8 @@
 @property (nonatomic, strong) RoomRecordCell *tempCell;
 @property (nonatomic, strong) PromptView *promptView;
 
+@property (nonatomic, strong) NSMutableArray<NSString *> *devices;
+
 @end
 
 @implementation RecordViewController
@@ -34,6 +37,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.devices = [[NSMutableArray alloc] init];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
@@ -47,6 +51,8 @@
     }
     
     self.tempCell = [[RoomRecordCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"RoomRecordCell"];
+    
+    [_textField addTarget:self action:@selector(changedTextField:) forControlEvents:UIControlEventEditingChanged];
 }
 
 - (void) viewWillAppear:(BOOL)animated {
@@ -65,16 +71,32 @@
     [self basePushViewController:vc];
 }
 
+-(void)changedTextField:(id)textField {
+    [self.devices removeAllObjects];
+    
+    if ([_textField.text isEqualToString:@""]) {
+        [self.devices addObjectsFromArray:self.vm.model.devices];
+    } else {
+        for (NSString *item in self.vm.model.devices) {
+            if ([item containsString:_textField.text]) {
+                [self.devices addObject:item];
+            }
+        }
+    }
+    
+    [self.tableView reloadData];
+}
+
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.vm.model.devices.count;
+    return self.devices.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     RoomRecordCell *cell = [RoomRecordCell cellWithTableView:tableView];
     
-    NSString *model = self.vm.model.devices[indexPath.row];
+    NSString *model = self.devices[indexPath.row];
     cell.model = model;
     
     return cell;
@@ -83,7 +105,7 @@
 #pragma mark - UITableViewDelegate
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 80;
+    return 65;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
@@ -97,9 +119,13 @@
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
     
-    if (indexPath.row > (self.vm.model.devices.count - 1)) {
+    if (indexPath.row > (self.devices.count - 1)) {
         return;
     }
+    
+    RecordTimeAxisViewController *vc = [[RecordTimeAxisViewController alloc] initWithStoryboard];
+    vc.recordId = self.devices[indexPath.row];
+    [self basePushViewController:vc];
 }
 
 - (void) addPromptView {
@@ -116,10 +142,15 @@
 #pragma mark - EasyViewControllerProtocol
 
 - (void)bindViewModel {
+    [self showHub];
     [self.vm.dataCommand execute:nil];
     
     [self.vm.dataSubject subscribeNext:^(id x) {
+        [self hideHub];
+        
         if (self.vm.model.devices.count > 0) {
+            [self.devices removeAllObjects];
+            [self.devices addObjectsFromArray:self.vm.model.devices];
             [self.tableView reloadData];
         } else {
             [self addPromptView];

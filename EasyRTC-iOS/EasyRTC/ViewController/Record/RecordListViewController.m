@@ -32,7 +32,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.title = self.channel.name;
+    self.navigationItem.title = @"视频广场";
     
     self.view.backgroundColor = UIColorFromRGB(0xeceff0);
     EasyViewBorderRadius(_dateBtn, 4, 0.6, UIColorFromRGB(0xb2b2b2));
@@ -67,9 +67,12 @@
         [self loginFirstWithCommend:command];
     }];
     
-    [self.viewModel.querydailyCommand execute:self.channel.channel];
+    [self showHub];
+    [self.viewModel.querydailyCommand execute:self.recordId];
     
     [self.viewModel.querydailySubject subscribeNext:^(id x) {
+        [self hideHub];
+        
         if (x) {
             [self.tableView reloadData];
         } else {
@@ -88,7 +91,7 @@
         [self.subject sendNext:nil];
         
         // 删除录像后 刷新数据
-        [self.viewModel.querydailyCommand execute:self.channel.channel];
+        [self.viewModel.querydailyCommand execute:self.recordId];
     }];
 }
 
@@ -97,13 +100,14 @@
 // 展开日历，选择日期
 - (IBAction)selectDate:(id)sender {
     CalendarViewController *controller = [[CalendarViewController alloc] initWithStoryborad];
-    controller.channelID = self.channel.channel;
+    controller.recordId = self.recordId;
     controller.chooseMonth = self.viewModel.selectDate;
     [controller.subject subscribeNext:^(NSDate *date) {
         self.viewModel.selectDate = date;
         [self setDateBtnTitle];
         
-        [self.viewModel.querydailyCommand execute:self.channel.channel];
+        [self showHub];
+        [self.viewModel.querydailyCommand execute:self.recordId];
     }];
     [self basePushViewController:controller];
 }
@@ -209,7 +213,8 @@
     }];
     action3.backgroundColor = UIColorFromRGB(0x5bb2ee);
     
-    return @[ action1, action2, action3 ];
+//    return @[ action1, action2, action3 ];
+    return @[ action2 ];
 }
 
 - (void) deleteRecord:(NSIndexPath *)indexPath {
@@ -220,7 +225,7 @@
     UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         [self showHubWithLoadText:@"删除中"];
         self.viewModel.curRecord = self.viewModel.records[indexPath.row];
-        [self.viewModel.removeCommand execute:self.channel.channel];
+        [self.viewModel.removeCommand execute:self.recordId];
     }];
     [controller addAction:cancelAction];
     [controller addAction:okAction];
@@ -235,7 +240,7 @@
     UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
     UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         DownloadViewController *controller = [[DownloadViewController alloc] initWithStoryborad];
-        controller.channel = self.channel;
+        controller.recordId = self.recordId;
         controller.curRecord = self.viewModel.records[indexPath.row];
         controller.modalPresentationStyle = UIModalPresentationOverCurrentContext;
         [self presentViewController:controller animated:YES completion:nil];

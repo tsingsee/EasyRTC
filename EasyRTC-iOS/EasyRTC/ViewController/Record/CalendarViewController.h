@@ -13,7 +13,7 @@
  */
 @interface CalendarViewController : BaseViewController
 
-@property (nonatomic, copy) NSString *channelID;
+@property (nonatomic, copy) NSString *recordId;
 @property (nonatomic, strong) NSDate *chooseMonth;
 
 @property (nonatomic, strong) RACSubject *subject;

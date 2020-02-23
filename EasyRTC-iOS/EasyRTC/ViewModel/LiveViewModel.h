@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface LiveViewModel : BaseViewModel
 
-@property (nonatomic, strong) LiveSessionModel *model;
+@property (nonatomic, strong) NSMutableArray<Session *> *sessions;
 
 @property (nonatomic, strong) RACSubject *dataSubject;
 @property (nonatomic, strong) RACCommand *dataCommand;

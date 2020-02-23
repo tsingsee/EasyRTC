@@ -28,7 +28,7 @@
     
     // 录像开始时间, YYYYMMDDHHmmss
     NSString *period = self.curRecord.startAt;
-    NSString *url = [NSString stringWithFormat:@"%@/api/v1/record/download/%@/%@", ip, self.channel.channel, period];
+    NSString *url = [NSString stringWithFormat:@"%@/api/v1/record/download/%@/%@", ip, self.recordId, period];
     NSLog(@"下载录像的地址L：%@", url);
     
     NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];

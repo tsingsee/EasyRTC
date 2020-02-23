@@ -180,7 +180,7 @@
         
         if (ch == 1) {
             NSString *period = [DateUtil dateYYYYMM:self.chooseMonth];
-            NSString *dateStr = [NSString stringWithFormat:@"%@%02d", period, i];
+            NSString *dateStr = [NSString stringWithFormat:@"%@%02d", period, i+1];
             NSDate *randomDate = [DateUtil dateFormatYYYYMMDD:dateStr];
             
             // Use the date as key for eventsByDate
@@ -203,7 +203,7 @@
     [self showHub];
     
     self.viewModel.chooseMonth = self.chooseMonth;
-    [self.viewModel.querymonthlyCommand execute:self.channelID];
+    [self.viewModel.querymonthlyCommand execute:self.recordId];
     
     [self.viewModel.querymonthlySubject subscribeNext:^(NSString *res) {
         [self hideHub];

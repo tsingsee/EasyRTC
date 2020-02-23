@@ -14,9 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface LiveCell : UITableViewCell
 
 @property (nonatomic, strong) UILabel *noLabel;
-@property (nonatomic, strong) UILabel *nameLabel;
-@property (nonatomic, strong) UILabel *statusLabel;
 @property (nonatomic, strong) UILabel *timeLabel;
+@property (nonatomic, strong) UILabel *bitLabel;
 
 @property (nonatomic, strong) Session *model;
 

@@ -7,7 +7,6 @@
 //
 
 #import "BaseViewController.h"
-#import "VideoModel.h"
 #import "RecordModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
@@ -17,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @interface DownloadViewController : BaseViewController
 
-@property (nonatomic, strong) Channel *channel;
+@property (nonatomic, copy) NSString *recordId;
 @property (nonatomic, strong) RecordModel *curRecord;
 
 - (instancetype) initWithStoryborad;

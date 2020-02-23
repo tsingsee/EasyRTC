@@ -32,7 +32,7 @@
     [self.querymonthlyCommand.executionSignals.switchToLatest subscribeNext:^(NetDataReturnModel *model) {
         if (model.type == ReturnSuccess) {
             // flag 标记当月每一天是否有录像, 0 - 没有录像, 1 - 有录像
-            [self.querymonthlySubject sendNext:model.result];
+            [self.querymonthlySubject sendNext:model.result[@"flags"]];
         } else if (model.type == ReturnFailure) {
             NSError *error = [NSError errorWithDomain:model.error code:0 userInfo:nil];
             [self.querymonthlySubject sendError:error];
@@ -60,7 +60,7 @@
             NSString *ip = [[LoginInfoLocalData sharedInstance] gainIPAddress];
             NSString *period = [DateUtil dateYYYYMMDD:self.selectDate];// 日期, YYYYMMDD
             
-            NSString *url = [NSString stringWithFormat:@"%@/api/v1/record/querydaily?id=%@&period=%@", ip, channelID, period];
+            NSString *url = [NSString stringWithFormat:@"%@/query_record_daily?id=%@&period=%@", ip, channelID, period];
             return [self.request httpGetRequest:url params:nil requestModel:nil];
         }];
     }
@@ -76,7 +76,7 @@
             // 月份, YYYYMM
             NSString *period = [DateUtil dateYYYYMM:self.chooseMonth];
             
-            NSString *url = [NSString stringWithFormat:@"%@/api/v1/record/querymonthly?id=%@&period=%@", ip, channelID, period];
+            NSString *url = [NSString stringWithFormat:@"%@/query_record_monthly?id=%@&period=%@", ip, channelID, period];
             return [self.request httpGetRequest:url params:nil requestModel:nil];
         }];
     }

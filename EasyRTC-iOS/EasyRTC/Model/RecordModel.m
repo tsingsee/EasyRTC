@@ -18,6 +18,11 @@
 
 @implementation RecordModel
 
+//返回一个 Dict，将 Model 属性名对映射到 JSON 的 Key。
++ (nullable NSDictionary<NSString *, id> *)modelCustomPropertyMapper {
+    return @{ @"startAt" : @"start_time" };
+}
+
 + (instancetype) convertFromDict:(NSDictionary *)dict {
     RecordModel *model = [RecordModel modelWithDictionary:dict];
     
@@ -30,9 +35,10 @@
             return _hls;
         }
         
-        NSString *ip = [[LoginInfoLocalData sharedInstance] gainIPAddress];
-        NSString *urlStr = [NSString stringWithFormat:@"%@%@", ip, _hls];
-        return urlStr;
+//        NSString *ip = [[LoginInfoLocalData sharedInstance] gainIPAddress];
+//        NSString *urlStr = [NSString stringWithFormat:@"%@%@", ip, _hls];
+//        return urlStr;
+        return [NSString stringWithFormat:@"https://demo.easyrtc.cn%@", _hls];
     }
     
     return _hls;

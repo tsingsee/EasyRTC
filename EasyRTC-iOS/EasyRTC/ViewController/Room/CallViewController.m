@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *liveView;
 @property (weak, nonatomic) IBOutlet UIButton *returnBtn;
 @property (weak, nonatomic) IBOutlet UIButton *speakBtn;
+@property (weak, nonatomic) IBOutlet UIButton *flipBtn;
 //@property (weak, nonatomic) IBOutlet UIButton *userListBtn;
 //@property (nonatomic, strong) ListViewController *listVC;
 
@@ -34,6 +35,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.navigationController setNavigationBarHidden:YES];
+    self.view.backgroundColor = [UIColor blackColor];
     
     [self showWaitingView];
     [self hideControlPanel];
@@ -54,17 +56,17 @@
     [self callRoom];
 }
 
-- (void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
-    
-    [self.room leave];
-    [self hideWaitingView];
-}
-
-- (void)viewDidDisappear:(BOOL)animated {
-    [super viewDidDisappear:animated];
-    [self.navigationController setNavigationBarHidden:NO];
-}
+//- (void)viewWillDisappear:(BOOL)animated {
+//    [super viewWillDisappear:animated];
+//    
+//    [self.room leave];
+//    [self hideWaitingView];
+//}
+//
+//- (void)viewDidDisappear:(BOOL)animated {
+//    [super viewDidDisappear:animated];
+//    [self.navigationController setNavigationBarHidden:NO];
+//}
 
 - (void)viewWillLayoutSubviews {
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
@@ -76,7 +78,7 @@
 
 //- (BOOL)onDeviceOrientationDidChange {
 //    //获取当前设备Device
-//    UIDevice *device = [UIDevice currentDevice] ;
+//    UIDevice *device = [UIDevice currentDevice];
 //    //识别当前设备的旋转方向
 //    switch (device.orientation) {
 //        case UIDeviceOrientationFaceUp: {
@@ -131,6 +133,7 @@
 - (void)showControlPanel {
     self.returnBtn.hidden = NO;
     self.speakBtn.hidden = NO;
+    self.flipBtn.hidden = NO;
 //    self.userListBtn.hidden = NO;
 //    self.userTable.hidden = NO;
 }
@@ -138,8 +141,9 @@
 - (void)hideControlPanel {
     self.returnBtn.hidden = YES;
     self.speakBtn.hidden = YES;
+    self.flipBtn.hidden = YES;
 //    self.userListBtn.hidden = YES;
-    self.userTable.hidden = YES;
+//    self.userTable.hidden = YES;
 }
 
 - (void)showLiveView {
@@ -161,8 +165,9 @@
     
     switch (roomStatus) {
         case ROOM_STATUS_SIGNOUT: {
-            [self hideWaitingView];
+//            [self hideWaitingView];
             [self hideLiveView];
+//            [self.room join];
         }
             break;
         case ROOM_STATUS_SIGNING:
@@ -222,6 +227,11 @@
 
 #pragma mark - action
 
+// 切换设摄像头
+- (IBAction)flip:(id)sender {
+    [self.room swapFrontAndBackCameras];
+}
+
 - (IBAction)cancelBtnClicked:(id)sender {
     [self.room leave];
     [self hideWaitingView];
@@ -232,13 +242,11 @@
     [self.room loudspeakerClick];
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//        if ([self.room isSpeakerEnable]) {
-//            [self.view makeToast:@"Speaker ON" duration:1.0 position:CSToastPositionTop];
-//            [self.speakBtn setImage:[UIImage imageNamed:@"speakeron"] forState:UIControlStateNormal];
-//        } else {
-//            [self.view makeToast:@"Speaker OFF" duration:1.0 position:CSToastPositionTop];
-//            [self.speakBtn setImage:[UIImage imageNamed:@"speakeroff"] forState:UIControlStateNormal];
-//        }
+        if ([self.room isSpeakerEnable]) {
+            [self.speakBtn setImage:[UIImage imageNamed:@"open_mute"] forState:UIControlStateNormal];
+        } else {
+            [self.speakBtn setImage:[UIImage imageNamed:@"close_mute"] forState:UIControlStateNormal];
+        }
     });
 }
 

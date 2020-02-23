@@ -74,7 +74,7 @@
 - (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
     
-    [self.player shutdown];
+//    [self.player shutdown];
     [self.player.view removeFromSuperview];
     self.player = nil;
     
@@ -90,7 +90,7 @@
     self.loadIV.hidden = NO;
     
     if (self.player) {
-        [self.player shutdown];
+//        [self.player shutdown];
         [self.player.view removeFromSuperview];
         self.player = nil;
     }
@@ -280,8 +280,9 @@
     [closeBtn setTarget:self action:@selector(close) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:closeBtn];
     [closeBtn makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.player.view.mas_top).offset(10);
-        make.right.equalTo(self.player.view.mas_right).offset(-10);
+        make.top.equalTo(self.player.view.mas_top);
+        make.right.equalTo(self.player.view.mas_right);
+        make.width.height.equalTo(@44);
     }];
     
     _playBtn = [[UIButton alloc] init];

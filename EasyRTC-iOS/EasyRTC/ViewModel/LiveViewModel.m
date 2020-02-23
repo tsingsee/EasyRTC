@@ -10,11 +10,28 @@
 
 @implementation LiveViewModel
 
+- (instancetype) init {
+    if (self = [super init]) {
+        self.sessions = [[NSMutableArray alloc] init];
+    }
+    
+    return self;
+}
+
 - (void) easy_initialize {
     [self.dataCommand.executionSignals.switchToLatest subscribeNext:^(NetDataReturnModel *model) {
         if (model.type == ReturnSuccess) {
-            self.model = [LiveSessionModel convertFromDict:model.result];
-            [self.dataSubject sendNext:self.model];
+            LiveSessionModel *live = [LiveSessionModel convertFromDict:model.result];
+            NSArray<Session *> *arr = [Session convertFromArray:live.sessions.sessions];
+            
+            [self.sessions removeAllObjects];
+            for (Session *item in arr) {
+                if ([item.Application isEqualToString:@"hls"]) {
+                    [self.sessions addObject:item];
+                }
+            }
+            
+            [self.dataSubject sendNext:nil];
         } else if (model.type == ReturnFailure) {
             [self.dataSubject sendNext:nil];
         } else if (model.type == ReturnValidToken) {

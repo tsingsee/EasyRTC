@@ -35,7 +35,7 @@
     self.slider.maximumValue = 100;
     self.slider.minimumValue = 0;
     
-    self.viewModel.channel = self.channel;
+    self.viewModel.recordId = self.recordId;
     self.viewModel.curRecord = self.curRecord;
     [self.viewModel downLoadVedio];
 }

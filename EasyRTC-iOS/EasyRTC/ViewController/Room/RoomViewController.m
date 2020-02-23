@@ -72,8 +72,8 @@
     UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"setting"] style:UIBarButtonItemStyleDone target:self action:@selector(setting)];
     self.parentViewController.navigationItem.leftBarButtonItem = item;
     
-    UIBarButtonItem *item1 = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"create_room"] style:UIBarButtonItemStyleDone target:self action:@selector(createRoom)];
-    self.parentViewController.navigationItem.rightBarButtonItem = item1;
+//    UIBarButtonItem *item1 = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"create_room"] style:UIBarButtonItemStyleDone target:self action:@selector(createRoom)];
+//    self.parentViewController.navigationItem.rightBarButtonItem = item1;
 }
 
 - (void) setting {

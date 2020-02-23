@@ -46,5 +46,6 @@ typedef NS_ENUM(NSUInteger, RoomStatus) {
 
 - (BOOL)isSpeakerEnable;
 - (UIView *)getRenderView;
+- (void)swapFrontAndBackCameras;
 
 @end

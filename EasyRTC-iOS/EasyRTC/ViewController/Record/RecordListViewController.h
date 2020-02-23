@@ -7,14 +7,13 @@
 //
 
 #import "BaseViewController.h"
-#import "VideoModel.h"
 
 /**
  列表的录像
  */
 @interface RecordListViewController : BaseViewController
 
-@property (nonatomic, strong) Channel *channel;
+@property (nonatomic, copy) NSString *recordId;
 @property (nonatomic, strong) NSDate *selectDate;
 
 @property (nonatomic, strong) RACSubject *subject;

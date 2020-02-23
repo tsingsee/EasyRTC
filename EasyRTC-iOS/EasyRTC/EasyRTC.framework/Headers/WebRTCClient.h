@@ -50,5 +50,6 @@ typedef NS_ENUM(NSInteger, ARDSignalingChannelState) {
 
 - (void)audioEnable:(BOOL)on; // mute本地音频
 - (void)loudspeakerClick; // speaker 开关
+- (void)swapFrontAndBackCameras;
 
 @end

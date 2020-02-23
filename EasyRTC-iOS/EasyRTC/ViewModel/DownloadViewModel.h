@@ -8,13 +8,12 @@
 
 #import "BaseViewModel.h"
 #import "RecordModel.h"
-#import "VideoModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface DownloadViewModel : BaseViewModel<NSURLSessionDelegate>
 
-@property (nonatomic, strong) Channel *channel;         // 通道号
+@property (nonatomic, copy) NSString *recordId;
 @property (nonatomic, strong) RecordModel *curRecord;   // 录像的
 
 @property (nonatomic, strong) RACSubject *downloadSubject;

@@ -49,7 +49,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.navigationItem.title = self.channel.name;
+    self.navigationItem.title = [NSString stringWithFormat:@"录像(%@)-时间轴视图", self.recordId];
     [self setView];
     
     NSData *data = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"loading.gif" ofType:nil]];
@@ -85,13 +85,13 @@
 - (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
     
+    [self removeMovieNotificationObservers];
+
     [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(refreshMediaControl) object:nil];
-    
-    [self.player shutdown];
+
+//    [self.player shutdown];
     [self.player.view removeFromSuperview];
     self.player = nil;
-    
-    [self removeMovieNotificationObservers];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -184,7 +184,7 @@
     }
     
     if (self.player) {
-        [self.player shutdown];
+//        [self.player shutdown];
         [self.player.view removeFromSuperview];
         self.player = nil;
     }
@@ -262,7 +262,7 @@
         [self loginFirstWithCommend:command];
     }];
     
-    [self.viewModel.querydailyCommand execute:self.channel.channel];
+    [self.viewModel.querydailyCommand execute:self.recordId];
     
     [self.viewModel.querydailySubject subscribeNext:^(id x) {
         if (self.isPushRecord) {
@@ -285,7 +285,7 @@
         }
         
         // 删除录像后 刷新数据
-        [self.viewModel.querydailyCommand execute:self.channel.channel];
+        [self.viewModel.querydailyCommand execute:self.recordId];
     }];
 }
 
@@ -298,7 +298,7 @@
     self.loadIV.hidden = YES;
     
     if (self.player) {
-        [self.player shutdown];
+//        [self.player shutdown];
         [self.player.view removeFromSuperview];
         self.player = nil;
     }
@@ -384,7 +384,7 @@
     }
     
     self.viewModel.selectDate = [[NSDate alloc] initWithTimeIntervalSinceReferenceDate:([self.viewModel.selectDate timeIntervalSinceReferenceDate] - 24 * 3600)];
-    [self.viewModel.querydailyCommand execute:self.channel.channel];
+    [self.viewModel.querydailyCommand execute:self.recordId];
     
     [self setDateBtnTitle];
 }
@@ -396,7 +396,7 @@
     }
     
     self.viewModel.selectDate = [[NSDate alloc] initWithTimeIntervalSinceReferenceDate:([self.viewModel.selectDate timeIntervalSinceReferenceDate] + 24 * 3600)];
-    [self.viewModel.querydailyCommand execute:self.channel.channel];
+    [self.viewModel.querydailyCommand execute:self.recordId];
     
     [self setDateBtnTitle];
 }
@@ -406,7 +406,7 @@
     self.isPushRecord = YES;
     
     CalendarViewController *controller = [[CalendarViewController alloc] initWithStoryborad];
-    controller.channelID = self.channel.channel;
+    controller.recordId = self.recordId;
     controller.chooseMonth = self.viewModel.selectDate;
     [controller.subject subscribeNext:^(NSDate *date) {
         self.viewModel.selectDate = date;
@@ -414,7 +414,7 @@
         
         [self setDateBtnTitle];
         
-        [self.viewModel.querydailyCommand execute:self.channel.channel];
+        [self.viewModel.querydailyCommand execute:self.recordId];
     }];
     [self basePushViewController:controller];
 }
@@ -425,7 +425,7 @@
         return;
     }
     
-    [self downloadRecord];
+//    [self downloadRecord];
 }
 
 // 视图列表
@@ -433,33 +433,33 @@
     self.isPushRecord = YES;
     
     RecordListViewController *controller = [[RecordListViewController alloc] initWithStoryboard];
-    controller.channel = self.channel;
+    controller.recordId = self.recordId;
     controller.selectDate = self.viewModel.selectDate;
     [controller.subject subscribeNext:^(id x) {
         // 删除录像了，则需要更新数据
-        [self.viewModel.querydailyCommand execute:self.channel.channel];
+        [self.viewModel.querydailyCommand execute:self.recordId];
     }];
     [self basePushViewController:controller];
 }
 
 // 暂停
 - (IBAction)pause:(id)sender {
-    if (!self.loadIV.isHidden) {
-        return;
-    }
-    
-    if (!self.viewModel.curRecord) {
-        return;
-    }
-    
-    _pauseBtn.selected = !_pauseBtn.selected;
-    _pauseBtn2.selected = !_pauseBtn2.selected;
-    
-    if (_pauseBtn.selected) {
-        [self.player pause];
-    } else {
-        [self.player play];
-    }
+//    if (!self.loadIV.isHidden) {
+//        return;
+//    }
+//
+//    if (!self.viewModel.curRecord) {
+//        return;
+//    }
+//
+//    _pauseBtn.selected = !_pauseBtn.selected;
+//    _pauseBtn2.selected = !_pauseBtn2.selected;
+//
+//    if (_pauseBtn.selected) {
+//        [self.player pause];
+//    } else {
+//        [self.player play];
+//    }
 }
 
 // 删除
@@ -478,7 +478,7 @@
     UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
     UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         [self showHubWithLoadText:@"删除中"];
-        [self.viewModel.removeCommand execute:self.channel.channel];
+        [self.viewModel.removeCommand execute:self.recordId];
     }];
     [controller addAction:cancelAction];
     [controller addAction:okAction];
@@ -493,7 +493,7 @@
     UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
     UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         DownloadViewController *controller = [[DownloadViewController alloc] initWithStoryborad];
-        controller.channel = self.channel;
+        controller.recordId = self.recordId;
         controller.curRecord = self.viewModel.curRecord;
         controller.modalPresentationStyle = UIModalPresentationOverCurrentContext;
         [self presentViewController:controller animated:YES completion:nil];

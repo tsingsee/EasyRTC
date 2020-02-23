@@ -35,7 +35,7 @@
 
 + (instancetype) convertFromDict:(NSDictionary *)dict {
     Sessions *model = [Sessions modelWithDictionary:dict];
-    model.sessions = [Sessions convertFromArray:model.sessions];
+    model.sessions = [Session convertFromArray:model.sessions];
     
     return model;
 }

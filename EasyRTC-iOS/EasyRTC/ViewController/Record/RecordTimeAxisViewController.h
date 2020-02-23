@@ -7,7 +7,6 @@
 //
 
 #import "BaseViewController.h"
-#import "VideoModel.h"
 #import <IJKMediaFramework/IJKMediaFramework.h>
 
 /**
@@ -15,7 +14,7 @@
  */
 @interface RecordTimeAxisViewController : BaseViewController
 
-@property (nonatomic, strong) Channel *channel;
+@property (nonatomic, copy) NSString *recordId;
 @property (atomic, retain) id<IJKMediaPlayback> player;
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *controlViewTop;

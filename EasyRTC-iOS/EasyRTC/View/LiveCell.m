@@ -41,28 +41,9 @@
         _noLabel.font = [UIFont systemFontOfSize:16];
         [self addSubview:_noLabel];
         [_noLabel makeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(@15);
+            make.left.equalTo(@12);
+            make.right.equalTo(@(-12));
             make.top.equalTo(@15);
-        }];
-        
-        _nameLabel = [[UILabel alloc] init];
-        _nameLabel.numberOfLines = 0;
-        _nameLabel.textColor = UIColorFromRGB(0x8d9197);
-        _nameLabel.font = [UIFont systemFontOfSize:15];
-        [self addSubview:_nameLabel];
-        [_nameLabel makeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(@15);
-            make.right.equalTo(@(-15));
-            make.top.equalTo(self.noLabel.mas_bottom).offset(15);
-        }];
-        
-        _statusLabel = [[UILabel alloc] init];
-        _statusLabel.textColor = UIColorFromRGB(0x55c40b);
-        _statusLabel.font = [UIFont systemFontOfSize:14];
-        [self addSubview:_statusLabel];
-        [_statusLabel makeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(self.nameLabel);
-            make.top.equalTo(self.nameLabel.mas_bottom).offset(15);
         }];
         
         _timeLabel = [[UILabel alloc] init];
@@ -70,8 +51,17 @@
         _timeLabel.font = [UIFont systemFontOfSize:14];
         [self addSubview:_timeLabel];
         [_timeLabel makeConstraints:^(MASConstraintMaker *make) {
-            make.right.equalTo(self.nameLabel);
-            make.top.equalTo(self.nameLabel.mas_bottom).offset(15);
+            make.left.equalTo(self.noLabel);
+            make.top.equalTo(self.noLabel.mas_bottom).offset(15);
+        }];
+        
+        _bitLabel = [[UILabel alloc] init];
+        _bitLabel.textColor = UIColorFromRGB(0xb2b2b2);
+        _bitLabel.font = [UIFont systemFontOfSize:14];
+        [self addSubview:_bitLabel];
+        [_bitLabel makeConstraints:^(MASConstraintMaker *make) {
+            make.right.equalTo(self.noLabel);
+            make.top.equalTo(self.noLabel.mas_bottom).offset(15);
         }];
         
         UIView *line = [[UIView alloc] init];
@@ -79,7 +69,7 @@
         [self addSubview:line];
         [line makeConstraints:^(MASConstraintMaker *make) {
             make.left.right.bottom.equalTo(@0);
-            make.height.equalTo(@10);
+            make.height.equalTo(@1);
         }];
     }
     
@@ -87,17 +77,13 @@
 }
 
 - (void) setModel:(Session *)model {
-//    self.noLabel.text = [NSString stringWithFormat:@"会议室号：%@", model.roomNo];
-//    self.nameLabel.text = model.roomName ? model.roomName : @"";
-//    self.timeLabel.text = model.createTime ? model.createTime : @"";
-//    self.statusLabel.text = model.status ? model.status : @"";
-//
-//    // 调整行间距
-//    [UILabel changeLineSpaceForLabel:self.nameLabel WithSpace:4];
+    self.noLabel.text = [NSString stringWithFormat:@"会议室号：%@", model.sessionID];
+    self.timeLabel.text = [NSString stringWithFormat:@"会议时长：%@", model.Time];
+    self.bitLabel.text = [NSString stringWithFormat:@"推送码率：%dKB", model.InBitrate / 1000];
 }
 
 - (CGFloat)heightForModel:(Session *)model {
-    CGFloat height = 125;
+    CGFloat height = 85;
 
 //    height += 12;
 //    self.nameLabel.text = model.newsTitle ? model.newsTitle : @"";
