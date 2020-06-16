@@ -10,8 +10,6 @@ Android版：http://d.firim.info/EasyRTC
 
 iOS版：AppStore搜索**EasyRTC**
 
-![EasyRTC-iOS](https://raw.githubusercontent.com/EasyDSS/EasyRTC/master/QR%20Code/EasyRTC-iOS.png)
-
 ## 获取更多信息 ##
 
 邮件：[support@easydss.com](mailto:support@easydss.com) 
