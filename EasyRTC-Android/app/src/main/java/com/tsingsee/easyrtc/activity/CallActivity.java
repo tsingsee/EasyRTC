@@ -1,16 +1,31 @@
 package com.tsingsee.easyrtc.activity;
 
+import android.Manifest;
+import android.content.DialogInterface;
 import android.content.pm.ActivityInfo;
+import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.os.Environment;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
+import android.support.v7.app.AlertDialog;
+import android.util.Log;
 import android.view.Display;
 import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.tsingsee.easyrtc.R;
+import com.tsingsee.easyrtc.http.BaseEntity3;
+import com.tsingsee.easyrtc.http.BaseObserver3;
+import com.tsingsee.easyrtc.http.RetrofitFactory;
 import com.tsingsee.easyrtc.model.Account;
 import com.tsingsee.easyrtc.model.RoomBean;
 import com.tsingsee.easyrtc.model.RoomModel;
+import com.tsingsee.easyrtc.model.UploadBean;
+import com.tsingsee.easyrtc.model.UserInfo;
+import com.tsingsee.easyrtc.tool.MD5Util;
 import com.tsingsee.easyrtc.tool.SharedHelper;
 import com.tsingsee.easyrtc.tool.ToastUtil;
 import com.tsingsee.rtc.Options;
@@ -22,13 +37,24 @@ import com.tsingsee.rtc.XLog;
 import org.webrtc.RendererCommon;
 import org.webrtc.SurfaceViewRenderer;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import io.reactivex.Observable;
+import okhttp3.MediaType;
+import okhttp3.MultipartBody;
+import okhttp3.RequestBody;
 
 import static android.content.pm.ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED;
 
 public class CallActivity extends BaseActivity implements StatusSink {
+    private static final int MY_PERMISSIONS_REQUEST_WRITE_EXTERNAL_STORAGE = 0x111;
+
     Room room;
     private Options options;
 
@@ -42,10 +68,12 @@ public class CallActivity extends BaseActivity implements StatusSink {
     ImageView speaker;
     @BindView(R.id.hangup)
     ImageView hangup;
+    @BindView(R.id.switch_camera)
+    ImageView switchCamera;
 
     private long mExitTime;
     private boolean connected = true;
-    private RoomBean roomBean;
+    private RoomBean.Data roomBean;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,7 +85,7 @@ public class CallActivity extends BaseActivity implements StatusSink {
 
         ButterKnife.bind(this);
 
-        roomBean = (RoomBean) getIntent().getSerializableExtra("roomBean");
+        roomBean = (RoomBean.Data) getIntent().getSerializableExtra("roomBean");
         room = RoomModel.getInstance().getRoom();
         options = new Options(this);
 
@@ -133,7 +161,7 @@ public class CallActivity extends BaseActivity implements StatusSink {
             finish();
         } else {
             hangup.setImageResource(R.drawable.stop_call);
-            connect(roomBean.getRoomNo());
+            connect(roomBean.getId());
         }
     }
 
@@ -152,6 +180,12 @@ public class CallActivity extends BaseActivity implements StatusSink {
     @OnClick(R.id.switch_camera)
     public void switchCamera() {
         room.switchCamera();
+    }
+
+    @OnClick(R.id.snap_camera)
+    public void snapCamera() {
+        // 获取实时图片
+        onTakePicture();
     }
 
     @OnClick(R.id.switch_orientation)
@@ -216,18 +250,136 @@ public class CallActivity extends BaseActivity implements StatusSink {
 
         SharedHelper sp = new SharedHelper(this);
         Account account = sp.readAccount();
+        UserInfo user = sp.readUserInfo();
 
-//        options.displayName = userName.getEditableText().toString();
-//        options.userEmail = email.getEditableText().toString();
         options.roomNumber = no;
         options.username = account.getUserName();
-        options.password = account.getPwd();
-//        options.serverAddress = serverEditText.getEditableText().toString();
-//        options.displayName = options.username;
-//        options.userEmail = options.username + "@easydarwin.org";
+        options.password = MD5Util.md5(account.getPwd());
+        options.serverAddress = account.getServerAddress();
+
+        if (user != null) {
+            options.displayName = user.getId() + "@" + user.getUserName();
+        }
 
         room.setOptions(options);
         room.join();
         options.save();
+    }
+
+    public void onTakePicture() {
+        int permissionCheck = ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
+
+        if (permissionCheck == PackageManager.PERMISSION_GRANTED) {
+            screenshot();
+        } else {
+            requestWriteStorage();
+        }
+    }
+
+    private void screenshot() {
+        try {
+            showHub("上传中");
+
+            File file = saveBitmap(room.getCurrentBitmap());
+            uploadImage(file);
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            hideHub();
+        }
+    }
+
+    private void requestWriteStorage() {
+        // Should we show an explanation?
+        if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
+
+            // Show an expanation to the user *asynchronously* -- don't block
+            // this thread waiting for the user's response! After the user
+            // sees the explanation, try again to request the permission.
+
+            new AlertDialog.Builder(this).setMessage("EasyRTC需要使用写文件权限来抓拍").setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    ActivityCompat.requestPermissions(CallActivity.this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, MY_PERMISSIONS_REQUEST_WRITE_EXTERNAL_STORAGE);
+                }
+            }).show();
+        } else {
+            // No explanation needed, we can request the permission.
+
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, MY_PERMISSIONS_REQUEST_WRITE_EXTERNAL_STORAGE);
+
+            // MY_PERMISSIONS_REQUEST_WRITE_EXTERNAL_STORAGE is an
+            // app-defined int constant. The callback method gets the
+            // result of the request.
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
+        switch (requestCode) {
+            case MY_PERMISSIONS_REQUEST_WRITE_EXTERNAL_STORAGE: {
+                // If request is cancelled, the result arrays are empty.
+                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    // permission was granted, yay! Do the contacts-related task you need to do.
+
+                    if (requestCode == MY_PERMISSIONS_REQUEST_WRITE_EXTERNAL_STORAGE) {
+                        screenshot();
+                    }
+                } else {
+                    // permission denied, boo! Disable the functionality that depends on this permission.
+                }
+
+                return;
+            }
+        }
+    }
+
+    private File saveBitmap(Bitmap bitmap) throws IOException {
+        String dir = Environment.getExternalStorageDirectory() + "/EasyRTC";
+        File f = new File(dir);
+        f.mkdirs();
+
+        File file = new File(f, "snap.jpg");
+        if (file.exists()) {
+            file.delete();
+        }
+
+        FileOutputStream out;
+        try {
+            out = new FileOutputStream(file);
+            if (bitmap.compress(Bitmap.CompressFormat.JPEG, 75, out)) {
+                out.flush();
+                out.close();
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return file;
+    }
+
+    private void uploadImage(File file) {
+        RequestBody requestFile = RequestBody.create(MediaType.parse("multipart/form-data"), file);
+        MultipartBody.Part part = MultipartBody.Part.createFormData("file", file.getName(), requestFile);
+
+        RequestBody id = RequestBody.create(MediaType.parse("multipart/form-data"), roomBean.getId());
+
+        Observable<BaseEntity3<UploadBean>> observable = RetrofitFactory.getRetrofitService().uploadImages(id, part);
+        observable.compose(compose(this.<BaseEntity3<UploadBean>>bindToLifecycle()))
+                .subscribe(new BaseObserver3<UploadBean>(this, dialog, null, false) {
+                    @Override
+                    protected void onHandleSuccess(UploadBean model) {
+                        hideHub();
+                        Log.i("CallActivity", model.getUrl());
+                        ToastUtil.show("截图上传成功");
+                    }
+
+                    @Override
+                    protected void loginSuccess() {
+
+                    }
+                });
     }
 }

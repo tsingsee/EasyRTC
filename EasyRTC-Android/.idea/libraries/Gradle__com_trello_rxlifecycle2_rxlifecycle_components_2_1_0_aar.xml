@@ -4,9 +4,7 @@
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c1629a7282664b247c0734710e6ab21d/res" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c1629a7282664b247c0734710e6ab21d/jars/classes.jar!/" />
     </CLASSES>
-    <JAVADOC>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.trello.rxlifecycle2/rxlifecycle-components/2.1.0/c944d4135b513d469bffd8e8ac6f46bc99b82c4e/rxlifecycle-components-2.1.0-javadoc.jar!/" />
-    </JAVADOC>
+    <JAVADOC />
     <SOURCES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.trello.rxlifecycle2/rxlifecycle-components/2.1.0/cf355c8c49c583d3aee918d9e2181ed289420977/rxlifecycle-components-2.1.0-sources.jar!/" />
     </SOURCES>

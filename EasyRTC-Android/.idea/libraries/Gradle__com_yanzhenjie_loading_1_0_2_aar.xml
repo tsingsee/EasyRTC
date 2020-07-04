@@ -4,9 +4,7 @@
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9a8219b45a3fdfc30e2994f877101c71/res" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9a8219b45a3fdfc30e2994f877101c71/jars/classes.jar!/" />
     </CLASSES>
-    <JAVADOC>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.yanzhenjie/loading/1.0.2/dfd36127c44db7459c416a8b2d29009bb337d318/loading-1.0.2-javadoc.jar!/" />
-    </JAVADOC>
+    <JAVADOC />
     <SOURCES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.yanzhenjie/loading/1.0.2/51d13557109460b8c95eb200c087e6e9f4307a06/loading-1.0.2-sources.jar!/" />
     </SOURCES>

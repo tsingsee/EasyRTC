@@ -132,8 +132,8 @@
     NSString *pwd = [[LoginInfoLocalData sharedInstance] gainPWD];
     
     Options *options = [[Options alloc] init];
-    options.username = name;
-    options.password = pwd;
+    options.username = name ? name : @"1008";
+    options.password = pwd ? pwd : @"1111";
     options.roomNumber = no;
     options.displayName = options.username;
 //    options.userEmail = [NSString stringWithFormat:@"%@@easydarwin.org", options.username];

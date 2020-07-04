@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.tsingsee.easyrtc.R;
 import com.tsingsee.easyrtc.activity.Record.RecordTimeAxisActivity;
+import com.tsingsee.easyrtc.model.RoomRecord;
 
 import java.util.List;
 
@@ -17,14 +18,14 @@ public class VideotapeAdapter extends RecyclerView.Adapter<VideotapeAdapter.View
     private LayoutInflater mInflater;
     private Context mContext;
 
-    private List<String> mDataList;
+    private List<RoomRecord> mDataList;
 
     public VideotapeAdapter(Context context) {
         mContext = context;
         this.mInflater = LayoutInflater.from(context);
     }
 
-    public void notifyDataSetChanged(List<String> dataList) {
+    public void notifyDataSetChanged(List<RoomRecord> dataList) {
         this.mDataList = dataList;
         super.notifyDataSetChanged();
     }
@@ -41,8 +42,8 @@ public class VideotapeAdapter extends RecyclerView.Adapter<VideotapeAdapter.View
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        final String item = mDataList.get(position);
-        holder.setData(item);
+        final RoomRecord item = mDataList.get(position);
+        holder.setData(item.getName());
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override

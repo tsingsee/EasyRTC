@@ -4,7 +4,6 @@ import android.app.AlertDialog;
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
@@ -16,18 +15,15 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.tsingsee.easyrtc.R;
-import com.tsingsee.easyrtc.RTCApplication;
 import com.tsingsee.easyrtc.activity.BaseActivity;
 import com.tsingsee.easyrtc.adapter.RecordAdapter;
 import com.tsingsee.easyrtc.databinding.ActivityRecordListBinding;
-import com.tsingsee.easyrtc.http.BaseEntity2;
-import com.tsingsee.easyrtc.http.BaseObserver2;
+import com.tsingsee.easyrtc.http.BaseEntity3;
+import com.tsingsee.easyrtc.http.BaseObserver3;
 import com.tsingsee.easyrtc.http.RetrofitFactory;
 import com.tsingsee.easyrtc.model.Record;
-import com.tsingsee.easyrtc.model.RecordModel;
+import com.tsingsee.easyrtc.model.RoomRecord;
 import com.tsingsee.easyrtc.tool.DateUtil;
-import com.tsingsee.easyrtc.tool.DownLoadUtil;
-import com.tsingsee.easyrtc.tool.SharedHelper;
 import com.yanzhenjie.recyclerview.swipe.SwipeMenu;
 import com.yanzhenjie.recyclerview.swipe.SwipeMenuBridge;
 import com.yanzhenjie.recyclerview.swipe.SwipeMenuCreator;
@@ -35,6 +31,7 @@ import com.yanzhenjie.recyclerview.swipe.SwipeMenuItem;
 import com.yanzhenjie.recyclerview.swipe.SwipeMenuItemClickListener;
 
 import java.util.Date;
+import java.util.List;
 
 import io.reactivex.Observable;
 
@@ -48,9 +45,9 @@ public class RecordListActivity extends BaseActivity implements Toolbar.OnMenuIt
     private ActivityRecordListBinding binding;
     private RecordAdapter adapter;
 
-    private String id;
+    private RoomRecord item;
     private Date selectDate;
-    private RecordModel recordModel;
+    private List<Record> recordModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,7 +61,7 @@ public class RecordListActivity extends BaseActivity implements Toolbar.OnMenuIt
         binding.mainToolbar.setNavigationIcon(R.drawable.back);
 
         Intent intent = getIntent();
-        id = intent.getStringExtra("id");
+        item = (RoomRecord) intent.getSerializableExtra("id");
         selectDate = (Date) intent.getSerializableExtra("selectDate");
 
         showDateTv();
@@ -78,7 +75,7 @@ public class RecordListActivity extends BaseActivity implements Toolbar.OnMenuIt
             public void onClick(View v) {
                 Intent intent = new Intent(RecordListActivity.this, CalendarActivity.class);
                 Bundle bundle = new Bundle();
-                bundle.putSerializable("id", id);
+                bundle.putSerializable("id", item);
                 bundle.putSerializable("selectDate", selectDate);
                 intent.putExtras(bundle);//发送数据
                 startActivityForResult(intent, request_code);
@@ -124,7 +121,7 @@ public class RecordListActivity extends BaseActivity implements Toolbar.OnMenuIt
                 // 任何操作必须先关闭菜单，否则可能出现Item菜单打开状态错乱。
                 menuBridge.closeMenu();
 
-                Record record = recordModel.getList().get(menuBridge.getAdapterPosition());
+                Record record = recordModel.get(menuBridge.getAdapterPosition());
                 if (menuBridge.getPosition() == 0) {        // 下载
                     downloadVideo(record);
                 } else if (menuBridge.getPosition() == 1) { // 分享
@@ -236,9 +233,9 @@ public class RecordListActivity extends BaseActivity implements Toolbar.OnMenuIt
 
         showHub("删除中");
 
-        Observable<BaseEntity2<String>> observable = RetrofitFactory.getRetrofitService2().removeRecord(id, record.getStartAt());
-        observable.compose(compose(this.<BaseEntity2<String>> bindToLifecycle()))
-                .subscribe(new BaseObserver2<String>(this, dialog, null, false) {
+        Observable<BaseEntity3<String>> observable = RetrofitFactory.getRetrofitService2().removeRecord(item.getId(), record.getStartAt());
+        observable.compose(compose(this.<BaseEntity3<String>> bindToLifecycle()))
+                .subscribe(new BaseObserver3<String>(this, dialog, null, false) {
                     @Override
                     protected void onHandleSuccess(String res) {
                         hideHub();
@@ -258,21 +255,21 @@ public class RecordListActivity extends BaseActivity implements Toolbar.OnMenuIt
     private void queryDaily() {
         String period = DateUtil.getDateStr(selectDate, "yyyyMMdd");
 
-        Observable<BaseEntity2<RecordModel>> observable = RetrofitFactory.getRetrofitService2().queryDaily(id, period);
-        observable.compose(compose(this.<BaseEntity2<RecordModel>> bindToLifecycle()))
-                .subscribe(new BaseObserver2<RecordModel>(this, dialog, null, false) {
+        Observable<BaseEntity3<List<Record>>> observable = RetrofitFactory.getRetrofitService2().queryDaily(item.getId(), period);
+        observable.compose(compose(this.<BaseEntity3<List<Record>>> bindToLifecycle()))
+                .subscribe(new BaseObserver3<List<Record>>(this, dialog, null, false) {
                     @Override
-                    protected void onHandleSuccess(RecordModel record) {
-                        recordModel = record;
+                    protected void onHandleSuccess(List<Record> records) {
+                        recordModel = records;
 
                         binding.activityEmptyView.setVisibility(View.GONE);
 
                         adapter = new RecordAdapter(RecordListActivity.this);
                         binding.recordRecyclerView.setAdapter(adapter);
 
-                        adapter.notifyDataSetChanged(record.getList());
+                        adapter.notifyDataSetChanged(records);
 
-                        if (record.getList().size() == 0) {
+                        if (records.size() == 0) {
                             binding.activityEmptyView.setVisibility(View.VISIBLE);
                         }
 

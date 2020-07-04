@@ -69,7 +69,8 @@
     
     LoginViewController *loginVC = [[LoginViewController alloc] initWithStoryborad];
     MainViewController *mainVC = [[MainViewController alloc] init];
-    [self.rootVC setViewControllers:@[ mainVC, loginVC ]];
+//    [self.rootVC setViewControllers:@[ mainVC, loginVC ]];
+    [self.rootVC setViewControllers:@[ mainVC ]];
     
     self.window.rootViewController = self.rootVC;
     

@@ -16,14 +16,14 @@ public class LiveAdapter extends RecyclerView.Adapter<LiveAdapter.ViewHolder> {
     private LayoutInflater mInflater;
     private Context mContext;
 
-    private List<LiveSessionModel.Session> mDataList;
+    private List<LiveSessionModel> mDataList;
 
     public LiveAdapter(Context context) {
         mContext = context;
         this.mInflater = LayoutInflater.from(context);
     }
 
-    public void notifyDataSetChanged(List<LiveSessionModel.Session> dataList) {
+    public void notifyDataSetChanged(List<LiveSessionModel> dataList) {
         this.mDataList = dataList;
         super.notifyDataSetChanged();
     }
@@ -40,7 +40,7 @@ public class LiveAdapter extends RecyclerView.Adapter<LiveAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        final LiveSessionModel.Session item = mDataList.get(position);
+        final LiveSessionModel item = mDataList.get(position);
         holder.setData(item);
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
@@ -65,7 +65,7 @@ public class LiveAdapter extends RecyclerView.Adapter<LiveAdapter.ViewHolder> {
             room_time_tv = (TextView) itemView.findViewById(R.id.room_time_tv);
         }
 
-        public void setData(LiveSessionModel.Session data) {
+        public void setData(LiveSessionModel data) {
             this.room_no_tv.setText("会议室号：" + data.getId());
             this.room_duration_tv.setText("会议时长：" + data.getTime());
             this.room_time_tv.setText("推送码率：" + data.getInBitrate() / 1000 + "KB");

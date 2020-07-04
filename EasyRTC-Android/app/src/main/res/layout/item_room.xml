@@ -5,7 +5,7 @@
     <data>
         <variable
             name="item"
-            type="com.tsingsee.easyrtc.model.RoomBean" />
+            type="com.tsingsee.easyrtc.model.RoomBean.Data" />
     </data>
 
     <LinearLayout
@@ -21,7 +21,7 @@
             android:layout_marginBottom="14dp"
             android:layout_marginLeft="12dp"
             android:layout_marginRight="12dp"
-            android:text="@{&quot;会议室号：&quot; + item.roomNo}"
+            android:text="@{&quot;会议室号：&quot; + item.id}"
             android:textColor="@color/color_333"
             android:textSize="15sp" />
 
@@ -31,7 +31,7 @@
             android:layout_marginBottom="14dp"
             android:layout_marginLeft="12dp"
             android:layout_marginRight="12dp"
-            android:text="@{item.roomName}"
+            android:text="@{item.name}"
             android:textColor="@color/color_8d9197"
             android:textSize="15sp" />
 
@@ -47,17 +47,37 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@{item.status}"
+                android:text="@{item.online ? &quot;在线&quot; : &quot;离线&quot;}"
                 android:textColor="@color/color_55c40b"
                 android:textSize="12sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@{item.createTime}"
+                android:text="@{item.updateAt}"
                 android:textColor="@color/color_gray1"
                 android:textSize="12sp" />
 
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="right"
+            android:padding="5dp">
+            <ImageView
+                android:id="@+id/audio_iv"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_action_audio_enabled"/>
+            <ImageView
+                android:id="@+id/video_iv"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/ic_action_record_enabled"/>
         </LinearLayout>
 
         <View

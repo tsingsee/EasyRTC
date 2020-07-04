@@ -2,6 +2,7 @@ package com.tsingsee.easyrtc.model;
 
 import android.databinding.BaseObservable;
 import android.text.TextUtils;
+import android.util.Log;
 
 import com.google.gson.annotations.SerializedName;
 import com.tsingsee.easyrtc.RTCApplication;
@@ -30,10 +31,14 @@ public class Record extends BaseObservable implements Serializable {
                 return hls;
             }
 
-//            SharedHelper helper = new SharedHelper(RTCApplication.getContext());
-//            return helper.getURL() + hls;
-            return "https://demo.easyrtc.cn" + hls;
-//            return "rtmp://202.69.69.180:443/webcast/bshdlive-pc";
+////            SharedHelper helper = new SharedHelper(RTCApplication.getContext());
+////            return helper.getURL() + hls;
+//            return "https://demo.easyrtc.cn" + hls;
+
+            SharedHelper helper = new SharedHelper(RTCApplication.getContext());
+            Account account = helper.readAccount();
+            String url = "http://" + account.getServerAddress() + ":" + account.getPort() + hls;
+            return url;
         }
 
         return hls;

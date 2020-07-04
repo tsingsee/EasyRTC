@@ -16,10 +16,10 @@ import com.tsingsee.easyrtc.R;
 import com.tsingsee.easyrtc.activity.SettingActivity;
 import com.tsingsee.easyrtc.adapter.VideotapeAdapter;
 import com.tsingsee.easyrtc.databinding.FragmentRecordBinding;
-import com.tsingsee.easyrtc.http.BaseEntity2;
-import com.tsingsee.easyrtc.http.BaseObserver2;
+import com.tsingsee.easyrtc.http.BaseEntity3;
+import com.tsingsee.easyrtc.http.BaseObserver3;
 import com.tsingsee.easyrtc.http.RetrofitFactory;
-import com.tsingsee.easyrtc.model.Devices;
+import com.tsingsee.easyrtc.model.RoomRecord;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,7 +28,7 @@ import io.reactivex.Observable;
 
 public class RecordFragment extends BaseFragment implements View.OnClickListener {
     private FragmentRecordBinding binding;
-    private Devices devices;
+    private List<RoomRecord> devices;
 
     public RecordFragment() {
 
@@ -52,17 +52,17 @@ public class RecordFragment extends BaseFragment implements View.OnClickListener
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                if (devices == null || devices.getDevices() == null) {
+                if (devices == null) {
                     return;
                 }
 
-                List<String> res = new ArrayList<>();
+                List<RoomRecord> res = new ArrayList<>();
                 String s = binding.searchEt.getText().toString();
                 if (TextUtils.isEmpty(s)) {
-                    res = devices.getDevices();
+                    res = devices;
                 } else {
-                    for (String item : devices.getDevices()) {
-                        if (item.contains(s)) {
+                    for (RoomRecord item : devices) {
+                        if (item.getName().contains(s)) {
                             res.add(item);
                         }
                     }
@@ -115,15 +115,15 @@ public class RecordFragment extends BaseFragment implements View.OnClickListener
     }
 
     public void queryDevices() {
-        Observable<BaseEntity2<Devices>> observable = RetrofitFactory.getRetrofitService().queryDevices();
-        observable.compose(compose(this.<BaseEntity2<Devices>> bindToLifecycle()))
-                .subscribe(new BaseObserver2<Devices>(getContext(), dialog, null, false) {
+        Observable<BaseEntity3<List<RoomRecord>>> observable = RetrofitFactory.getRetrofitService().queryDevices();
+        observable.compose(compose(this.<BaseEntity3<List<RoomRecord>>> bindToLifecycle()))
+                .subscribe(new BaseObserver3<List<RoomRecord>>(getContext(), dialog, null, false) {
                     @Override
-                    protected void onHandleSuccess(Devices model) {
+                    protected void onHandleSuccess(List<RoomRecord> model) {
                         hideHub();
 
                         binding.activityEmptyView.setVisibility(View.GONE);
-                        if (model == null || model.getDevices().size() == 0) {
+                        if (model == null || model.size() == 0) {
                             binding.activityEmptyView.setVisibility(View.VISIBLE);
                             return;
                         }
@@ -135,7 +135,7 @@ public class RecordFragment extends BaseFragment implements View.OnClickListener
 
                         VideotapeAdapter adapter = new VideotapeAdapter(getContext());
                         binding.recyclerView.setAdapter(adapter);
-                        adapter.notifyDataSetChanged(model.getDevices());
+                        adapter.notifyDataSetChanged(model);
                     }
 
                     @Override

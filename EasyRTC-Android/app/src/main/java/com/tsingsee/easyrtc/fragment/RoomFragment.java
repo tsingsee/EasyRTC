@@ -6,24 +6,26 @@ import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
-import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import com.tsingsee.easyrtc.R;
 import com.tsingsee.easyrtc.activity.CallActivity;
 import com.tsingsee.easyrtc.activity.CreateRoomActivity;
-import com.tsingsee.easyrtc.activity.RtcActivity;
 import com.tsingsee.easyrtc.activity.SettingActivity;
 import com.tsingsee.easyrtc.adapter.RoomAdapter;
 import com.tsingsee.easyrtc.adapter.SpinnerAdapter;
 import com.tsingsee.easyrtc.databinding.FragmentRoomBinding;
+import com.tsingsee.easyrtc.http.BaseEntity3;
+import com.tsingsee.easyrtc.http.BaseObserver3;
+import com.tsingsee.easyrtc.http.RetrofitFactory;
 import com.tsingsee.easyrtc.model.Account;
 import com.tsingsee.easyrtc.model.RoomBean;
 import com.tsingsee.easyrtc.model.RoomModel;
+import com.tsingsee.easyrtc.model.UserInfo;
 import com.tsingsee.easyrtc.tool.Constant;
+import com.tsingsee.easyrtc.tool.MD5Util;
 import com.tsingsee.easyrtc.tool.SharedHelper;
 import com.tsingsee.easyrtc.tool.ToastUtil;
 import com.tsingsee.rtc.Options;
@@ -32,10 +34,9 @@ import com.tsingsee.rtc.RoomStatus;
 import com.tsingsee.rtc.StatusSink;
 import com.tsingsee.rtc.XLog;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
+import io.reactivex.Observable;
 import pub.devrel.easypermissions.EasyPermissions;
 
 public class RoomFragment extends BaseFragment implements View.OnClickListener, StatusSink {
@@ -43,24 +44,15 @@ public class RoomFragment extends BaseFragment implements View.OnClickListener, 
     public static final String[] perms = { Manifest.permission.CAMERA, Manifest.permission.RECORD_AUDIO, Manifest.permission.WRITE_EXTERNAL_STORAGE };
 
     private FragmentRoomBinding binding;
-    private List<RoomBean> roomBeans;
-    private RoomBean roomBean;
+    private RoomBean roomBeans;
+    private RoomBean.Data roomBean;
 
     Room room;
     private Options options;
     public static boolean isConnecting = false;
 
     public RoomFragment() {
-        roomBeans = new ArrayList<>();
 
-        roomBeans.add(getRoomBean("3580", "2019年公司年度总结会议", "在线", "2020-1-1 12:12:12"));
-        roomBeans.add(getRoomBean("3581", "2020年市场营销部业务规划会议", "在线", "2020-1-1 12:12:12"));
-        roomBeans.add(getRoomBean("3582", "华为5G项目推进会", "在线", "2020-1-1 12:12:12"));
-        roomBeans.add(getRoomBean("3583", "安徽省高速取消边界收费项目需求会", "在线", "2020-1-1 12:12:12"));
-        roomBeans.add(getRoomBean("3584", "研发部例会", "在线", "2020-1-1 12:12:12"));
-        roomBeans.add(getRoomBean("3585", "关于安防互联网直播项目的培训", "在线", "2020-1-1 12:12:12"));
-        roomBeans.add(getRoomBean("3586", "EasyRTC新功能发布会", "在线", "2020-1-1 12:12:12"));
-        roomBeans.add(getRoomBean("3587", "在线教育培训", "在线", "2020-1-1 12:12:12"));
     }
 
     @Override
@@ -81,19 +73,9 @@ public class RoomFragment extends BaseFragment implements View.OnClickListener, 
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         binding.roomStatusSp.setAdapter(adapter);
 
-        binding.activityEmptyView.setVisibility(View.GONE);
-
-        GridLayoutManager manager = new GridLayoutManager(getContext(), 1);
-        binding.recyclerView.setLayoutManager(manager);
-        RoomAdapter roomAdapter = new RoomAdapter(getContext(), roomBeans);
-        binding.recyclerView.setAdapter(roomAdapter);
-        roomAdapter.setClickListener(new RoomAdapter.MyClickListener() {
-            @Override
-            public void onItemClick(int pos) {
-                roomBean = roomBeans.get(pos);
-                connect(roomBean.getRoomNo());
-            }
-        });
+        showHub("查询中");
+        getConferences();
+        userInfo();
 
         return binding.getRoot();
     }
@@ -146,16 +128,6 @@ public class RoomFragment extends BaseFragment implements View.OnClickListener, 
         }
     }
 
-    private RoomBean getRoomBean(String no, String name, String status, String time) {
-        RoomBean room = new RoomBean();
-        room.setRoomNo(no);
-        room.setRoomName(name);
-        room.setStatus(status);
-        room.setCreateTime(time);
-
-        return room;
-    }
-
     @Override
     public void onRoomStatusChange(RoomStatus roomStatus) {
         XLog.i("onRoomStatusChange: " + roomStatus);
@@ -201,18 +173,78 @@ public class RoomFragment extends BaseFragment implements View.OnClickListener, 
 
         SharedHelper sp = new SharedHelper(getContext());
         Account account = sp.readAccount();
+        UserInfo user = sp.readUserInfo();
 
-//        options.displayName = userName.getEditableText().toString();
-//        options.userEmail = email.getEditableText().toString();
         options.roomNumber = no;
         options.username = account.getUserName();
-        options.password = account.getPwd();
-//        options.serverAddress = serverEditText.getEditableText().toString();
-//        options.displayName = options.username;
-//        options.userEmail = options.username + "@easydarwin.org";
+        options.password = MD5Util.md5(account.getPwd());
+        options.serverAddress = account.getServerAddress();
 
+        if (user != null) {
+            options.displayName = user.getId() + "@" + user.getUserName();
+        }
+
+        room.setVideoEnable(roomBean.isVideoEnable());
         room.setOptions(options);
         room.join();
         options.save();
+    }
+
+    public void getConferences() {
+        Observable<BaseEntity3<RoomBean>> observable = RetrofitFactory.getRetrofitService().getConferences(0, 100);
+        observable.compose(compose(this.<BaseEntity3<RoomBean>> bindToLifecycle()))
+                .subscribe(new BaseObserver3<RoomBean>(getContext(), dialog, null, false) {
+                    @Override
+                    protected void onHandleSuccess(RoomBean model) {
+                        hideHub();
+
+                        binding.activityEmptyView.setVisibility(View.GONE);
+
+                        roomBeans = model;
+
+                        if (model == null && model.getDatas().size() == 0) {
+                            binding.activityEmptyView.setVisibility(View.VISIBLE);
+                            return;
+                        }
+
+                        GridLayoutManager manager = new GridLayoutManager(getContext(), 1);
+                        binding.recyclerView.setLayoutManager(manager);
+
+                        RoomAdapter roomAdapter = new RoomAdapter(getContext(), roomBeans.getDatas());
+                        binding.recyclerView.setAdapter(roomAdapter);
+                        roomAdapter.setClickListener(new RoomAdapter.MyClickListener() {
+                            @Override
+                            public void onItemClick(int pos, boolean enable) {
+                                roomBean = roomBeans.getDatas().get(pos);
+                                roomBean.setVideoEnable(enable);
+                                connect(roomBean.getId());
+                            }
+                        });
+                    }
+
+                    @Override
+                    protected void loginSuccess() {
+                        getConferences();
+                    }
+                });
+    }
+
+    public void userInfo() {
+        final SharedHelper sp = new SharedHelper(getContext());
+        Account account = sp.readAccount();
+
+        Observable<BaseEntity3<UserInfo>> observable = RetrofitFactory.getRetrofitService().userInfo(account.getUserName());
+        observable.compose(compose(this.<BaseEntity3<UserInfo>> bindToLifecycle()))
+                .subscribe(new BaseObserver3<UserInfo>(getContext(), dialog, null, false) {
+                    @Override
+                    protected void onHandleSuccess(UserInfo model) {
+                        sp.saveUserInfo(model);
+                    }
+
+                    @Override
+                    protected void loginSuccess() {
+
+                    }
+                });
     }
 }

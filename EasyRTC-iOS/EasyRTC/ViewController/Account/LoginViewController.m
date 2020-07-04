@@ -7,6 +7,7 @@
 //
 
 #import "LoginViewController.h"
+#import "RegisterViewController.h"
 
 @interface LoginViewController ()
 
@@ -27,6 +28,10 @@
     [self.navigationController setNavigationBarHidden:YES];
     
     EasyViewBorderRadius(_loginBtn, 22, 0, [UIColor clearColor]);
+}
+
+- (void) viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     
     NSString *name = [[LoginInfoLocalData sharedInstance] gainName];
     NSString *pwd = [[LoginInfoLocalData sharedInstance] gainPWD];
@@ -37,18 +42,23 @@
 
 - (IBAction)loginBtnClicked:(id)sender {
     if ([self.nameTF.text isEqualToString:@""]) {
-        [self showTextHubWithContent:@"请输入用户名或账号"];
+        [self showTextHubWithContent:@"请设置您的用户名"];
         return;
     }
     
     if ([self.pwdTF.text isEqualToString:@""]) {
-        [self showTextHubWithContent:@"请输入密码"];
+        [self showTextHubWithContent:@"请设置您的识别码"];
         return;
     }
     
     [[LoginInfoLocalData sharedInstance] saveName:self.nameTF.text psw:self.pwdTF.text];
     
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (IBAction)registerAccount:(id)sender {
+    RegisterViewController *vc = [[RegisterViewController alloc] initWithStoryborad];
+    [self basePushViewController:vc];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {

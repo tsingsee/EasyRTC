@@ -19,31 +19,31 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0.200223</string>
+	<string>$(MARKETING_VERSION)</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppleMusicUsageDescription</key>
-	<string>需要您的同意,才能访问媒体资料库</string>
+	<string>视频通话时需要访问您的媒体资料库</string>
 	<key>NSCalendarsUsageDescription</key>
-	<string>我们将使用您的日历</string>
+	<string>视频通话时需要访问您的日历</string>
 	<key>NSCameraUsageDescription</key>
-	<string>我们将使用您的摄像头</string>
+	<string>视频通话时需要访问您的摄像头</string>
 	<key>NSContactsUsageDescription</key>
-	<string>我们将使用您的通讯录</string>
+	<string>视频通话时需要访问您的通讯录</string>
 	<key>NSHomeKitUsageDescription</key>
-	<string>我们将使用您的home kit</string>
+	<string>视频通话时需要访问您的home kit</string>
 	<key>NSLocationUsageDescription</key>
-	<string>我们将使用您的地理位置</string>
+	<string>视频通话时需要访问您的地理位置</string>
 	<key>NSMicrophoneUsageDescription</key>
-	<string>需要您的同意,才能访问麦克风</string>
+	<string>视频通话时需要访问您的麦克风权限</string>
 	<key>NSMotionUsageDescription</key>
-	<string>我们将使用您的motion</string>
+	<string>视频通话时需要访问您的motion</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>我们将使用您的相册</string>
+	<string>视频通话时需要访问您的相册</string>
 	<key>NSRemindersUsageDescription</key>
-	<string>我们将使用您的Reminder</string>
+	<string>视频通话时需要访问您的Reminder</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

@@ -8,8 +8,8 @@ android {
         applicationId "com.tsingsee.easyrtc"
         minSdkVersion 21
         targetSdkVersion 27
-        versionCode 10200205
-        versionName "1.0.200205"
+        versionCode 10200704
+        versionName "1.0.2000704"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
         if (project.hasProperty('PLAYER_KEY')) {
@@ -19,7 +19,7 @@ android {
             /*
             *本Key为3个月临时授权License，如需商业使用，请邮件至support@easydarwin.org了解此产品的授权信息。
             */
-            buildConfigField 'String', 'PLAYER_KEY', "\"64686473647036526D34304145545A656F636E757065746A6232307564484E70626D647A5A5755755A57467A65584A3059796C58444661672F3658695257467A65555268636E6470626C526C5957314A6331526F5A554A6C6333516A4D6A41784F546C6C59584E35\""
+            buildConfigField 'String', 'PLAYER_KEY', "\"64686473647036526D34324178654A656F5230364A65746A6232307564484E70626D647A5A5755755A57467A65584A3059373558444661672F3658695257467A65555268636E6470626C526C5957314A6331526F5A554A6C6333516A4D6A41784F546C6C59584E35\""
         }
 
         javaCompileOptions {

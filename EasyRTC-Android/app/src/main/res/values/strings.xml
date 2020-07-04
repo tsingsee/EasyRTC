@@ -16,6 +16,8 @@
     <string name="toast_network_error">网络连接异常，请检查网络</string>
     <string name="exit_hint">再按一次退出</string>
     <string name="welcome">欢迎使用EasyRTC</string>
+    <string name="ip_tint">请输入服务器地址</string>
+    <string name="port_tint">请输入端口</string>
     <string name="account_tint">请输入用户名或账号</string>
     <string name="pwd_tint">请输入密码</string>
     <string name="todo">TODO</string>

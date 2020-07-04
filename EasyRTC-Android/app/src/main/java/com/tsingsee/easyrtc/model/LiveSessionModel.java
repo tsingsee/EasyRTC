@@ -10,299 +10,260 @@ import java.util.List;
 
 /**
  * 录像
- * */
+ */
 public class LiveSessionModel extends BaseObservable implements Serializable {
-    @SerializedName("SessionCount")
-    private String sessionCount;
 
-    @SerializedName("Sessions")
-    private Sessions sessions;
+    // 应用名称
+    @SerializedName("application")
+    private String application;
 
-    public String getSessionCount() {
-        return sessionCount;
+    // 音频率
+    @SerializedName("audioBitrate")
+    private String audioBitrate;
+
+    // HLS地址
+    @SerializedName("hls")
+    private String hls;
+
+    // HTTP-FLV地址
+    @SerializedName("httpFlv")
+    private String httpFlv;
+
+    // 推流会议室ID
+    @SerializedName("id")
+    private String id;
+
+    // 会议室名称
+    @SerializedName("name")
+    private String name;
+
+    // 是否在录像
+    private boolean recording;
+
+    // 推送码率
+    @SerializedName("inBitrate")
+    private int inBitrate;
+
+    // 推送流量
+    @SerializedName("inBytes")
+    private String inBytes;
+
+    // 输出码率
+    @SerializedName("outBitrate")
+    private String outBitrate;
+
+    // 输出流量
+    @SerializedName("outBytes")
+    private String outBytes;
+
+    // RTMP直播地址，前端需要将地址替换成域名
+    @SerializedName("rtmp")
+    private String rtmp;
+
+    // RTSP直播地址，前端需要将地址替换成域名
+    @SerializedName("rtsp")
+    private String rtsp;
+
+    // 直播时长
+    @SerializedName("Time")
+    private String time;
+
+    // 开始时间, YYYYMMDDHHmmss
+    @SerializedName("StartTime")
+    private String startTime;
+
+    // 音频码率
+    @SerializedName("VideoBitrate")
+    private String videoBitrate;
+
+    @SerializedName("audioChannel")
+    private String audioChannel;
+
+    @SerializedName("audioCodec")
+    private String audioCodec;
+
+    @SerializedName("audioSampleRate")
+    private String audioSampleRate;
+
+    @SerializedName("audioSampleSize")
+    private String audioSampleSize;
+
+//    @SerializedName("NumOutputs")
+//    private String numOutputs;
+//
+//    @SerializedName("PublisherIP")
+//    private String publisherIP;
+//
+//    @SerializedName("VideoCodec")
+//    private String videoCodec;
+//
+//    @SerializedName("VideoHeight")
+//    private String videoHeight;
+//
+//    @SerializedName("VideoWidth")
+//    private String videoWidth;
+
+    public String getApplication() {
+        return application;
     }
 
-    public void setSessionCount(String sessionCount) {
-        this.sessionCount = sessionCount;
+    public void setApplication(String application) {
+        this.application = application;
     }
 
-    public Sessions getSessions() {
-        return sessions;
+    public String getAudioBitrate() {
+        return audioBitrate;
     }
 
-    public void setSessions(Sessions sessions) {
-        this.sessions = sessions;
+    public void setAudioBitrate(String audioBitrate) {
+        this.audioBitrate = audioBitrate;
     }
 
-    public static class Sessions {
-        @SerializedName("Sessions")
-        private List<Session> sessions;
-
-        public List<Session> getSessions() {
-            return sessions;
-        }
-
-        public void setSessions(List<Session> sessions) {
-            this.sessions = sessions;
-        }
+    public String getHls() {
+        return hls;
     }
 
-    public static class Session implements Serializable {
-        @SerializedName("Application")
-        private String application;
+    public void setHls(String hls) {
+        this.hls = hls;
+    }
 
-        @SerializedName("AudioBitrate")
-        private String audioBitrate;
+    public String getHttpFlv() {
+        return httpFlv;
+    }
 
-        @SerializedName("AudioChannel")
-        private String audioChannel;
+    public void setHttpFlv(String httpFlv) {
+        this.httpFlv = httpFlv;
+    }
 
-        @SerializedName("AudioCodec")
-        private String audioCodec;
+    public String getId() {
+        return id;
+    }
 
-        @SerializedName("AudioSampleRate")
-        private String audioSampleRate;
+    public void setId(String id) {
+        this.id = id;
+    }
 
-        @SerializedName("AudioSampleSize")
-        private String audioSampleSize;
+    public String getName() {
+        return name;
+    }
 
-        @SerializedName("HLS")
-        private String hls;
+    public void setName(String name) {
+        this.name = name;
+    }
 
-        @SerializedName("HTTP-FLV")
-        private String httpFlv;
+    public boolean isRecording() {
+        return recording;
+    }
 
-        @SerializedName("Id")
-        private String id;
+    public void setRecording(boolean recording) {
+        this.recording = recording;
+    }
 
-        @SerializedName("InBitrate")
-        private int inBitrate;
+    public int getInBitrate() {
+        return inBitrate;
+    }
 
-        @SerializedName("InBytes")
-        private String inBytes;
+    public void setInBitrate(int inBitrate) {
+        this.inBitrate = inBitrate;
+    }
 
-        @SerializedName("NumOutputs")
-        private String numOutputs;
+    public String getInBytes() {
+        return inBytes;
+    }
 
-        @SerializedName("OutBitrate")
-        private String outBitrate;
+    public void setInBytes(String inBytes) {
+        this.inBytes = inBytes;
+    }
 
-        @SerializedName("OutBytes")
-        private String outBytes;
+    public String getOutBitrate() {
+        return outBitrate;
+    }
 
-        @SerializedName("PublisherIP")
-        private String publisherIP;
+    public void setOutBitrate(String outBitrate) {
+        this.outBitrate = outBitrate;
+    }
 
-        @SerializedName("RTMP")
-        private String rtmp;
+    public String getOutBytes() {
+        return outBytes;
+    }
 
-        @SerializedName("RTSP")
-        private String rtsp;
+    public void setOutBytes(String outBytes) {
+        this.outBytes = outBytes;
+    }
 
-        @SerializedName("StartTime")
-        private String startTime;
+    public String getRtmp() {
+        return rtmp;
+    }
 
-        @SerializedName("Time")
-        private String time;
+    public void setRtmp(String rtmp) {
+        this.rtmp = rtmp;
+    }
 
-        @SerializedName("VideoBitrate")
-        private String videoBitrate;
+    public String getRtsp() {
+        return rtsp;
+    }
 
-        @SerializedName("VideoCodec")
-        private String videoCodec;
+    public void setRtsp(String rtsp) {
+        this.rtsp = rtsp;
+    }
 
-        @SerializedName("VideoHeight")
-        private String videoHeight;
-
-        @SerializedName("VideoWidth")
-        private String videoWidth;
-
-        public String getApplication() {
-            return application;
+    public String getTime() {
+        if (TextUtils.isEmpty(time)) {
+            return "0";
         }
 
-        public void setApplication(String application) {
-            this.application = application;
-        }
+        return time;
+    }
 
-        public String getAudioBitrate() {
-            return audioBitrate;
-        }
+    public void setTime(String time) {
+        this.time = time;
+    }
 
-        public void setAudioBitrate(String audioBitrate) {
-            this.audioBitrate = audioBitrate;
-        }
+    public String getStartTime() {
+        return startTime;
+    }
 
-        public String getAudioChannel() {
-            return audioChannel;
-        }
+    public void setStartTime(String startTime) {
+        this.startTime = startTime;
+    }
 
-        public void setAudioChannel(String audioChannel) {
-            this.audioChannel = audioChannel;
-        }
+    public String getVideoBitrate() {
+        return videoBitrate;
+    }
 
-        public String getAudioCodec() {
-            return audioCodec;
-        }
+    public void setVideoBitrate(String videoBitrate) {
+        this.videoBitrate = videoBitrate;
+    }
 
-        public void setAudioCodec(String audioCodec) {
-            this.audioCodec = audioCodec;
-        }
+    public String getAudioChannel() {
+        return audioChannel;
+    }
 
-        public String getAudioSampleRate() {
-            return audioSampleRate;
-        }
+    public void setAudioChannel(String audioChannel) {
+        this.audioChannel = audioChannel;
+    }
 
-        public void setAudioSampleRate(String audioSampleRate) {
-            this.audioSampleRate = audioSampleRate;
-        }
+    public String getAudioCodec() {
+        return audioCodec;
+    }
 
-        public String getAudioSampleSize() {
-            return audioSampleSize;
-        }
+    public void setAudioCodec(String audioCodec) {
+        this.audioCodec = audioCodec;
+    }
 
-        public void setAudioSampleSize(String audioSampleSize) {
-            this.audioSampleSize = audioSampleSize;
-        }
+    public String getAudioSampleRate() {
+        return audioSampleRate;
+    }
 
-        public String getHls() {
-            return hls;
-        }
+    public void setAudioSampleRate(String audioSampleRate) {
+        this.audioSampleRate = audioSampleRate;
+    }
 
-        public void setHls(String hls) {
-            this.hls = hls;
-        }
+    public String getAudioSampleSize() {
+        return audioSampleSize;
+    }
 
-        public String getHttpFlv() {
-            return httpFlv;
-        }
-
-        public void setHttpFlv(String httpFlv) {
-            this.httpFlv = httpFlv;
-        }
-
-        public String getId() {
-            if (TextUtils.isEmpty(id)) {
-                return "";
-            }
-
-            return id;
-        }
-
-        public void setId(String id) {
-            this.id = id;
-        }
-
-        public int getInBitrate() {
-            return inBitrate;
-        }
-
-        public void setInBitrate(int inBitrate) {
-            this.inBitrate = inBitrate;
-        }
-
-        public String getInBytes() {
-            return inBytes;
-        }
-
-        public void setInBytes(String inBytes) {
-            this.inBytes = inBytes;
-        }
-
-        public String getNumOutputs() {
-            return numOutputs;
-        }
-
-        public void setNumOutputs(String numOutputs) {
-            this.numOutputs = numOutputs;
-        }
-
-        public String getOutBitrate() {
-            return outBitrate;
-        }
-
-        public void setOutBitrate(String outBitrate) {
-            this.outBitrate = outBitrate;
-        }
-
-        public String getOutBytes() {
-            return outBytes;
-        }
-
-        public void setOutBytes(String outBytes) {
-            this.outBytes = outBytes;
-        }
-
-        public String getPublisherIP() {
-            return publisherIP;
-        }
-
-        public void setPublisherIP(String publisherIP) {
-            this.publisherIP = publisherIP;
-        }
-
-        public String getRtmp() {
-            return rtmp;
-        }
-
-        public void setRtmp(String rtmp) {
-            this.rtmp = rtmp;
-        }
-
-        public String getRtsp() {
-            return rtsp;
-        }
-
-        public void setRtsp(String rtsp) {
-            this.rtsp = rtsp;
-        }
-
-        public String getStartTime() {
-            return startTime;
-        }
-
-        public void setStartTime(String startTime) {
-            this.startTime = startTime;
-        }
-
-        public String getTime() {
-            return time;
-        }
-
-        public void setTime(String time) {
-            this.time = time;
-        }
-
-        public String getVideoBitrate() {
-            return videoBitrate;
-        }
-
-        public void setVideoBitrate(String videoBitrate) {
-            this.videoBitrate = videoBitrate;
-        }
-
-        public String getVideoCodec() {
-            return videoCodec;
-        }
-
-        public void setVideoCodec(String videoCodec) {
-            this.videoCodec = videoCodec;
-        }
-
-        public String getVideoHeight() {
-            return videoHeight;
-        }
-
-        public void setVideoHeight(String videoHeight) {
-            this.videoHeight = videoHeight;
-        }
-
-        public String getVideoWidth() {
-            return videoWidth;
-        }
-
-        public void setVideoWidth(String videoWidth) {
-            this.videoWidth = videoWidth;
-        }
+    public void setAudioSampleSize(String audioSampleSize) {
+        this.audioSampleSize = audioSampleSize;
     }
 }

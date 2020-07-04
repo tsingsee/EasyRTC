@@ -6,9 +6,6 @@
             name="service"
             type="com.tsingsee.easyrtc.model.ServiceInfo"/>
         <variable
-            name="keyModel"
-            type="com.tsingsee.easyrtc.model.RequestKeyModel"/>
-        <variable
             name="onClick"
             type="android.view.View.OnClickListener"/>
     </data>
@@ -244,7 +241,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@{keyModel.requestKey}"
+                        android:text="@{service.requestKey}"
                         android:textColor="#4d4d4d"
                         android:layout_marginLeft="22dp"
                         android:textSize="14sp"/>

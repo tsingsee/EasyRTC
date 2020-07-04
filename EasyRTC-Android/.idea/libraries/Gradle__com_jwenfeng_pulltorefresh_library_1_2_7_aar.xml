@@ -7,9 +7,7 @@
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/639a67ab59fe97853bfba11e7bfb45a9/res" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/639a67ab59fe97853bfba11e7bfb45a9/jars/classes.jar!/" />
     </CLASSES>
-    <JAVADOC>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jwenfeng.pulltorefresh/library/1.2.7/1be139c982cbca3a7a701c9216e8eea7cfe069ff/library-1.2.7-javadoc.jar!/" />
-    </JAVADOC>
+    <JAVADOC />
     <SOURCES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jwenfeng.pulltorefresh/library/1.2.7/6cadd708a53cc9858dcc808f70b1238bbd06a955/library-1.2.7-sources.jar!/" />
     </SOURCES>

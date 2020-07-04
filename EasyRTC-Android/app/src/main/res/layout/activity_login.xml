@@ -31,14 +31,61 @@
             android:textColor="@color/colorTheme" />
 
         <EditText
-            android:id="@+id/account_et"
+            android:id="@+id/ip_et"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_below="@+id/login_title_tv"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
             android:layout_marginTop="50dp"
+            android:hint="@string/ip_tint"
+            android:inputType="text"
+            android:textColorHint="@color/color_ccc"
+            android:textColor="@color/color_333"
+            android:paddingStart="50dp"
+            android:background="@drawable/shape_line" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/admin"
+            android:layout_alignTop="@+id/ip_et"
+            android:layout_alignStart="@+id/ip_et"
+            android:layout_alignBottom="@+id/ip_et"
+            android:contentDescription="TODO" />
+
+        <EditText
+            android:id="@+id/port_et"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/ip_et"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:hint="@string/port_tint"
+            android:inputType="number"
+            android:textColorHint="@color/color_ccc"
+            android:textColor="@color/color_333"
+            android:paddingStart="50dp"
+            android:background="@drawable/shape_line" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/admin"
+            android:layout_alignTop="@+id/port_et"
+            android:layout_alignStart="@+id/port_et"
+            android:layout_alignBottom="@+id/port_et"
+            android:contentDescription="TODO" />
+
+        <EditText
+            android:id="@+id/account_et"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/port_et"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
             android:hint="@string/account_tint"
+            android:inputType="text"
             android:textColorHint="@color/color_ccc"
             android:textColor="@color/color_333"
             android:paddingStart="50dp"

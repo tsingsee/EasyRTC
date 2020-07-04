@@ -25,11 +25,11 @@ import com.tsingsee.easyrtc.BuildConfig;
 import com.tsingsee.easyrtc.R;
 import com.tsingsee.easyrtc.activity.BaseActivity;
 import com.tsingsee.easyrtc.databinding.ActivityRecordTimeAxisBinding;
-import com.tsingsee.easyrtc.http.BaseEntity2;
-import com.tsingsee.easyrtc.http.BaseObserver2;
+import com.tsingsee.easyrtc.http.BaseEntity3;
+import com.tsingsee.easyrtc.http.BaseObserver3;
 import com.tsingsee.easyrtc.http.RetrofitFactory;
 import com.tsingsee.easyrtc.model.Record;
-import com.tsingsee.easyrtc.model.RecordModel;
+import com.tsingsee.easyrtc.model.RoomRecord;
 import com.tsingsee.easyrtc.tool.DateUtil;
 import com.tsingsee.easyrtc.view.RecordControllerView;
 import com.tsingsee.easyrtc.view.RullerView.TimeRange;
@@ -60,10 +60,10 @@ public class RecordTimeAxisActivity extends BaseActivity implements Toolbar.OnMe
 
     private GestureDetector detector;
 
-    private RecordModel recordModel;
+    private List<Record> recordModel;
     private Record selectRecord;
     private Date selectDate;
-    private String id;
+    private RoomRecord item;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,8 +77,8 @@ public class RecordTimeAxisActivity extends BaseActivity implements Toolbar.OnMe
         mBinding.liveToolbar.setNavigationIcon(R.drawable.back);
 
         Intent intent = getIntent();
-        id = intent.getStringExtra("id");
-        mBinding.toolbarTv.setText("录像(" + id + ")-时间轴视图");
+        item = (RoomRecord) intent.getSerializableExtra("id");
+        mBinding.toolbarTv.setText("录像(" + item.getName() + ")-时间轴视图");
 
         // init player
         IjkMediaPlayer.loadLibrariesOnce(null);
@@ -126,10 +126,10 @@ public class RecordTimeAxisActivity extends BaseActivity implements Toolbar.OnMe
     protected void onResume() {
         super.onResume();
 
-        if (recordModel != null && recordModel.getList() != null && recordModel.getList().size() > 0) {
+        if (recordModel != null && recordModel != null && recordModel.size() > 0) {
             mBinding.progress.setVisibility(View.VISIBLE);
 
-            selectRecord = recordModel.getList().get(0);
+            selectRecord = recordModel.get(0);
             mediaController.startAtSecond = selectRecord.getStartAtSecond();
 
             mBinding.videoView.setVideoURI(Uri.parse(selectRecord.getHls()));
@@ -189,7 +189,7 @@ public class RecordTimeAxisActivity extends BaseActivity implements Toolbar.OnMe
 
         if (recordModel != null) {
             List<TimeRange> ranges = new ArrayList<>();
-            for (Record item : recordModel.getList()) {
+            for (Record item : recordModel) {
                 TimeRange r = new TimeRange();
                 r.start = item.getStartAtSecond();
                 r.duration = (int) item.getDuration();
@@ -209,20 +209,20 @@ public class RecordTimeAxisActivity extends BaseActivity implements Toolbar.OnMe
         showDateTv();
         String period = DateUtil.getDateStr(selectDate, "yyyyMMdd");
 
-        Observable<BaseEntity2<RecordModel>> observable = RetrofitFactory.getRetrofitService2().queryDaily(id, period);
-        observable.compose(compose(this.<BaseEntity2<RecordModel>> bindToLifecycle()))
-                .subscribe(new BaseObserver2<RecordModel>(this, dialog, null, false) {
+        Observable<BaseEntity3<List<Record>>> observable = RetrofitFactory.getRetrofitService2().queryDaily(item.getId(), period);
+        observable.compose(compose(this.<BaseEntity3<List<Record>>> bindToLifecycle()))
+                .subscribe(new BaseObserver3<List<Record>>(this, dialog, null, false) {
                     @Override
-                    protected void onHandleSuccess(RecordModel record) {
+                    protected void onHandleSuccess(List<Record> record) {
                         recordModel = record;
 
-                        if (record.getList() != null && record.getList().size() > 0) {
+                        if (record != null && record.size() > 0) {
                             boolean start = false;
                             if (selectRecord == null) {
                                 start = true;
                             }
 
-                            selectRecord = record.getList().get(0);
+                            selectRecord = record.get(0);
                             mediaController.startAtSecond = selectRecord.getStartAtSecond();
 
                             if (start) {
@@ -418,7 +418,7 @@ public class RecordTimeAxisActivity extends BaseActivity implements Toolbar.OnMe
     public void recordList() {
         Intent intent = new Intent(this, RecordListActivity.class);
         Bundle bundle = new Bundle();
-        bundle.putSerializable("id", id);
+        bundle.putSerializable("id", item);
         bundle.putSerializable("selectDate", selectDate);
         intent.putExtras(bundle);//发送数据
         startActivity(intent);
@@ -441,9 +441,9 @@ public class RecordTimeAxisActivity extends BaseActivity implements Toolbar.OnMe
 
     // 调整播放进度
     public void scaleScroll(double scale) {
-        int count = recordModel.getList().size();
+        int count = recordModel.size();
         for (int i = (count - 1); i >= 0; i--) {
-            Record record = recordModel.getList().get(i);
+            Record record = recordModel.get(i);
             double pos = scale - record.getStartAtSecond();
 
             if (pos >= 0 && pos < record.getDuration()) {
@@ -475,9 +475,9 @@ public class RecordTimeAxisActivity extends BaseActivity implements Toolbar.OnMe
 
         showHub("删除中");
 
-        Observable<BaseEntity2<String>> observable = RetrofitFactory.getRetrofitService2().removeRecord(id, record.getStartAt());
-        observable.compose(compose(this.<BaseEntity2<String>> bindToLifecycle()))
-                .subscribe(new BaseObserver2<String>(this, dialog, null, false) {
+        Observable<BaseEntity3<String>> observable = RetrofitFactory.getRetrofitService2().removeRecord(item.getId(), record.getStartAt());
+        observable.compose(compose(this.<BaseEntity3<String>> bindToLifecycle()))
+                .subscribe(new BaseObserver3<String>(this, dialog, null, false) {
                     @Override
                     protected void onHandleSuccess(String res) {
                         hideHub();
@@ -501,7 +501,7 @@ public class RecordTimeAxisActivity extends BaseActivity implements Toolbar.OnMe
         if (value == 0) {
             Intent intent = new Intent(RecordTimeAxisActivity.this, CalendarActivity.class);
             Bundle bundle = new Bundle();
-            bundle.putSerializable("id", id);
+            bundle.putSerializable("id", item);
             bundle.putSerializable("selectDate", selectDate);
             intent.putExtras(bundle);//发送数据
             startActivityForResult(intent, request_code);

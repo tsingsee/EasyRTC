@@ -13,12 +13,12 @@ import com.tsingsee.easyrtc.model.RoomBean;
 
 import java.util.List;
 
-public class RoomAdapter extends BaseBindRecyclerViewAdapter<RoomBean> {
+public class RoomAdapter extends BaseBindRecyclerViewAdapter<RoomBean.Data> {
     private Context mContext;
 
     private MyClickListener clickListener;
 
-    public RoomAdapter(Context context, List<RoomBean> mList) {
+    public RoomAdapter(Context context, List<RoomBean.Data> mList) {
         super(context, mList);
         mContext = context;
     }
@@ -34,13 +34,33 @@ public class RoomAdapter extends BaseBindRecyclerViewAdapter<RoomBean> {
     public void onBindMyViewHolder(RecyclerView.ViewHolder holder, int pos) {
         ItemRoomBinding binding = DataBindingUtil.getBinding(holder.itemView);
 
-        final RoomBean item = mList.get(pos);
+        final RoomBean.Data item = mList.get(pos);
         binding.setItem(item);
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                clickListener.onItemClick(pos);
+                if (clickListener != null) {
+                    clickListener.onItemClick(pos, true);
+                }
+            }
+        });
+
+        binding.audioIv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (clickListener != null) {
+                    clickListener.onItemClick(pos, false);
+                }
+            }
+        });
+
+        binding.videoIv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (clickListener != null) {
+                    clickListener.onItemClick(pos, true);
+                }
             }
         });
 
@@ -52,6 +72,6 @@ public class RoomAdapter extends BaseBindRecyclerViewAdapter<RoomBean> {
     }
 
     public interface MyClickListener {
-        void onItemClick(int pos);
+        void onItemClick(int pos, boolean videoEnable);
     }
 }

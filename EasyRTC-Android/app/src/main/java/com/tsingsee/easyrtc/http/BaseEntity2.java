@@ -43,6 +43,6 @@ public class BaseEntity2<E> {
      * 返回正确的状态码是0
      * */
     public boolean isSuccess() {
-        return code == 0;
+        return code == 200;
     }
 }

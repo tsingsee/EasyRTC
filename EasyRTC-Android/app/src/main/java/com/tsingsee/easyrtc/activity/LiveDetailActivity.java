@@ -29,7 +29,7 @@ import java.util.Hashtable;
 public class LiveDetailActivity extends BaseActivity implements Toolbar.OnMenuItemClickListener, View.OnClickListener {
 
     private ActivityLiveDetailBinding binding;
-    private LiveSessionModel.Session session;
+    private LiveSessionModel session;
 
     private ClipboardManager cm;
     private ClipData mClipData;
@@ -46,7 +46,7 @@ public class LiveDetailActivity extends BaseActivity implements Toolbar.OnMenuIt
         // 左边的小箭头（注意需要在setSupportActionBar(toolbar)之后才有效果）
         binding.infoToolbar.setNavigationIcon(R.drawable.back);
 
-        session = (LiveSessionModel.Session) getIntent().getSerializableExtra("session");
+        session = (LiveSessionModel) getIntent().getSerializableExtra("session");
 
         Options options = new Options(this);
 

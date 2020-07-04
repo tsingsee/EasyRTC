@@ -15,10 +15,11 @@ import android.widget.Toast;
 import com.tsingsee.easyrtc.R;
 import com.tsingsee.easyrtc.activity.BaseActivity;
 import com.tsingsee.easyrtc.databinding.ActivityCalendarBinding;
-import com.tsingsee.easyrtc.http.BaseEntity2;
-import com.tsingsee.easyrtc.http.BaseObserver2;
+import com.tsingsee.easyrtc.http.BaseEntity3;
+import com.tsingsee.easyrtc.http.BaseObserver3;
 import com.tsingsee.easyrtc.http.RetrofitFactory;
 import com.tsingsee.easyrtc.model.MonthFlag;
+import com.tsingsee.easyrtc.model.RoomRecord;
 import com.tsingsee.easyrtc.tool.DateUtil;
 import com.tsingsee.easyrtc.tool.MyDPCNCalendar;
 
@@ -41,7 +42,7 @@ public class CalendarActivity extends BaseActivity implements Toolbar.OnMenuItem
 
     private List<String> recordDates;
 
-    private String id;
+    private RoomRecord item;
     private Date selectDate;
 
     @Override
@@ -58,7 +59,7 @@ public class CalendarActivity extends BaseActivity implements Toolbar.OnMenuItem
         binding.mainToolbar.setNavigationIcon(R.drawable.back);
 
         Intent intent = getIntent();
-        id = intent.getStringExtra("id");
+        item = (RoomRecord) intent.getSerializableExtra("id");
         selectDate = (Date) intent.getSerializableExtra("selectDate");
 
         binding.datePicker.setDate(DateUtil.getDateYear(selectDate), DateUtil.getDateMonth(selectDate));
@@ -121,9 +122,9 @@ public class CalendarActivity extends BaseActivity implements Toolbar.OnMenuItem
     private void querymonthly() {
         String period = DateUtil.getDateStr(selectDate, "yyyyMM");
 
-        Observable<BaseEntity2<MonthFlag>> observable = RetrofitFactory.getRetrofitService2().querymonthly(id, period);
-        observable.compose(compose(this.<BaseEntity2<MonthFlag>> bindToLifecycle()))
-                .subscribe(new BaseObserver2<MonthFlag>(this, dialog, null, false) {
+        Observable<BaseEntity3<MonthFlag>> observable = RetrofitFactory.getRetrofitService2().querymonthly(item.getId(), period);
+        observable.compose(compose(this.<BaseEntity3<MonthFlag>> bindToLifecycle()))
+                .subscribe(new BaseObserver3<MonthFlag>(this, dialog, null, false) {
                     @Override
                     protected void onHandleSuccess(MonthFlag flag) {
                         hideHub();

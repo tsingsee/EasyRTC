@@ -12,10 +12,9 @@ import android.view.View;
 
 import com.tsingsee.easyrtc.R;
 import com.tsingsee.easyrtc.databinding.ActivitySettingBinding;
-import com.tsingsee.easyrtc.http.BaseEntity;
-import com.tsingsee.easyrtc.http.BaseObserver;
+import com.tsingsee.easyrtc.http.BaseEntity3;
+import com.tsingsee.easyrtc.http.BaseObserver3;
 import com.tsingsee.easyrtc.http.RetrofitFactory;
-import com.tsingsee.easyrtc.model.RequestKeyModel;
 import com.tsingsee.easyrtc.model.ServiceInfo;
 import com.tsingsee.easyrtc.tool.ToastUtil;
 
@@ -42,7 +41,6 @@ public class SettingActivity extends BaseActivity implements Toolbar.OnMenuItemC
 
         showHub("查询中");
         getServerInfo();
-        getKeyModel();
 
 //        SharedHelper helper = new SharedHelper(getApplicationContext());
 //        Account account = helper.readAccount();
@@ -53,9 +51,9 @@ public class SettingActivity extends BaseActivity implements Toolbar.OnMenuItemC
     }
 
     public void getServerInfo() {
-        Observable<BaseEntity<ServiceInfo>> observable = RetrofitFactory.getRetrofitService().getServerInfo();
-        observable.compose(compose(this.<BaseEntity<ServiceInfo>> bindToLifecycle()))
-                .subscribe(new BaseObserver<ServiceInfo>(this, dialog, null, false) {
+        Observable<BaseEntity3<ServiceInfo>> observable = RetrofitFactory.getRetrofitService().getServerInfo();
+        observable.compose(compose(this.<BaseEntity3<ServiceInfo>> bindToLifecycle()))
+                .subscribe(new BaseObserver3<ServiceInfo>(this, dialog, null, false) {
                     @Override
                     protected void onHandleSuccess(ServiceInfo serviceInfo) {
                         hideHub();
@@ -69,27 +67,10 @@ public class SettingActivity extends BaseActivity implements Toolbar.OnMenuItemC
                 });
     }
 
-    public void getKeyModel() {
-        Observable<BaseEntity<RequestKeyModel>> observable = RetrofitFactory.getRetrofitService().getRequestkey();
-        observable.compose(compose(this.<BaseEntity<RequestKeyModel>> bindToLifecycle()))
-                .subscribe(new BaseObserver<RequestKeyModel>(this, dialog, null, false) {
-                    @Override
-                    protected void onHandleSuccess(RequestKeyModel model) {
-                        hideHub();
-                        binding.setKeyModel(model);
-                    }
-
-                    @Override
-                    protected void loginSuccess() {
-                        getKeyModel();
-                    }
-                });
-    }
-
     public void verifyProductCode(String code) {
-        Observable<BaseEntity<Object>> observable = RetrofitFactory.getRetrofitService().verifyproductcode(code);
-        observable.compose(compose(this.<BaseEntity<Object>> bindToLifecycle()))
-                .subscribe(new BaseObserver<Object>(this, dialog, null, false) {
+        Observable<BaseEntity3<Object>> observable = RetrofitFactory.getRetrofitService().verifyproductcode(code);
+        observable.compose(compose(this.<BaseEntity3<Object>> bindToLifecycle()))
+                .subscribe(new BaseObserver3<Object>(this, dialog, null, false) {
                     @Override
                     protected void onHandleSuccess(Object obj) {
                         hideHub();

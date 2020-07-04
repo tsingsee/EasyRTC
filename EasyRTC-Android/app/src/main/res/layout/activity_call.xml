@@ -31,6 +31,14 @@
             android:src="@drawable/close_mute"/>
 
         <ImageView
+            android:id="@+id/switch_camera"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:scaleType="center"
+            android:src="@drawable/flip_lens" />
+
+        <ImageView
             android:id="@+id/hangup"
             android:layout_width="0dp"
             android:layout_height="80dp"
@@ -39,15 +47,14 @@
             android:text="@string/hangup" />
 
         <ImageView
-            android:id="@+id/switch_camera"
+            android:id="@+id/snap_camera"
             android:layout_width="0dp"
-            android:layout_height="40dp"
+            android:layout_height="50dp"
             android:layout_weight="1"
-            android:scaleType="fitCenter"
-            android:src="@drawable/flip_lens" />
+            android:scaleType="center"
+            android:src="@drawable/new_snapshot" />
 
         <ImageView
-            android:visibility="gone"
             android:id="@+id/switch_orientation"
             android:layout_width="0dp"
             android:layout_height="40dp"
@@ -58,12 +65,12 @@
     </LinearLayout>
 
     <org.webrtc.SurfaceViewRenderer
+        android:visibility="gone"
         android:id="@+id/local_video_view"
         android:layout_width="120dp"
         android:layout_height="160dp"
         android:layout_margin="20dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:visibility="gone" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

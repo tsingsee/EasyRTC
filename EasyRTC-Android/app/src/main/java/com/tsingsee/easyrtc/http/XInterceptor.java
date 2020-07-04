@@ -4,6 +4,8 @@ import android.content.Context;
 import android.util.Log;
 
 import com.tsingsee.easyrtc.RTCApplication;
+import com.tsingsee.easyrtc.model.Account;
+import com.tsingsee.easyrtc.tool.SharedHelper;
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
@@ -27,11 +29,12 @@ public class XInterceptor {
             // chain就是包含request和response
             Request.Builder builder = chain.request().newBuilder();
 
-//            SharedHelper helper = new SharedHelper(RTCApplication.getContext());
-//            Account account = helper.readAccount();
-//            if (!account.getToken().equals("")) {
-//                builder.addHeader("Cookie", "token=" + account.getToken());
-//            }
+            // 请求头添加token
+            SharedHelper helper = new SharedHelper(RTCApplication.getContext());
+            Account account = helper.readAccount();
+            if (!account.getToken().equals("")) {
+                builder.addHeader("Cookie", "token=" + account.getToken());
+            }
 
             builder.addHeader("Accept", "application/vnd.apple.mpegurl");
 

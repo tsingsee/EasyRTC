@@ -230,6 +230,8 @@
 // 切换设摄像头
 - (IBAction)flip:(id)sender {
     [self.room swapFrontAndBackCameras];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:kSwitchCameraNotification object:nil];
 }
 
 - (IBAction)cancelBtnClicked:(id)sender {

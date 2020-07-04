@@ -14,15 +14,18 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.tsingsee.easyrtc.R;
+import com.tsingsee.easyrtc.RTCApplication;
 import com.tsingsee.easyrtc.activity.LiveActivity;
 import com.tsingsee.easyrtc.activity.LiveDetailActivity;
 import com.tsingsee.easyrtc.activity.SettingActivity;
 import com.tsingsee.easyrtc.adapter.LiveAdapter;
 import com.tsingsee.easyrtc.databinding.FragmentLiveBinding;
-import com.tsingsee.easyrtc.http.BaseEntity;
-import com.tsingsee.easyrtc.http.BaseObserver;
+import com.tsingsee.easyrtc.http.BaseEntity3;
+import com.tsingsee.easyrtc.http.BaseObserver3;
 import com.tsingsee.easyrtc.http.RetrofitFactory;
+import com.tsingsee.easyrtc.model.Account;
 import com.tsingsee.easyrtc.model.LiveSessionModel;
+import com.tsingsee.easyrtc.tool.SharedHelper;
 import com.tsingsee.rtc.Options;
 import com.yanzhenjie.recyclerview.swipe.SwipeMenu;
 import com.yanzhenjie.recyclerview.swipe.SwipeMenuBridge;
@@ -39,7 +42,7 @@ public class LiveFragment extends BaseFragment implements View.OnClickListener {
     private FragmentLiveBinding binding;
     private AlertDialog alertDialog;
 
-    private LiveSessionModel liveSessionModel;
+    private List<LiveSessionModel> liveSessionModels;
 
     TimeCount mTimeCount = null;
 
@@ -129,7 +132,7 @@ public class LiveFragment extends BaseFragment implements View.OnClickListener {
                 // 任何操作必须先关闭菜单，否则可能出现Item菜单打开状态错乱。
                 menuBridge.closeMenu();
 
-                LiveSessionModel.Session session = liveSessionModel.getSessions().getSessions().get(menuBridge.getAdapterPosition());
+                LiveSessionModel session = liveSessionModels.get(menuBridge.getAdapterPosition());
                 if (menuBridge.getPosition() == 0) {
                     // 播放
                     showSingleAlertDialog(session);
@@ -144,27 +147,24 @@ public class LiveFragment extends BaseFragment implements View.OnClickListener {
     }
 
     public void getLiveSessions() {
-        Observable<BaseEntity<LiveSessionModel>> observable = RetrofitFactory.getRetrofitService().getLiveSessions();
-        observable.compose(compose(this.<BaseEntity<LiveSessionModel>> bindToLifecycle()))
-                .subscribe(new BaseObserver<LiveSessionModel>(getContext(), dialog, null, false) {
+        Observable<BaseEntity3<List<LiveSessionModel>>> observable = RetrofitFactory.getRetrofitService().getLiveSessions();
+        observable.compose(compose(this.<BaseEntity3<List<LiveSessionModel>>> bindToLifecycle()))
+                .subscribe(new BaseObserver3<List<LiveSessionModel>>(getContext(), dialog, null, false) {
                     @Override
-                    protected void onHandleSuccess(LiveSessionModel model) {
+                    protected void onHandleSuccess(List<LiveSessionModel> model) {
                         hideHub();
 
                         binding.activityEmptyView.setVisibility(View.GONE);
 
-                        liveSessionModel = model;
+                        liveSessionModels = model;
 
-                        if (model == null ||
-                                model.getSessions() == null ||
-                                model.getSessions().getSessions() == null ||
-                                model.getSessions().getSessions().size() == 0) {
+                        if (model == null && model.size() > 0) {
                             binding.activityEmptyView.setVisibility(View.VISIBLE);
                             return;
                         }
 
-                        List<LiveSessionModel.Session> result = new ArrayList<>();
-                        for (LiveSessionModel.Session s : model.getSessions().getSessions()) {
+                        List<LiveSessionModel> result = new ArrayList<>();
+                        for (LiveSessionModel s : model) {
                             // 返回的数据有2种格式：hls/record，如果有record格式说明有录像
                             if ("hls".equals(s.getApplication())) {
                                 result.add(s);
@@ -184,7 +184,7 @@ public class LiveFragment extends BaseFragment implements View.OnClickListener {
     }
 
     private int index = 0;
-    public void showSingleAlertDialog(LiveSessionModel.Session session) {
+    public void showSingleAlertDialog(LiveSessionModel session) {
 //        final String[] items = {"HLS", "FLV", "RTMP"};
         final String[] items = {"HLS", "FLV"};
         AlertDialog.Builder alertBuilder = new AlertDialog.Builder(getContext());
@@ -201,14 +201,17 @@ public class LiveFragment extends BaseFragment implements View.OnClickListener {
             public void onClick(DialogInterface dialogInterface, int i) {
                 alertDialog.dismiss();
 
-                Options options = new Options(getContext());
-                String addr = "https://" + options.serverAddress + "/record";
+                SharedHelper helper = new SharedHelper(RTCApplication.getContext());
+                Account account = helper.readAccount();
+                String addres = "http://" + account.getServerAddress() + ":" + account.getPort();
 
                 String url;
                 if (index == 0) {
-                    url = addr + session.getHls().replace("/hls", "");
+//                    url = addr + session.getHls().replace("/hls", "");
+                    url = addres + session.getHls();
                 } else if (index == 1) {
-                    url = addr + session.getHttpFlv().replace("/hls", "");
+//                    url = addr + session.getHttpFlv().replace("/hls", "");
+                    url = addres + session.getHttpFlv();
                 } else {
                     url = session.getRtmp();
                 }

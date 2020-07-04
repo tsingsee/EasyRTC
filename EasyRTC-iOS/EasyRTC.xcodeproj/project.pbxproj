@@ -125,6 +125,7 @@
 		667F919223EFE535009F7473 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6673BA2E21E99BD900EB2430 /* MessageUI.framework */; };
 		669BA1D523FE416000E45C37 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 669BA1D223FE416000E45C37 /* IJKMediaFramework.framework */; };
 		669BA1D623FE416000E45C37 /* IJKMediaFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 669BA1D223FE416000E45C37 /* IJKMediaFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		66DAEAF02413666C0090B0BE /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66DAEAEF2413666C0090B0BE /* RegisterViewController.m */; };
 		DBB664BF923A2932405A80EE /* Pods_EasyRTC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E1C53248CA0B2030D5BB57 /* Pods_EasyRTC.framework */; };
 /* End PBXBuildFile section */
 
@@ -354,6 +355,8 @@
 		6673BA4421E99C3500EB2430 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		6677CB6123C22640002E37A9 /* new.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = new.xcassets; sourceTree = "<group>"; };
 		669BA1D223FE416000E45C37 /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IJKMediaFramework.framework; path = EasyRTC/IJKMediaFramework.framework; sourceTree = "<group>"; };
+		66DAEAEE2413666C0090B0BE /* RegisterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		66DAEAEF2413666C0090B0BE /* RegisterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -623,6 +626,8 @@
 			children = (
 				6673BA0821E99B3B00EB2430 /* LoginViewController.h */,
 				6673BA0C21E99B3B00EB2430 /* LoginViewController.m */,
+				66DAEAEE2413666C0090B0BE /* RegisterViewController.h */,
+				66DAEAEF2413666C0090B0BE /* RegisterViewController.m */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -1054,6 +1059,7 @@
 				666F730F23E5295D00E9871D /* BaseModel.m in Sources */,
 				666F72F323E5259A00E9871D /* BaseViewController.m in Sources */,
 				666F734E23E52FE700E9871D /* JTCalendarDelegateManager.m in Sources */,
+				66DAEAF02413666C0090B0BE /* RegisterViewController.m in Sources */,
 				666F72E723E5243E00E9871D /* LoginInfoLocalData.m in Sources */,
 				6673BA1C21E99B3B00EB2430 /* LoginViewController.m in Sources */,
 				666F737423E52FED00E9871D /* RefreshGifFooter.m in Sources */,
@@ -1222,6 +1228,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = 33USAS7KQX;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1239,6 +1246,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/EasyRTC",
 				);
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tsingsee.easyrtc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1254,6 +1262,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = 33USAS7KQX;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1271,6 +1280,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/EasyRTC",
 				);
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tsingsee.easyrtc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

@@ -4,9 +4,7 @@
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a88a85b84e8998c835b86e589b75f5c4/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a88a85b84e8998c835b86e589b75f5c4/res" />
     </CLASSES>
-    <JAVADOC>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.leakcanary/leakcanary-support-fragment/1.6.1/d196e9fe6fb97afa5dc5a40e188f98c64e13443f/leakcanary-support-fragment-1.6.1-javadoc.jar!/" />
-    </JAVADOC>
+    <JAVADOC />
     <SOURCES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.leakcanary/leakcanary-support-fragment/1.6.1/8db7b6b2988ddf4d21074e7941c3fd061db9a3a6/leakcanary-support-fragment-1.6.1-sources.jar!/" />
     </SOURCES>
