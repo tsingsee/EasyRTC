@@ -277,6 +277,8 @@ public class CallActivity extends BaseActivity implements StatusSink {
     }
 
     private void screenshot() {
+        ToastUtil.show("截图完成");
+
         try {
             showHub("上传中");
 

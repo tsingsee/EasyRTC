@@ -8,8 +8,8 @@ android {
         applicationId "com.tsingsee.easyrtc"
         minSdkVersion 21
         targetSdkVersion 27
-        versionCode 10200704
-        versionName "1.0.2000704"
+        versionCode 10200708
+        versionName "1.0.2000708"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
         if (project.hasProperty('PLAYER_KEY')) {

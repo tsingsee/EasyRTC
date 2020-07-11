@@ -84,12 +84,17 @@
                 android:background="@drawable/shape_et_bg"/>
         </LinearLayout>
 
-        <com.yanzhenjie.recyclerview.swipe.SwipeMenuRecyclerView
-            android:id="@+id/recyclerView"
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/refreshLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@+id/room_top_ll">
-        </com.yanzhenjie.recyclerview.swipe.SwipeMenuRecyclerView>
+            <com.yanzhenjie.recyclerview.swipe.SwipeMenuRecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </com.yanzhenjie.recyclerview.swipe.SwipeMenuRecyclerView>
+        </android.support.v4.widget.SwipeRefreshLayout>
 
         <RelativeLayout
             android:id="@+id/activity_empty_view"

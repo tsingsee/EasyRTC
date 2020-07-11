@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.GridLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -72,6 +73,16 @@ public class RoomFragment extends BaseFragment implements View.OnClickListener, 
         SpinnerAdapter adapter = new SpinnerAdapter(getContext(), Arrays.asList(Constant.STATUS_CONTENT));
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         binding.roomStatusSp.setAdapter(adapter);
+
+        GridLayoutManager manager = new GridLayoutManager(getContext(), 1);
+        binding.recyclerView.setLayoutManager(manager);
+
+        binding.refreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                getConferences();
+            }
+        });
 
         showHub("查询中");
         getConferences();
@@ -197,6 +208,7 @@ public class RoomFragment extends BaseFragment implements View.OnClickListener, 
                     @Override
                     protected void onHandleSuccess(RoomBean model) {
                         hideHub();
+                        binding.refreshLayout.setRefreshing(false);
 
                         binding.activityEmptyView.setVisibility(View.GONE);
 
@@ -206,9 +218,6 @@ public class RoomFragment extends BaseFragment implements View.OnClickListener, 
                             binding.activityEmptyView.setVisibility(View.VISIBLE);
                             return;
                         }
-
-                        GridLayoutManager manager = new GridLayoutManager(getContext(), 1);
-                        binding.recyclerView.setLayoutManager(manager);
 
                         RoomAdapter roomAdapter = new RoomAdapter(getContext(), roomBeans.getDatas());
                         binding.recyclerView.setAdapter(roomAdapter);
