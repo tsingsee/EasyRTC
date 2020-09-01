@@ -1,16 +1,22 @@
-## EasyRTC介绍 ##
+## EasyRTC介绍
 
-EasyRTC将采用WEBRTC技术，近期正在做内部测试，即将发布！
+EasyRTC视频会议系统是有<a href="http://www.tsingsee.com" target="_blank">TSINGSEE青犀</a>团队多年来在音视频领域上的技术积累而研发的，EasyRTC是一款强大的实时音视频通话产品，支持语音会议、视频会议、会议录像、会议回放、旁路直播、会议管理控制、文档共享、视频共享等功能，是一款广泛应用于在线教育、互动课堂、视频会议、应急指挥的即时通信平台。
 
-## 演示下载 ##
+## 演示下载
 
-Web版：<a href="https://demo.easyrtc.cn" target="_blank">https://demo.easyrtc.cn</a>
+EasyRTC详细介绍：http://www.easyrtc.cn/
 
-Android版：http://d.firim.info/EasyRTC
+MCU版：<a href="https://demo.easyrtc.cn" target="_blank">https://demo.easyrtc.cn</a>
 
-iOS版：AppStore搜索**EasyRTC**
+SFU版：<a href="https://sfu.easyrtc.cn" target="_blank">https://sfu.easyrtc.cn</a>
 
-<br/>
+## App
+
+MCU Android版：http://d.firim.info/EasyRTC
+
+MCU iOS版：AppStore搜索**EasyRTC**
+
+
 
 ## ✈ 更多视频解决方案资源汇总
 
